@@ -22,12 +22,14 @@
   body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
 
-  nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--hair)}
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
   .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
-  .navlinks{display:flex;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
   .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
   .navlinks a:hover{border-bottom-color:var(--s2)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
 
   /* progress bar */
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
@@ -39,7 +41,7 @@
   .crumb .here{color:var(--s2-deep)}
 
   .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
-  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:46px;line-height:1.08;letter-spacing:-.5px;margin-bottom:22px}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
   .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
   .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
 
@@ -90,7 +92,9 @@
     <div class="navlinks">
       <a href="../../#series">Les séries</a>
       <a href="../../a-propos/">À propos</a>
-      <a href="https://omgaudhd.substack.com" target="_blank" rel="noopener">Newsletter</a>
+      <a href="https://instagram.com/omgaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
     </div>
   </nav>
 
@@ -153,8 +157,6 @@
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
     <div>
       <a href="https://instagram.com/omgaudhd" target="_blank" rel="noopener">@omgaudhd</a>
-      &nbsp;·&nbsp;
-      <a href="https://omgaudhd.substack.com" target="_blank" rel="noopener">Substack</a>
     </div>
   </footer>
 
