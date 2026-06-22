@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saison 02 — Trouver un chemin · OMGAUDHD</title>
+<meta name="description" content="Le masking scolaire, de la primaire à l'école de commerce. Comment on apprend à devenir quelqu'un d'autre pour rentrer dans le moule — et tout ce que ça coûte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a.active{border-bottom-color:var(--s2)}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
+
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin-top:34px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s2-deep)}
+
+  .serie-head{padding:18px 0 50px;border-bottom:1px solid var(--hair);margin-bottom:48px}
+  .serie-head .tag{font-size:13px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
+  .serie-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:58px;line-height:1.03;letter-spacing:-1px;max-width:760px}
+  .serie-head h1 .hl{background:var(--s2);color:#fff;padding:0 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .serie-head .thesis{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:21px;line-height:1.5;color:var(--encre);max-width:620px;margin-top:26px;padding-left:18px;border-left:3px solid var(--s2)}
+  .serie-head .intro{font-size:15px;line-height:1.7;color:var(--encre-soft);max-width:600px;margin-top:24px}
+
+  .art-list{display:flex;flex-direction:column;gap:0}
+  .art{display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;padding:26px 4px;border-top:1px solid var(--hair);text-decoration:none;color:var(--encre);transition:padding .18s}
+  .art:last-child{border-bottom:1px solid var(--hair)}
+  .art:hover{padding-left:14px}
+  .art .num{font-family:'Playfair Display',serif;font-weight:900;font-size:40px;color:var(--s2);line-height:1}
+  .art .body h3{font-family:'Playfair Display',serif;font-weight:700;font-size:25px;line-height:1.15;margin-bottom:5px}
+  .art .body .desc{font-size:13px;color:var(--encre-soft);line-height:1.5}
+  .art .status{font-size:11px;letter-spacing:1px;padding:5px 11px;border-radius:30px;white-space:nowrap}
+  .st-pub{background:var(--s2);color:#fff}
+  .st-wip{background:var(--jaune);color:var(--encre)}
+  .st-soon{background:transparent;color:var(--encre-soft);border:1px solid var(--hair)}
+  .art .arrow{font-size:18px;color:var(--s2);opacity:0;transition:opacity .18s;margin-left:6px}
+  .art:hover .arrow{opacity:1}
+  .art.locked{opacity:.5;pointer-events:none}
+
+  footer{margin-top:90px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+  @media(max-width:680px){
+    .serie-head h1{font-size:38px}
+    .art{grid-template-columns:44px 1fr auto;gap:14px}
+    .art .num{font-size:28px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <div class="navlinks">
+      <a href="../../#series" class="active">Les séries</a>
+      <a href="../../a-propos/">À propos</a>
+      <a href="https://omgaudhd.substack.com" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </nav>
+
+  <div class="crumb"><a href="../../#series">Les séries</a> &nbsp;/&nbsp; <span class="here">Saison 02</span></div>
+
+  <header class="serie-head">
+    <div class="tag">SAISON 02</div>
+    <h1>Trouver un <span class="hl">chemin</span></h1>
+    <p class="thesis">« Plus tu masques bien, plus tu t'éloignes de toi. »</p>
+    <p class="intro">Le masking scolaire, de la primaire à l'école de commerce. Comment on apprend à devenir quelqu'un d'autre pour rentrer dans le moule — et tout ce que ça coûte.</p>
+  </header>
+
+  <div class="art-list">
+
+    <a class="art" href="../../articles/s2-01/">
+      <div class="num">01</div>
+      <div class="body">
+        <h3>On m'évite ?</h3>
+        <div class="desc">L'eczéma, la cour de récré, et la première fois qu'on devient le problème.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s2-02/">
+      <div class="num">02</div>
+      <div class="body">
+        <h3>Tuto de la collégienne normale… tu parles !</h3>
+        <div class="desc">Première stratégie consciente : observer, copier, disparaître dans la masse.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s2-03/">
+      <div class="num">03</div>
+      <div class="body">
+        <h3>Le lycée ? RAS… ou presque !</h3>
+        <div class="desc">L'armure censée la rendre invisible — qui la rend justement inoubliable.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-wip">En cours</span><span class="arrow">→</span></div>
+    </a>
+
+    <div class="art locked">
+      <div class="num">04</div>
+      <div class="body">
+        <h3>Prépa &amp; école de commerce</h3>
+        <div class="desc">À venir.</div>
+      </div>
+      <div><span class="status st-soon">Bientôt</span></div>
+    </div>
+
+    <div class="art locked">
+      <div class="num">05</div>
+      <div class="body">
+        <h3>Synthèse — ce que masquer m'a coûté</h3>
+        <div class="desc">À venir.</div>
+      </div>
+      <div><span class="status st-soon">Bientôt</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/omgaudhd" target="_blank" rel="noopener">@omgaudhd</a>
+      &nbsp;·&nbsp;
+      <a href="https://omgaudhd.substack.com" target="_blank" rel="noopener">Substack</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
