@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le lycée ? RAS… ou presque ! — OMGAUDHD S2·03</title>
-<meta name="description" content="L'armure censée me rendre invisible — qui me rendait justement inoubliable. Épisode 03 de la Saison 02 d'OMGAUDHD.">
+<title>Tuto de la collégienne normale… tu parles ! — OMGAUDHD S2·02</title>
+<meta name="description" content="Emilie, le masque cool, et l'art de se réinventer pour disparaître dans la masse. Épisode 02 de la Saison 02 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@
   .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
   .ig-icon:hover{opacity:1;border-bottom:none !important}
 
-  /* progress bar */
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
   article{max-width:680px;margin:0 auto}
@@ -63,11 +62,14 @@
   .aparte::before{content:'— ';}
   .aparte::after{content:' —';}
 
-  .next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
-  .next:hover{border-color:var(--s2)}
-  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
-  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
-  .next .ar{font-size:24px;color:var(--s2)}
+  .nav-articles{max-width:680px;margin:54px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .nav-art{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:20px 22px;text-decoration:none;color:var(--encre);transition:.18s;display:flex;flex-direction:column;gap:8px}
+  .nav-art:hover{border-color:var(--s2)}
+  .nav-art .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft)}
+  .nav-art .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;line-height:1.3}
+  .nav-art.prev .ttl::before{content:'← ';color:var(--s2)}
+  .nav-art.nxt .ttl::after{content:' →';color:var(--s2)}
+  .nav-art.nxt{text-align:right}
 
   footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
   footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
@@ -75,12 +77,13 @@
   footer a:hover{color:var(--encre)}
 
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:28px}
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
+    .nav-articles{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -100,69 +103,69 @@
   </nav>
 
   <article>
-    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s2/">Saison 02</a> / <span class="here">Article 03</span></div>
+    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s2/">Saison 02</a> / <span class="here">Article 02</span></div>
 
     <header class="art-head">
       <div class="tag">SAISON 02 · TROUVER UN CHEMIN</div>
-      <h1>Le lycée ? RAS…<br>ou presque !</h1>
+      <h1>Tuto de la collégienne normale… tu parles !</h1>
       <div class="art-meta">
-        <span class="num">03</span>
-        <span>· 8 min de lecture</span>
-        <span>· #LYCÉE #MASKING #FAUXSELF</span>
+        <span class="num">02</span>
+        <span>· 6 min de lecture</span>
+        <span>· #COLLÈGE #MASKING #IDENTITÉ</span>
       </div>
     </header>
 
     <div class="prose">
-      <p>Quand j'ai commencé à réfléchir à cette série d'articles, je me suis dit… bah, j'ai survolé le lycée, il ne s'est rien passé de fou… Il n'y a rien à raconter !</p>
+      <p>Après les années de primaire à déménager à répétition, me voilà balancée dans un grand collège. Je n'en menais pas large.</p>
 
-      <p>Mon mari m'a regardé en mode… « Whaaaaaat ? »</p>
+      <p>Et là… j'ai rencontré Emilie.</p>
 
-      <div class="dialogue">
-        <p><span class="who">— Lui :</span> Attends, ce n'est pas en seconde que tu as fait la grève pendant un trimestre entier à organiser des manifs et séché les cours ?</p>
-        <p><span class="who">— Moi :</span> Euh… ben si !</p>
-        <p><span class="who">— Lui :</span> C'est pas au lycée que t'as commencé à sortir avec des mecs plus vieux que toi ?</p>
-        <p><span class="who">— Moi :</span> Ben si !</p>
-        <p><span class="who">— Lui :</span> Et c'est pas au lycée que tu t'habillais comme un mec et que t'avais les cheveux violets ?</p>
-        <p><span class="who">— Moi :</span> Si, si…</p>
-      </div>
+      <p>Emilie c'était une relation fusionnelle. Le genre de complicité immédiate, absolue, où on se comprend sans vraiment expliquer. On était tout le temps ensemble. Inséparables. Ce n'était pas compliqué à comprendre : Emilie était ma première vraie amie. Ma première relation où j'avais le sentiment d'appartenir, d'être choisie pour ce que j'étais.</p>
 
-      <p>Rien de spécial quoi…</p>
+      <p>Et puis… Emilie est partie. Du jour au lendemain.</p>
 
-      <p><span class="hl">Anonyme. Invisible.</span> C'était mon objectif à atteindre. Alors quand la grève de 98 est arrivée, j'ai très vite séché les cours pour traîner dehors (pardon maman). Jusqu'au jour où une élève de terminale me prend à partie.</p>
+      <p>Pas de dispute. Pas d'explication. Juste une amitié qui s'arrête, comme ça, sans crier gare. Elle a changé de groupe. Elle ne m'a plus adressé la parole de la même façon. J'ai mis un temps fou à comprendre ce qui s'était passé et, surtout, à ne plus me demander ce que j'avais fait de mal. <span class="hl">Parce que bien sûr, c'était forcément ma faute.</span></p>
 
-      <p class="punch">« Si tu ne partages pas notre combat,<br>tu n'es qu'une profiteuse. »</p>
+      <p>En attendant, il fallait survivre au collège.</p>
 
-      <p>J'ai eu honte. Sans le savoir, elle venait d'enrôler son plus jeune et fidèle soldat. Je m'étais fait un devoir de jouer le jeu à fond pour faire bonne impression, et surtout pour racheter le fait que j'avais utilisé « la cause » à des fins personnelles.</p>
+      <p>J'ai regardé autour de moi et j'ai fait ce que je savais faire depuis la maternelle : j'ai observé. J'ai observé les filles qui avaient l'air normale. Les filles qui avaient un groupe. Les filles qu'on ne regardait pas de travers. J'ai étudié leurs codes.</p>
 
-      <p class="aparte">spoiler : j'ai redoublé</p>
+      <p class="aparte">Le jean. La coiffure. La façon de parler. La musique qu'on écoute. Ce qu'on aime, ce qu'on n'aime pas.</p>
 
-      <p>Pendant 3 mois, je vivais à contre-courant de la majorité des élèves de seconde. Je suis rentrée dans la peau d'un nouveau personnage, rebelle et combatif. Puis le message lycéen que je portais de tout mon être a fini par être récupéré politiquement. J'ai perdu le sens. J'avais été trahie.</p>
+      <p>Et j'ai commencé à copier. Méthodiquement. Consciencieusement.</p>
 
-      <p>Mon personnage ne tenait plus. Alors j'en ai littéralement fait des caisses : cheveux courts ET fuchsia, puis orange, puis gris… Je voulais avoir l'air plus âgée, plus cool, plus fun. Je devais être intouchable. Inaccessible. J'ai changé de peau en croyant dur comme fer que là, c'était moi qui commandais.</p>
+      <p>J'ai demandé à avoir un jean. À me faire lisser les cheveux. J'ai mis de côté mes lectures, mes lubies, mes centres d'intérêt d'adulte miniature. J'ai appris à rire des choses qu'on était censé trouver drôles. À m'intéresser à ce qui était supposé m'intéresser.</p>
 
-      <p>J'ai commencé à me croire au-dessus des autres. Parce que <span class="hl-y">la vulnérabilité, c'était de la faiblesse. Et la faiblesse, je n'y avais pas le droit.</span> La duplicité envers les autres, c'est compliqué. Me mentir à moi-même, c'est beaucoup plus simple.</p>
+      <p class="punch">Je construisais un personnage. Et j'étais douée.</p>
 
-      <p>Le plus drôle dans tout ça, c'est qu'au lycée je ne connaissais presque personne. Quand j'étais en 2e année à l'ESC, j'ai fait l'accueil des étudiants admissibles et tous ceux qui étaient passés par mon lycée m'ont reconnue. Visiblement j'avais marqué les esprits, et je l'ignorais complètement.</p>
+      <p>J'ai changé d'école. Nouveau départ, nouveau masque. Cette fois j'avais décidé d'incarner quelque chose de différent : la fille un peu rebelle, un peu bad-ass. Pas méchante, mais avec du caractère. Quelqu'un qu'on n'embête pas.</p>
+
+      <p>Ça a plutôt bien marché.</p>
+
+      <p>J'ai intégré un groupe. J'avais une réputation. Les gens savaient qui j'étais — enfin, qui j'avais décidé d'être. C'était reposant, paradoxalement. Moins d'imprévisible. Moins de questions auxquelles je ne savais pas répondre.</p>
+
+      <p>Sauf que.</p>
+
+      <p>Ce que je ne savais pas encore, c'est que tout ça avait un nom. Que ce travail permanent d'observation, d'analyse, de copie et d'adaptation des codes sociaux — ce travail que je faisais naturellement, instinctivement, depuis que j'avais conscience d'être différente — s'appelait le <span class="hl-y">masking</span>.</p>
+
+      <p>Je m'étais mise en apnée pour ressembler à tout le monde.</p>
+
+      <p>Et comme toutes les apnées, ça se termine. Il faut bien remonter à la surface pour respirer.</p>
+
+      <p>Je ne le savais pas encore. Mais la facture, elle arrivait.</p>
     </div>
   </article>
 
-  <a class="next" href="../s2-02/" style="flex-direction:row-reverse">
-    <div style="text-align:right">
-      <div class="lbl">ARTICLE PRÉCÉDENT · S2</div>
-      <div class="ttl">Tuto de la collégienne normale… tu parles !</div>
-    </div>
-    <div class="ar" style="transform:scaleX(-1)">→</div>
-  </a>
-
-  <!-- Article suivant — à activer quand S2-04 sera publié
-  <a class="next" href="../s2-04/">
-    <div>
-      <div class="lbl">ARTICLE SUIVANT · S2</div>
-      <div class="ttl">Prépa &amp; école de commerce</div>
-    </div>
-    <div class="ar">→</div>
-  </a>
-  -->
+  <div class="nav-articles">
+    <a class="nav-art prev" href="../s2-01/">
+      <div class="lbl">PRÉCÉDENT · S2</div>
+      <div class="ttl">On m'évite ?</div>
+    </a>
+    <a class="nav-art nxt" href="../s2-03/">
+      <div class="lbl">SUIVANT · S2</div>
+      <div class="ttl">À quoi ça ressemble dans ma tête ?</div>
+    </a>
+  </div>
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
@@ -174,7 +177,6 @@
 </div>
 
 <script>
-  // barre de progression de lecture
   window.addEventListener('scroll', () => {
     const doc = document.documentElement;
     const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;

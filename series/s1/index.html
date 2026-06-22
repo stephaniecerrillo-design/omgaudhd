@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saison 01 — Me découvrir · OMGAUDHD</title>
+<meta name="description" content="De l'enfance au diagnostic — comprendre d'où vient le décalage. 5 articles sur le TDAH féminin tardif.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s1:#FF2D78;
+    --s1-deep:#9B0040;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a.active{border-bottom-color:var(--s1)}
+  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin-top:34px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s1-deep)}
+
+  .serie-head{padding:18px 0 50px;border-bottom:1px solid var(--hair);margin-bottom:48px}
+  .serie-head .tag{font-size:13px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .serie-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(36px,5vw,58px);line-height:1.18;letter-spacing:-1px;max-width:760px}
+  .serie-head h1 .hl{background:var(--s1);color:#fff;padding:0 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .serie-head .thesis{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:21px;line-height:1.5;color:var(--encre);max-width:620px;margin-top:26px;padding-left:18px;border-left:3px solid var(--s1)}
+  .serie-head .intro{font-size:15px;line-height:1.7;color:var(--encre-soft);max-width:600px;margin-top:24px}
+
+  .art-list{display:flex;flex-direction:column;gap:0}
+  .art{display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;padding:26px 4px;border-top:1px solid var(--hair);text-decoration:none;color:var(--encre);transition:padding .18s}
+  .art:last-child{border-bottom:1px solid var(--hair)}
+  .art:hover{padding-left:14px}
+  .art .num{font-family:'Playfair Display',serif;font-weight:900;font-size:40px;color:var(--s1);line-height:1}
+  .art .body h3{font-family:'Playfair Display',serif;font-weight:700;font-size:25px;line-height:1.15;margin-bottom:5px}
+  .art .body .desc{font-size:13px;color:var(--encre-soft);line-height:1.5}
+  .art .status{font-size:11px;letter-spacing:1px;padding:5px 11px;border-radius:30px;white-space:nowrap}
+  .st-pub{background:var(--s1);color:#fff}
+  .st-soon{background:transparent;color:var(--encre-soft);border:1px solid var(--hair)}
+  .art .arrow{font-size:18px;color:var(--s1);opacity:0;transition:opacity .18s;margin-left:6px}
+  .art:hover .arrow{opacity:1}
+  .art.locked{opacity:.5;pointer-events:none}
+
+  footer{margin-top:90px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+  @media(max-width:680px){
+    .serie-head h1{font-size:38px}
+    .art{grid-template-columns:44px 1fr auto;gap:14px}
+    .art .num{font-size:28px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <div class="navlinks">
+      <a href="../../#series" class="active">Les séries</a>
+      <a href="../../a-propos/">À propos</a>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <div class="crumb"><a href="../../#series">Les séries</a> &nbsp;/&nbsp; <span class="here">Saison 01</span></div>
+
+  <header class="serie-head">
+    <div class="tag">SAISON 01</div>
+    <h1>Me <span class="hl">découvrir</span></h1>
+    <p class="thesis">« Il m'aura fallu 40 ans et le diagnostic de mon fils pour enfin voir mon reflet dans un miroir. »</p>
+    <p class="intro">De l'enfance au diagnostic — comprendre d'où vient le décalage. Le TDAH féminin tel qu'on le vit de l'intérieur, pas tel qu'on le décrit dans les manuels.</p>
+  </header>
+
+  <div class="art-list">
+
+    <a class="art" href="../../articles/s1-01/">
+      <div class="num">01</div>
+      <div class="body">
+        <h3>Connais toi toi-même… facile à dire !</h3>
+        <div class="desc">TDAH, génétique, et la première fois que le mot revient en boucle dans ma tête.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s1-02/">
+      <div class="num">02</div>
+      <div class="body">
+        <h3>Héréditaire</h3>
+        <div class="desc">Le psychiatre catastrophique, les larmes dans le métro, et le fils qui remet tout en place.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s1-03/">
+      <div class="num">03</div>
+      <div class="body">
+        <h3>En fait, j'étais normale…</h3>
+        <div class="desc">Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s1-04/">
+      <div class="num">04</div>
+      <div class="body">
+        <h3>Evidemment</h3>
+        <div class="desc">Une conférence, une inconnue, et deux mots qui font basculer quelque chose.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s1-05/">
+      <div class="num">05</div>
+      <div class="body">
+        <h3>Explaining…</h3>
+        <div class="desc">L'expat, l'effondrement, et la découverte de l'AuDHD — la pièce manquante du puzzle.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

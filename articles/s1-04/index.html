@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidemment — OMGAUDHD S1·04</title>
+<meta name="description" content="Une conférence, une inconnue, et deux mots qui font basculer quelque chose. Épisode 04 de la Saison 01 d'OMGAUDHD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s1:#FF2D78;
+    --s1-deep:#9B0040;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+
+  article{max-width:680px;margin:0 auto}
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s1-deep)}
+
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
+
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose p{margin-bottom:24px}
+  .prose .hl{background:var(--s1);color:#fff;padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s1)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s1-deep);font-weight:700}
+
+  .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
+
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
+
+  .next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s1)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s1)}
+
+  footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+  @media(max-width:680px){
+    .art-head h1{font-size:32px}
+    .prose{font-size:17px}
+    .punch{font-size:22px}
+    .dialogue{padding-left:32px;font-size:14px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <div class="navlinks">
+      <a href="../../#series">Les séries</a>
+      <a href="../../a-propos/">À propos</a>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s1/">Saison 01</a> / <span class="here">Article 04</span></div>
+
+    <header class="art-head">
+      <div class="tag">SAISON 01 · ME DÉCOUVRIR</div>
+      <h1>Evidemment</h1>
+      <div class="art-meta">
+        <span class="num">04</span>
+        <span>· 7 min de lecture</span>
+        <span>· #CONFÉRENCE #LÉGITIMITÉ #TDAHFÉMININ</span>
+      </div>
+    </header>
+
+    <div class="prose">
+      <p>21 mars 2025. J'assiste à la soirée annuelle du Centre des Jeunes Dirigeants du Béarn sur le thème : Transformez les contraintes en opportunités. J'étais très excitée à l'idée de m'y rendre. Les conférences du CJD m'ont toujours beaucoup apporté, mis en lumière des choses que je ne voyais pas. Et puis je suis toujours contente de voir mes copines et copains. Bref. J'étais joie.</p>
+
+      <p>L'invitée principale était Virginie Delalande qui venait nous parler de résilience et de dépassement de soi. Inconnue au bataillon en ce qui me concernait.</p>
+
+      <p>La lumière s'éteint dans la salle, et Virginie illumine la scène. Quand elle commence à parler, je ne la comprends pas, parce que sa voix est différente, son élocution particulière (je ne savais pas qu'elle était sourde, ça surprend !). Petit à petit, elle m'embarque. Finalement, yeux et bouche grands ouverts, je fixe la scène et je ne la vois plus. <span class="hl-y">Je ME vois.</span></p>
+
+      <p>Tout mon corps me dit : c'est là que tu dois être !</p>
+
+      <p>Mais c'est impossible. De quoi je pourrais bien parler ? C'est toujours pareil avec moi… je voulais être coach, formatrice et même enseignante. Mais pour enseigner quoi ? Et surtout à qui ? Et à quel titre ? Bref.</p>
+
+      <p>Je tourne la tête sur ma droite à la fin de la conférence et je dis à ma voisine, que j'avais rencontrée juste avant : « Oh lala, j'aimerais tellement faire ça comme boulot ! »</p>
+
+      <p>Elle sourit.</p>
+
+      <p>On avait un peu échangé avant la conférence et le courant était passé. Elle me demande pourquoi. Alors je me lance. Sans filet, ça sort tout seul. C'était la première fois que j'exprimais ça à voix haute : mon envie de transmettre et mon incapacité à me sentir légitime de le faire. J'enchaîne en lui parlant de mon TDAH, de la difficulté que j'ai eue pour me faire diagnostiquer, et puis finalement je lui ai tenu la jambe sur ce sujet pendant 15 bonnes minutes sans respirer.</p>
+
+      <p>Elle sourit encore, me regarde avec attention, et me dit :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Elle :</span> Evidemment ! C'est ça ton sujet.</p>
+        <p><span class="who">— Moi :</span> Je ne comprends pas ! De quoi tu parles ?</p>
+        <p><span class="who">— Elle :</span> Du TDAH féminin bien sûr ! Tu es tellement captivante quand tu en parles ! Vraiment je sens que c'est quelque chose qui t'anime et tu devrais tenter ! Je suis sûre que ça fonctionnerait.</p>
+      </div>
+
+      <p>Je la regarde, incrédule.</p>
+
+      <p>N'importe quoi. Je ne suis personne. Qui voudrait m'écouter déblatérer sur ce sujet ? Ok je suis bien documentée mais je ne suis ni médecin, ni psychologue… ni une actrice connue. Non vraiment je vois pas ce que je fais dans cette histoire.</p>
+
+      <p>Mais… ça reste dans ma tête…</p>
+
+      <p>Ce qu'il faut savoir à ce moment-là c'est que je suis dans une période un peu dense de ma vie. J'étais encore en train de digérer la liquidation de mon entreprise 6 mois plus tôt. Je cherchais un boulot salarié pour me prouver que je pouvais encore bosser et en même temps je venais de finir un accompagnement de 3 mois avec une dirigeante qui voulait opérer un repositionnement de son entreprise.</p>
+
+      <p class="aparte">Oui je sais, ça fait beaucoup… mais je voulais rester occupée pour ne pas m'effondrer. Mon entreprise m'avait littéralement épuisée, et comme je ne sais pas me reposer j'ai préféré me noyer sous les projets. Très sain comme réaction on en conviendra.</p>
+
+      <p>Anyway. J'en étais là.</p>
+
+      <p>Tout se bouscule dans ma tête et je panique. Le boulot salarié, ce sera ma priorité. Donc est arrivé ce qui devait arriver : j'ai trouvé du boulot. Démarrage en juin. Les autres projets partent au placard.</p>
+
+      <p>Sauf que… j'ai du mal à m'adapter à l'entreprise. Ça faisait 6 ans que je n'avais pas mis les pieds derrière un bureau pour avoir un salaire. J'avais du mal à m'intégrer et surtout, <span class="hl">je m'ennuyais à mourir toute la journée</span>.</p>
+
+      <p>Mon instinct de survie s'est alors déclenché et je me suis lancé un défi — de taille : écrire une conférence sur le TDAH féminin. Jusqu'au bout.</p>
+
+      <p>La bonne blague.</p>
+
+      <p>Mon cerveau s'est allumé et l'hyperfocus qui va avec aussi. Des heures et des heures d'écriture, de relecture. Le jour. La nuit. Tout. Le. Temps.</p>
+
+      <p>C'était difficile. Difficile parce que je ne me sentais pas légitime pour en parler. Je ne voulais pas sortir de mon rôle, ne pas donner de leçon, ne pas être une féministe trop engagée qui perdrait la moitié de mon auditoire, ne pas entrer trop dans mon intimité pour me préserver. J'avais peur. De mal faire, de ne pas assez bien écrire, de trop en dire. Avoir l'air prétentieuse, ou à côté de la plaque. Me faire attaquer pour des approximations…</p>
+
+      <p>Mais je ne lâche pas. Je cherche mon ton. Peaufine mon texte.</p>
+
+      <p>Je m'offre le luxe de prendre du temps pour écrire. Dans des endroits qui m'inspirent. Seule. Je me sens tellement à ma place dans ces moments-là. Je voudrais que ma vie soit comme ça tout le temps.</p>
+
+      <p>16 juillet 2025. C'est le départ d'un changement de vie radical. Nous allons partir en expatriation à la fin de l'année.</p>
+
+      <p>Putain… j'avais pas prévu ça moi.</p>
+
+      <p>Le temps presse. Je me fixe une deadline : je dois avoir terminé ma conférence et l'avoir dite devant du public au moins une fois avant notre départ.</p>
+
+      <p>Chiche ?</p>
+
+      <p>Cette urgence était exactement ce qu'il me fallait pour boucler la conférence. J'ai commencé à en parler autour de moi, à mes collègues, à mes amis du CJD, partout. Je me suis mise dans la m*** pour avoir non pas une mais 2 dates durant lesquelles j'allais dire ma conférence à DES GENS…</p>
+
+      <p class="punch">Je l'ai fait. Je l'ai fait je l'ai fait ! J'ai adoré ça.</p>
+
+      <p>Premier round avec des amis avec une médecin dans l'assistance. J'étais pétrifiée de trac, j'avais tellement peur qu'elle me juge… Il m'a fallu plusieurs verres pour me lancer. Petit à petit, sous leur regard bienveillant, je me suis détendue et j'ai déroulé mon texte avec de plus en plus de confiance. À la fin, j'ai bien cru que j'allais m'écrouler… Ensuite nous avons eu un échange très intéressant sur les statistiques, le fond de la conférence, et sa forme. C'était trop bien.</p>
+
+      <p>Deuxième round devant une trentaine de personnes dans une association pour entrepreneurs en liquidation. Je pensais clôturer la séance mais ils m'ont prise par surprise et j'ai ouvert les hostilités. Finalement c'était mieux, je n'ai pas eu le temps de stresser. Cette fois je me sentais mieux. À ma place. Heureuse. L'échange qui a eu lieu après était magique. Quand une coach, autiste, est venue me serrer dans les bras et me dire : j'avais envie de me lever et de dire « oui ! c'est ça ! Bravo ».</p>
+
+      <p>J'étais tellement fière de l'avoir fait. J'étais gonflée à bloc ! Et très heureuse de rentrer me coucher…</p>
+
+      <p>Pourtant, j'allais devoir me réinventer. Encore une fois. De l'autre côté de l'Atlantique cette fois.</p>
+    </div>
+  </article>
+
+  <a class="next" href="../s1-05/">
+    <div>
+      <div class="lbl">ARTICLE SUIVANT · S1</div>
+      <div class="ttl">Explaining…</div>
+    </div>
+    <div class="ar">→</div>
+  </a>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    document.getElementById('progress').style.width = scrolled + '%';
+  });
+</script>
+</body>
+</html>

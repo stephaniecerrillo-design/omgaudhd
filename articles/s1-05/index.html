@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explaining… — OMGAUDHD S1·05</title>
+<meta name="description" content="L'expat, l'effondrement, et la découverte de l'AuDHD. Épisode 05 de la Saison 01 d'OMGAUDHD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s1:#FF2D78;
+    --s1-deep:#9B0040;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+
+  article{max-width:680px;margin:0 auto}
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s1-deep)}
+
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
+
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose p{margin-bottom:24px}
+  .prose .hl{background:var(--s1);color:#fff;padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s1)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s1-deep);font-weight:700}
+
+  .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
+
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
+
+  .serie-next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s;border-left:4px solid var(--s2,#38C9A3)}
+  .serie-next:hover{box-shadow:0 4px 20px rgba(35,31,32,.08)}
+  .serie-next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .serie-next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .serie-next .ar{font-size:24px;color:var(--s2,#38C9A3)}
+
+  footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+  @media(max-width:680px){
+    .art-head h1{font-size:32px}
+    .prose{font-size:17px}
+    .punch{font-size:22px}
+    .dialogue{padding-left:32px;font-size:14px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <div class="navlinks">
+      <a href="../../#series">Les séries</a>
+      <a href="../../a-propos/">À propos</a>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s1/">Saison 01</a> / <span class="here">Article 05</span></div>
+
+    <header class="art-head">
+      <div class="tag">SAISON 01 · ME DÉCOUVRIR</div>
+      <h1>Explaining…</h1>
+      <div class="art-meta">
+        <span class="num">05</span>
+        <span>· 7 min de lecture</span>
+        <span>· #AUDHD #EXPAT #DÉCOUVERTE</span>
+      </div>
+    </header>
+
+    <div class="prose">
+      <p>Partir en expatriation en famille, ce n'est pas une petite décision. Et psychologiquement, je sentais que j'avais besoin d'un coup de pouce.</p>
+
+      <p>Je suis donc allée chercher de l'aide. Et des médocs.</p>
+
+      <p>Attention, je ne fais pas l'apologie des médocs, mais disons qu'à un moment, être contre pour être contre, c'est un peu limité comme motif. J'en avais besoin. Je le savais. Le psychiatre aussi, mais voyant que j'étais récalcitrante, ce petit malin a eu un argument imparable :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Le psychiatre :</span> Ça devrait lisser votre SPM…</p>
+      </div>
+
+      <p>Oh My F****** God ! Je peux ne pas m'effondrer et me transformer en dragon fumant entre J16 et J21 ? Sérieux ? Allez-y docteur, prescrivez-moi vite cet antidépresseur !</p>
+
+      <p class="aparte">Bon, j'ai quand même demandé confirmation à ma sœur (pharmacienne) pour vérifier que le type ne m'avait pas embobinée. Il ne m'avait pas menti.</p>
+
+      <p>Mieux, il m'avait dit de ne pas m'attendre à des miracles. Sauf que je me suis rendue compte que je n'avais <strong><em>jamais</em></strong> ressenti un tel <strong><em>calme</em></strong>, un tel recul. Comme si d'un coup, je pouvais réagir sans sur-réagir. Penser sans boucler à l'infini… enfin la plupart du temps.</p>
+
+      <p><em>Décembre 2025, grand départ.</em></p>
+
+      <p>On traverse l'Atlantique… et je me perds quelque part en chemin.</p>
+
+      <p>Trois mois que nous sommes arrivés et déjà, la couture pète.</p>
+
+      <p>Je savais que ce ne serait pas un long fleuve tranquille cette expat, mais j'étais optimiste et, comme toujours, je me suis mise une pression de dingo : je voulais être le <strong><em>pilier inébranlable</em></strong> pour tout le monde. J'ai plutôt bien géré au début.</p>
+
+      <p>La lune de miel a duré 3 mois. J'ai fini par imploser.</p>
+
+      <p>Comment ? En faisant le minimum ! Non vraiment ! Pas grand-chose : les enfants gérés, le ménage fait, le frigo plein, le linge propre plié et rangé dans les placards. Bref, le quotidien normal d'une femme au foyer (je les <strong>admire</strong> ces femmes…).</p>
+
+      <p>Le déménagement dans la nouvelle maison ? J'ai géré. L'arrivée des meubles en mars ? Pas de problème, je vais gérer. <em>Non en vrai ça commençait à tirer.</em> La décharge de stress des enfants après l'école ? <em>Ça vaaaa. C'était l'Enfer.</em></p>
+
+      <p>Les enfants ont enchaîné les maladies l'un après l'autre, les nerfs de tout le monde ont commencé à lâcher et j'avais l'impression de me noyer. Je me sentais nulle, incapable de protéger mes enfants.</p>
+
+      <p>Les antidépresseurs ne faisaient plus d'effet mais comme j'étais très à l'aise avec mon déni, j'ai quand même voulu commencer le traitement TDAH. Attention, on est tous différents mais pour moi, <strong><em>mauvaise magie</em></strong>. Un cœur qui s'emballe, des insomnies, des larmes. Je n'y arrivais plus.</p>
+
+      <p>Quand on est neuroA on passe <em>un peu</em> de temps à se documenter… Depuis quelques semaines j'étais intriguée par le concept de <span class="hl-y">AuDHD</span>, la co-occurrence du TDAH et de l'autisme.</p>
+
+      <p>J'avais déjà demandé à mon psychiatre en France s'il était possible que je sois également autiste. Il l'a balayé d'un revers de main :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Le psychiatre :</span> Vous êtes seulement allergique à la bêtise.</p>
+        <p><span class="who">— Moi :</span> Ah bon ?</p>
+      </div>
+
+      <p>Idem ici, j'ai reposé la question à ma psychiatre.</p>
+
+      <div class="dialogue">
+        <p><span class="who">— La psychiatre :</span> Très peu probable, vous fonctionnez trop bien.</p>
+        <p><span class="who">— Moi :</span> Vous trouvez ?</p>
+      </div>
+
+      <p>Du coup je cherchais de mon côté, et comme je ne suis pas non plus une adepte du diagnostic par les contenus des réseaux sociaux, je me suis cherché un bouquin <strong>sérieux</strong>.</p>
+
+      <p>J'ai trouvé <strong><em>Explaining AuDHD</em></strong> de Khurram Sadiq. Autant dire que le gars, c'est pas <em>Jo le Clodo</em> : psychiatre spécialisé, AuDHD lui-même. Tous les forums et avis s'accordent à dire que son livre est barbant et répétitif…</p>
+
+      <p>J'ai passé tout le bouquin à chercher ce qui ne collait pas avec moi. Vraiment, je n'étais pas en mode <em>oh oui ! oh oui !</em> Les gens qui pensent qu'on est comme ça se gourent complètement. On est plutôt en mode :</p>
+
+      <p class="punch">« Oh putaiiiiiin…… Mais non… Ohhhhh… Ça aussi ? »</p>
+
+      <p>En vrai de vrai, comme dirait mon fils. On n'est pas heureux de coller au tableau clinique. On est à la fois soulagé <strong>ET</strong> désespéré !</p>
+
+      <p>Bref. C'est trop d'un coup.</p>
+
+      <p>La composante autiste de mon profil, je la soupçonnais depuis longtemps (<em>toujours</em>) mais c'est pas glamour, et puis je ne collais pas à l'image de Sheldon Cooper. Depuis peu, plusieurs femmes influentes ont commencé à en parler et je me reconnaissais déjà plus dans leurs profils. Tellement que quand j'en parle à ma sœur elle me dit :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Ma sœur :</span> Bah bien sûr ma sœur que t'es autiste !</p>
+        <p><span class="who">— Moi :</span> Wtf ???</p>
+      </div>
+
+      <p>Comme par hasard, mon envie — que dis-je mon <strong><em>besoin</em></strong> — de transmettre revient. Comment peut-on passer à côté de l'évidence ?</p>
+
+      <p>Je repense à ma conférence. Mais je me dis que je ne suis pas encore complètement dans cette dynamique.</p>
+
+      <p>Ma thérapeute m'avait donné des devoirs à l'issue de notre premier entretien : écrire mes objectifs de thérapie. Quand je lui ai lu mes réponses elle m'a dit :</p>
+
+      <p class="punch">« You are a writer ! »</p>
+
+      <p>J'ai souri. Et puis j'ai réfléchi.</p>
+
+      <p>Mon rêve depuis toujours, c'est d'écrire un livre. Mon rêve depuis toujours c'est de raconter quelque chose. Mon rêve depuis toujours, c'est de transmettre, d'une façon ou d'une autre.</p>
+
+      <p><span class="hl">J'ai senti la machine à l'intérieur de mon crâne démarrer en trombe…</span></p>
+    </div>
+  </article>
+
+  <a class="serie-next" href="../../series/s2/" style="--s2:#38C9A3">
+    <div>
+      <div class="lbl">SAISON SUIVANTE</div>
+      <div class="ttl">Trouver un chemin →</div>
+    </div>
+    <div class="ar">→</div>
+  </a>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    document.getElementById('progress').style.width = scrolled + '%';
+  });
+</script>
+</body>
+</html>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le lycée ? RAS… ou presque ! — OMGAUDHD S2·03</title>
-<meta name="description" content="L'armure censée me rendre invisible — qui me rendait justement inoubliable. Épisode 03 de la Saison 02 d'OMGAUDHD.">
+<title>En fait, j'étais normale… — OMGAUDHD S1·03</title>
+<meta name="description" content="Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit. Épisode 03 de la Saison 01 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
     --encre:#231F20;
     --encre-soft:#5A5550;
     --jaune:#FFE800;
-    --s2:#38C9A3;
-    --s2-deep:#1B7A60;
+    --s1:#FF2D78;
+    --s1-deep:#9B0040;
     --hair:rgba(35,31,32,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -28,46 +28,39 @@
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
   .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
   .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
-  .navlinks a:hover{border-bottom-color:var(--s2)}
+  .navlinks a:hover{border-bottom-color:var(--s1)}
   .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
   .ig-icon:hover{opacity:1;border-bottom:none !important}
 
-  /* progress bar */
-  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
   article{max-width:680px;margin:0 auto}
   .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
   .crumb a{color:var(--encre-soft);text-decoration:none}
   .crumb a:hover{color:var(--encre)}
-  .crumb .here{color:var(--s2-deep)}
+  .crumb .here{color:var(--s1-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
   .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
-  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
 
   .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
   .prose p{margin-bottom:24px}
-  .prose .hl{background:var(--s2);color:#fff;padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl{background:var(--s1);color:#fff;padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .prose .hl-y{background:var(--jaune);color:var(--encre);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-
-  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
-  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
-  .dialogue p{margin-bottom:11px}
-  .dialogue p:last-child{margin-bottom:0}
-  .dialogue .who{color:var(--s2-deep);font-weight:700}
 
   .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
 
-  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
-  .aparte::before{content:'— ';}
-  .aparte::after{content:' —';}
+  .realisation{font-family:'Space Mono',monospace;font-size:15px;line-height:1.8;color:var(--encre);padding:28px 32px;margin:30px 0;border-left:3px solid var(--s1)}
+  .realisation p{margin-bottom:12px}
+  .realisation p:last-child{margin-bottom:0}
 
   .next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
-  .next:hover{border-color:var(--s2)}
+  .next:hover{border-color:var(--s1)}
   .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
   .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
-  .next .ar{font-size:24px;color:var(--s2)}
+  .next .ar{font-size:24px;color:var(--s1)}
 
   footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
   footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
@@ -78,7 +71,7 @@
     .art-head h1{font-size:32px}
     .prose{font-size:17px}
     .punch{font-size:22px}
-    .dialogue{padding-left:32px;font-size:14px}
+    .realisation{padding:20px 22px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
   }
@@ -100,69 +93,85 @@
   </nav>
 
   <article>
-    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s2/">Saison 02</a> / <span class="here">Article 03</span></div>
+    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s1/">Saison 01</a> / <span class="here">Article 03</span></div>
 
     <header class="art-head">
-      <div class="tag">SAISON 02 · TROUVER UN CHEMIN</div>
-      <h1>Le lycée ? RAS…<br>ou presque !</h1>
+      <div class="tag">SAISON 01 · ME DÉCOUVRIR</div>
+      <h1>En fait, j'étais<br>normale…</h1>
       <div class="art-meta">
         <span class="num">03</span>
-        <span>· 8 min de lecture</span>
-        <span>· #LYCÉE #MASKING #FAUXSELF</span>
+        <span>· 5 min de lecture</span>
+        <span>· #TDAHFÉMININ #MASKING #ÉVIDENCE</span>
       </div>
     </header>
 
     <div class="prose">
-      <p>Quand j'ai commencé à réfléchir à cette série d'articles, je me suis dit… bah, j'ai survolé le lycée, il ne s'est rien passé de fou… Il n'y a rien à raconter !</p>
+      <p>Quand il est rentré en maternelle, on nous a fait tester notre fils pour un HPI mais les résultats ont été trop hétérogènes pour être interprétés.</p>
 
-      <p>Mon mari m'a regardé en mode… « Whaaaaaat ? »</p>
+      <p>C'était une piste mais à l'époque je ne le savais pas.</p>
 
-      <div class="dialogue">
-        <p><span class="who">— Lui :</span> Attends, ce n'est pas en seconde que tu as fait la grève pendant un trimestre entier à organiser des manifs et séché les cours ?</p>
-        <p><span class="who">— Moi :</span> Euh… ben si !</p>
-        <p><span class="who">— Lui :</span> C'est pas au lycée que t'as commencé à sortir avec des mecs plus vieux que toi ?</p>
-        <p><span class="who">— Moi :</span> Ben si !</p>
-        <p><span class="who">— Lui :</span> Et c'est pas au lycée que tu t'habillais comme un mec et que t'avais les cheveux violets ?</p>
-        <p><span class="who">— Moi :</span> Si, si…</p>
+      <p>Et puis il y avait un truc qui ne collait pas complètement. Genre « oui mais pas que… »</p>
+
+      <p>Toute seule dans mon coin, je ne laissais pas tomber. Je voulais <strong><em>comprendre</em></strong> et être là pour lui. Un jour je suis tombée sur un flyer chez le médecin sur le TDAH. Les « vrais » symptômes.</p>
+
+      <p>Franchement j'en avais vraiment une idée très floue mais là…. En lisant le document, mon cœur a manqué un battement puis il a accéléré.</p>
+
+      <p>C'était ça ! Bien sûr que c'était ça ! Le diagnostic de mon fils a été une formalité.</p>
+
+      <p>Quand j'ai compris, toujours à force de chercher des infos valables, que c'était fortement héréditaire, je me suis penchée sur les symptômes des adultes. Mouais… Pas 100% convaincue. Et puis les spécificités du TDAH féminin. Ça commence à piquer.</p>
+
+      <p>Le masking. La fluctuation hormonale. Les changements de jobs tous les 18 mois.</p>
+
+      <p>Je me refais le film de ma vie, cette vie à chercher la raison pour laquelle je me sentais si différente et incapable de me plier au monde qui m'entoure.</p>
+
+      <div class="realisation">
+        <p>J'ai compris que mon SPM était bien supérieur à la moyenne.</p>
+        <p>Que mon sentiment de rejet était bien supérieur à la normale.</p>
+        <p>Que mes trous de mémoire étaient bien plus fréquents que pour les autres.</p>
+        <p>Que mes lubies étaient bien plus hétérogènes et aléatoires que des hobbys traditionnels.</p>
+        <p>Que ma concentration était bien plus intense mais pas quand je voulais.</p>
+        <p>Que tout ça était… <strong><em>la normalité d'une personne avec un TDAH</em></strong>.</p>
       </div>
 
-      <p>Rien de spécial quoi…</p>
+      <p class="punch">En fait j'étais normale.</p>
 
-      <p><span class="hl">Anonyme. Invisible.</span> C'était mon objectif à atteindre. Alors quand la grève de 98 est arrivée, j'ai très vite séché les cours pour traîner dehors (pardon maman). Jusqu'au jour où une élève de terminale me prend à partie.</p>
+      <p>Et moi qui me détestais de ne pas arriver à faire comme tout le monde…</p>
 
-      <p class="punch">« Si tu ne partages pas notre combat,<br>tu n'es qu'une profiteuse. »</p>
+      <p>J'ai beaucoup pleuré. Pleuré sur cette jeune femme qui voulait toujours bien faire et qui en faisait toujours trop. J'ai ressenti une grande bouffée de compassion pour elle. Et une énorme sensation de temps perdu.</p>
 
-      <p>J'ai eu honte. Sans le savoir, elle venait d'enrôler son plus jeune et fidèle soldat. Je m'étais fait un devoir de jouer le jeu à fond pour faire bonne impression, et surtout pour racheter le fait que j'avais utilisé « la cause » à des fins personnelles.</p>
+      <p>J'étais aussi super en colère.</p>
 
-      <p class="aparte">spoiler : j'ai redoublé</p>
+      <p>Puisque mon TDAH se voyait comme le nez au milieu de ma figure, <span class="hl">pourquoi est-ce qu'il aura fallu si longtemps pour le débusquer ?</span></p>
 
-      <p>Pendant 3 mois, je vivais à contre-courant de la majorité des élèves de seconde. Je suis rentrée dans la peau d'un nouveau personnage, rebelle et combatif. Puis le message lycéen que je portais de tout mon être a fini par être récupéré politiquement. J'ai perdu le sens. J'avais été trahie.</p>
+      <p>C'est pas faute d'avoir consulté pourtant : dépression, anxiété, burn-out même.</p>
 
-      <p>Mon personnage ne tenait plus. Alors j'en ai littéralement fait des caisses : cheveux courts ET fuchsia, puis orange, puis gris… Je voulais avoir l'air plus âgée, plus cool, plus fun. Je devais être intouchable. Inaccessible. J'ai changé de peau en croyant dur comme fer que là, c'était moi qui commandais.</p>
+      <p>Non. Il aura fallu que je passe par mon gamin pour enfin voir mon reflet dans un miroir.</p>
 
-      <p>J'ai commencé à me croire au-dessus des autres. Parce que <span class="hl-y">la vulnérabilité, c'était de la faiblesse. Et la faiblesse, je n'y avais pas le droit.</span> La duplicité envers les autres, c'est compliqué. Me mentir à moi-même, c'est beaucoup plus simple.</p>
+      <p>Alors quoi ?</p>
 
-      <p>Le plus drôle dans tout ça, c'est qu'au lycée je ne connaissais presque personne. Quand j'étais en 2e année à l'ESC, j'ai fait l'accueil des étudiants admissibles et tous ceux qui étaient passés par mon lycée m'ont reconnue. Visiblement j'avais marqué les esprits, et je l'ignorais complètement.</p>
+      <p>Il n'en fallait pas plus pour que je passe en <em>hyperfocus</em> sur le TDAH féminin. Podcasts, interviews, magazines, bouquin de psychologie, vulgarisation scientifique, Instagram (oui aussi). Tout y est passé et j'ai compris.</p>
+
+      <p>Ce qui m'est arrivé n'est pas un accident.</p>
+
+      <p>C'est <span class="hl-y">systémique</span>.</p>
+
+      <p>De « en colère » je suis passée à « furieuse ». Je devais faire quelque chose pour augmenter la visibilité du TDAH des femmes.</p>
+
+      <p>Déjà que j'étais une féministe un peu reloue, j'allais passer dans la catégorie féministe et porte-parole de ma condition neurologique.</p>
+
+      <p>Une vraie perle.</p>
+
+      <p>Vous n'êtes pas prêts pour ce qui arrive…</p>
     </div>
   </article>
 
-  <a class="next" href="../s2-02/" style="flex-direction:row-reverse">
-    <div style="text-align:right">
-      <div class="lbl">ARTICLE PRÉCÉDENT · S2</div>
-      <div class="ttl">Tuto de la collégienne normale… tu parles !</div>
-    </div>
-    <div class="ar" style="transform:scaleX(-1)">→</div>
-  </a>
-
-  <!-- Article suivant — à activer quand S2-04 sera publié
-  <a class="next" href="../s2-04/">
+  <a class="next" href="../s1-04/">
     <div>
-      <div class="lbl">ARTICLE SUIVANT · S2</div>
-      <div class="ttl">Prépa &amp; école de commerce</div>
+      <div class="lbl">ARTICLE SUIVANT · S1</div>
+      <div class="ttl">Evidemment</div>
     </div>
     <div class="ar">→</div>
   </a>
-  -->
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
@@ -174,7 +183,6 @@
 </div>
 
 <script>
-  // barre de progression de lecture
   window.addEventListener('scroll', () => {
     const doc = document.documentElement;
     const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
