@@ -84,6 +84,12 @@
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
   }
+
+  .nav-articles{max-width:680px;margin:54px auto 0;display:flex;gap:12px}
+  .nav-articles .next,.nav-articles .serie-next{flex:1;margin:0;max-width:none}
+  .prev{flex-direction:row-reverse;text-align:right}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 </style>
 </head>
 <body>
@@ -147,15 +153,17 @@
     </div>
   </article>
 
-  <!-- Article suivant — à activer quand S2-04 sera publié
-  <a class="next" href="../s2-02/" style="flex-direction:row-reverse;text-align:right">
+  <div class="nav-articles">
+  <a class="next prev" href="../s2-02/">
     <div class="ar" style="color:var(--s2)">←</div>
     <div>
       <div class="lbl">ARTICLE PRÉCÉDENT · S2</div>
       <div class="ttl">Tuto de la collégienne normale… tu parles !</div>
     </div>
   </a>
+  </div>
 
+  <!-- Article suivant — à activer quand S2-04 sera publié
   <a class="next" href="../s2-04/">
     <div>
       <div class="lbl">ARTICLE SUIVANT · S2</div>

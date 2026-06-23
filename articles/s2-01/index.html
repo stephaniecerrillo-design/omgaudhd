@@ -83,6 +83,14 @@
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
   }
+
+  .nav-articles{max-width:680px;margin:54px auto 0;display:flex;gap:12px}
+  .nav-articles .next,.nav-articles .serie-next{flex:1;margin:0;max-width:none}
+  .prev{flex-direction:row-reverse;text-align:right}
+  .s1-prev .ar{color:#FF2D78!important}
+  .s1-prev:hover{border-color:#FF2D78}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 </style>
 </head>
 <body>
@@ -145,7 +153,8 @@
     </div>
   </article>
 
-  <a class="next" href="../s1-05/" style="flex-direction:row-reverse;text-align:right">
+  <div class="nav-articles">
+  <a class="next prev s1-prev" href="../s1-05/">
     <div class="ar" style="color:var(--s2)">←</div>
     <div>
       <div class="lbl">ARTICLE PRÉCÉDENT · S1</div>
@@ -160,6 +169,7 @@
     </div>
     <div class="ar">→</div>
   </a>
+  </div>
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
