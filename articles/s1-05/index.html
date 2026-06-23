@@ -34,7 +34,7 @@
 
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
-  article{margin:0 auto}
+  article{max-width:760px;margin:0 auto}
   .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
   .crumb a{color:var(--encre-soft);text-decoration:none}
   .crumb a:hover{color:var(--encre)}
@@ -44,10 +44,10 @@
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
-  .art-meta{max-width:680px;display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
   .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
 
-  .prose{max-width:680px;font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
   .prose p{margin-bottom:24px}
   .prose .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
@@ -64,7 +64,7 @@
   .aparte::before{content:'— ';}
   .aparte::after{content:' —';}
 
-  .serie-next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s;border-left:4px solid var(--s2,#38C9A3)}
+  .serie-next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s;border-left:4px solid var(--s2,#38C9A3)}
   .serie-next:hover{box-shadow:0 4px 20px rgba(35,31,32,.08)}
   .serie-next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
   .serie-next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
@@ -84,14 +84,53 @@
     .brand{font-size:20px}
   }
 
-  .nav-articles{max-width:680px;margin:54px auto 0;display:flex;gap:12px}
-  .nav-articles .next,.nav-articles .serie-next{flex:1;margin:0;max-width:none}
+  .nav-articles{max-width:760px;margin:54px auto 0;display:flex;align-items:stretch}
+  .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
+  .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
   .prev{flex-direction:row-reverse;text-align:right}
   .art-head h1 .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s1)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:0}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s1)}
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s1);line-height:1.2;margin:2px 0 5px}
+  .serie-next .card-num{color:var(--s2,#38C9A3)}
+
+  .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
+  .ctx-bar.visible{transform:translateY(0)}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
+  .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
+  .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
+  .ctx-nav:hover{opacity:1;box-shadow:inset 0 0 0 999px currentColor}.ctx-nav:hover .ctx-arrow,.ctx-nav:hover .ctx-num{color:var(--creme)}
+  .ctx-spacer{width:74px;flex-shrink:0}
+  .ctx-arrow{font-size:12px}
+  .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
+  .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
+  .ctx-center:hover{opacity:.6}
+  .ctx-ep{color:var(--s1);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s1);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s1);cursor:pointer;color:var(--s1);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .fab.visible{opacity:1;transform:scale(1)}
+  .fab:hover{transform:scale(1.1)!important}
+  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
 </style>
 </head>
 <body>
+<div class="ctx-bar" id="ctx-bar">
+  <div class="ctx-inner">
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <div style="flex:1"></div>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·05</span>Explaining…</button>
+    <a href="../s1-04/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">04</span></a>
+    <a href="../s2-01/" class="ctx-nav ctx-next" style="color:#38C9A3"><span class="ctx-num">01</span><span class="ctx-arrow">→</span></a>
+    <div class="ctx-prog" id="ctx-prog"></div>
+  </div>
+</div>
+<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><span style="font-family:'Playfair Display',serif;font-weight:900;font-size:30px;line-height:1;display:block;margin-top:-4px">^</span></button>
 <div class="progress" id="progress"></div>
 <div class="wrap">
 
@@ -204,25 +243,6 @@
     </div>
   </article>
 
-  <div class="nav-articles">
-  <a class="next prev" href="../s1-04/">
-    <div class="ar" style="color:var(--s1)">←</div>
-    <div>
-      <div class="lbl">ARTICLE PRÉCÉDENT · S1</div>
-      <div class="ttl">Evidemment</div>
-    </div>
-  </a>
-
-
-  <a class="serie-next" href="../s2-01/" style="--s2:#38C9A3">
-    <div>
-      <div class="lbl">ARTICLE SUIVANT · S2</div>
-      <div class="ttl">On m'évite ?</div>
-    </div>
-    <div class="ar">→</div>
-  </a>
-  </div>
-
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
     <div>
@@ -233,11 +253,32 @@
 </div>
 
 <script>
+  const ctxBar = document.getElementById('ctx-bar');
+  const ctxProg = document.getElementById('ctx-prog');
+  const fab = document.getElementById('fab');
+  const progressEl = document.getElementById('progress');
+
+  new IntersectionObserver(
+    e => {
+      const hidden = !e[0].isIntersecting;
+      ctxBar.classList.toggle('visible', hidden);
+      fab.classList.toggle('visible', hidden);
+    },
+    { rootMargin: '-52px 0px 0px 0px' }
+  ).observe(document.querySelector('.art-head'));
+
+  const footer = document.querySelector('footer');
+
   window.addEventListener('scroll', () => {
     const doc = document.documentElement;
-    const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
-    document.getElementById('progress').style.width = scrolled + '%';
-  });
+    const pct = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    progressEl.style.width = pct + '%';
+    ctxProg.style.width = pct + '%';
+    const fTop = footer.getBoundingClientRect().top;
+    fab.style.bottom = fTop < window.innerHeight - 60
+      ? (window.innerHeight - fTop + 16) + 'px'
+      : '28px';
+  }, { passive: true });
 </script>
 </body>
 </html>
