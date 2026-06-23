@@ -34,21 +34,23 @@
 
   .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
-  article{max-width:680px;margin:0 auto}
+  article{margin:0 auto}
   .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
   .crumb a{color:var(--encre-soft);text-decoration:none}
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s2-deep)}
 
   .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
+  .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
+  .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
-  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta{max-width:680px;display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
   .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
 
-  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose{max-width:680px;font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
   .prose p{margin-bottom:24px}
-  .prose .hl{background:var(--s2);color:#fff;padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:1px 6px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
   .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
   .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
@@ -62,14 +64,11 @@
   .aparte::before{content:'— ';}
   .aparte::after{content:' —';}
 
-  .nav-articles{max-width:680px;margin:54px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .nav-art{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:20px 22px;text-decoration:none;color:var(--encre);transition:.18s;display:flex;flex-direction:column;gap:8px}
-  .nav-art:hover{border-color:var(--s2)}
-  .nav-art .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft)}
-  .nav-art .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:17px;line-height:1.3}
-  .nav-art.prev .ttl::before{content:'← ';color:var(--s2)}
-  .nav-art.nxt .ttl::after{content:' →';color:var(--s2)}
-  .nav-art.nxt{text-align:right}
+  .next{max-width:680px;margin:54px auto 0;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s2)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s2)}
 
   footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
   footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
@@ -83,8 +82,7 @@
     .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
-    .nav-articles{grid-template-columns:1fr}
-  }
+}
 </style>
 </head>
 <body>
@@ -94,7 +92,7 @@
   <nav>
     <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
     <div class="navlinks">
-      <a href="../../#series">Les séries</a>
+      <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
       <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -103,10 +101,9 @@
   </nav>
 
   <article>
-    <div class="crumb"><a href="../../#series">Les séries</a> / <a href="../../series/s2/">Saison 02</a> / <span class="here">Article 02</span></div>
 
     <header class="art-head">
-      <div class="tag">SAISON 02 · TROUVER UN CHEMIN</div>
+      <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
       <h1>Tuto de la collégienne normale… tu parles !</h1>
       <div class="art-meta">
         <span class="num">02</span>
@@ -156,16 +153,21 @@
     </div>
   </article>
 
-  <div class="nav-articles">
-    <a class="nav-art prev" href="../s2-01/">
-      <div class="lbl">PRÉCÉDENT · S2</div>
+  <a class="next" href="../s2-01/" style="flex-direction:row-reverse;text-align:right">
+    <div class="ar" style="color:var(--s2)">←</div>
+    <div>
+      <div class="lbl">ARTICLE PRÉCÉDENT · S2</div>
       <div class="ttl">On m'évite ?</div>
-    </a>
-    <a class="nav-art nxt" href="../s2-03/">
-      <div class="lbl">SUIVANT · S2</div>
-      <div class="ttl">À quoi ça ressemble dans ma tête ?</div>
-    </a>
-  </div>
+    </div>
+  </a>
+
+  <a class="next" href="../s2-03/">
+    <div>
+      <div class="lbl">ARTICLE SUIVANT · S2</div>
+      <div class="ttl">Le lycée ? RAS… ou presque !</div>
+    </div>
+    <div class="ar">→</div>
+  </a>
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
