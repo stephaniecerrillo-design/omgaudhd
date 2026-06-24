@@ -61,12 +61,24 @@
   footer a{color:var(--encre-soft);text-decoration:none}
   footer a:hover{color:var(--encre)}
 
+
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
   @media(max-width:680px){
     .serie-head h1{font-size:38px}
     .art{grid-template-columns:44px 1fr auto;gap:14px}
     .art .num{font-size:28px}
-    .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
+    .wrap{padding:0 16px}
+    .serie-head .thesis{font-size:18px}
+    footer{flex-direction:column;gap:14px;align-items:flex-start}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
   }
 </style>
 </head>
@@ -75,7 +87,8 @@
 
   <nav>
     <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
-    <div class="navlinks">
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
       <a href="../../#series" class="active">Saisons</a>
       <a href="../../a-propos/">À propos</a>
       <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
@@ -148,5 +161,25 @@
   </footer>
 
 </div>
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var nav = document.getElementById('navlinks');
+  if(!btn||!nav) return;
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  });
+})();
+</script>
 </body>
 </html>

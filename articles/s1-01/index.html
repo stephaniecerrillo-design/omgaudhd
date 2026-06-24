@@ -69,15 +69,66 @@
   footer a{color:var(--encre-soft);text-decoration:none}
   footer a:hover{color:var(--encre)}
 
-  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
+
+
+
+  /* ACCORDÉON NAV */
+  .nav-section{display:none;border-bottom:1px solid var(--hair)}
+  .nav-section-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;padding:14px 0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--encre);font-family:inherit;text-align:left}
+  .nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--sec)}
+  .nav-chevron{margin-left:auto;color:var(--sec);flex-shrink:0;transition:transform .2s;display:block}
+  .nav-section-btn.open .nav-chevron{transform:rotate(90deg)}
+  .nav-section-items{display:none;flex-direction:column;padding:0 0 14px 18px}
+  .nav-section-items.open{display:flex}
+  .nav-section-items a{font-size:13px;padding:8px 0;color:var(--encre);text-decoration:none;letter-spacing:.3px}
+  .nav-section-items a:hover{opacity:.6}
+  .ep-num{color:var(--sec);font-weight:700}
+  .nav-flat{display:none;flex-direction:column;gap:14px;padding-top:16px;align-items:flex-start}
+  .nav-flat a{color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.5px;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .nav-flat a:hover{border-bottom-color:var(--jaune)}
+  .nav-section-items a:hover{border-bottom-color:var(--sec) !important;opacity:1}
+  /* CTX BURGER */
+  .ctx-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .ctx-burger span{display:block;width:18px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .ctx-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .ctx-burger.open span:nth-child(2){opacity:0}
+  .ctx-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* NEXT MOBILE (mobile uniquement) */
+  .next-mobile{display:none}
+  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
+  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
+  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
+  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
+  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
+  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
+  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
+  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
+  .nm-ar{font-size:24px;transition:color .18s}
   @media(max-width:680px){
-    .art-head h1{font-size:32px
+    .art-head h1{font-size:32px;}
     .litanie{font-size:15px;padding-left:14px}
-  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
+    .next-mobile{display:block}
+    .wrap{padding:0 16px}
+    .art-meta{flex-wrap:wrap;gap:10px}
+    .nav-articles{flex-direction:column;gap:12px}
+    .nav-articles .next,.nav-articles .serie-next{width:100%;flex:none;margin-left:0 !important}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
+    .nav-dt{display:none}
+    .nav-section{display:block}
+    .nav-flat{display:flex}
   }
 
   .nav-articles{max-width:760px;margin:54px auto 0;display:flex;align-items:stretch}
@@ -108,6 +159,7 @@
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
   .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
+  @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
 </style>
 </head>
 <body>
@@ -117,21 +169,49 @@
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·01</span>Connais toi toi-même !</button>
     <a href="../s1-02/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">02</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
 </div>
-<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><span style="font-family:'Playfair Display',serif;font-weight:900;font-size:30px;line-height:1;display:block;margin-top:-4px">^</span></button>
+<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,10 7,4 13,10"/></svg></button>
 <div class="progress" id="progress"></div>
 <div class="wrap">
 
   <nav>
     <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
-    <div class="navlinks">
-      <a href="../../#series">Saisons</a>
-      <a href="../../a-propos/">À propos</a>
-      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      </a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a class="nav-dt" href="../../#series">Saisons</a>
+      <a class="nav-dt" href="../../a-propos/">À propos</a>
+      <div class="nav-section" style="--sec:#FF2D78">
+        <button class="nav-section-btn" data-target="nav-s1">
+          <span class="nav-dot"></span>
+          <span>SAISON 01 · ME DÉCOUVRIR</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s1">
+          <a href="../../articles/s1-01/"><span class="ep-num">S1·01</span> — Connais toi toi-même… facile à dire !</a>
+          <a href="../../articles/s1-02/"><span class="ep-num">S1·02</span> — Héréditaire</a>
+          <a href="../../articles/s1-03/"><span class="ep-num">S1·03</span> — En fait, j'étais normale…</a>
+          <a href="../../articles/s1-04/"><span class="ep-num">S1·04</span> — Evidemment</a>
+          <a href="../../articles/s1-05/"><span class="ep-num">S1·05</span> — Explaining…</a>
+        </div>
+      </div>
+      <div class="nav-section" style="--sec:#38C9A3">
+        <button class="nav-section-btn" data-target="nav-s2">
+          <span class="nav-dot"></span>
+          <span>SAISON 02 · TROUVER UN CHEMIN</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s2">
+          <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
+          <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
+          <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
+        </div>
+      </div>
+      <div class="nav-flat">
+        <a href="../../a-propos/">À propos</a>
+      </div>
     </div>
   </nav>
 
@@ -180,6 +260,17 @@
 
       <p class="punch">Vertige.<br>Déni.<br>Évidence.<br>Colère.</p>
     </div>
+
+  <div class="next-mobile" style="--nm-color:var(--s1)">
+    <a href="../s1-02/">
+      <div class="nm-meta">
+        <span class="nm-label">Article suivant</span>
+        <span class="nm-num" style="color:var(--s1)">S1·02</span>
+        <span class="nm-ttl">Héréditaire</span>
+      </div>
+      <span class="nm-ar" style="color:var(--s1)">→</span>
+    </a>
+  </div>
   </article>
 
   <footer>
@@ -218,6 +309,35 @@
       ? (window.innerHeight - fTop + 16) + 'px'
       : '28px';
   }, { passive: true });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var ctxBtn = document.getElementById('ctx-burger');
+  var nav = document.getElementById('navlinks');
+  if(!nav) return;
+  function openMenu(open){
+    nav.classList.toggle('open',open);
+    if(btn) btn.classList.toggle('open',open);
+    if(ctxBtn) ctxBtn.classList.toggle('open',open);
+  }
+  function toggle(){ openMenu(!nav.classList.contains('open')); }
+  if(btn) btn.addEventListener('click',toggle);
+  if(ctxBtn) ctxBtn.addEventListener('click',toggle);
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ openMenu(false); });
+  });
+  nav.querySelectorAll('.nav-section-btn').forEach(function(secBtn){
+    secBtn.addEventListener('click',function(){
+      var target=document.getElementById(this.dataset.target);
+      if(!target) return;
+      var isOpen=!target.classList.contains('open');
+      nav.querySelectorAll('.nav-section-items').forEach(function(el){el.classList.remove('open');});
+      nav.querySelectorAll('.nav-section-btn').forEach(function(el){el.classList.remove('open');});
+      if(isOpen){target.classList.add('open');secBtn.classList.add('open');}
+    });
+  });
+})();
 </script>
 </body>
 </html>
