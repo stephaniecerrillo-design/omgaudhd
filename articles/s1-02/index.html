@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s1-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -77,7 +77,9 @@
 
   @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:32px
+    .litanie{font-size:15px;padding-left:14px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
@@ -96,7 +98,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -112,12 +114,13 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·02</span>Héréditaire</button>
     <a href="../s1-01/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">01</span></a>
@@ -130,7 +133,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -152,62 +155,78 @@
       </div>
     </header>
 
+    
     <div class="prose">
       <p>Au début je ne veux pas le comprendre, ça me glisse dessus comme sur les plumes du proverbial canard. Parce que bon, je ne me reconnais pas dans les caractéristiques de mon fils. Enfin… pas complètement.</p>
 
-      <p>Sans vraiment m'en rendre compte, je commence à orienter mes recherches sur le TDAH chez les adultes, et les manifestations spécifiques des femmes. Je tombe alors sur les articles et les interventions du Pr Nader Perroud que j'ai bingé comme une bonne série Netflix.</p>
+      <p>Sans vraiment m'en rendre compte, je commence à orienter mes recherches sur le TDAH chez les adultes, et les manifestations spécifiques des femmes. Je tombe alors sur les articles et les interventions du Pr Nader Perroud que j'ai bingé comme une bonne série Netflix. <span class="hl-y">Le combo masking social et fluctuation hormonale…</span></p>
 
-      <p>Le combo <span class="hl">masking social</span> et fluctuation hormonale… Boum. Alors là on y est !</p>
+      <p>Boum 💥 Alors là on y est !</p>
 
       <p>Je décide ni une ni deux, de prendre rdv avec un(e) psychiatre spécialisé(e). Quelle galère… Je m'éloigne de ma ville et je finis par dénicher un gars qui veut bien me prendre, une fois que je serai passée par le tamis de la psychologue avec laquelle il travaille.</p>
 
       <p>Eh bien soit. J'irai.</p>
 
-      <p>Me voilà donc avec un questionnaire DIVA dans les pattes que j'ai envoyé à mes parents pour qu'ils le remplissent sur la partie "enfance". Mes géniteurs n'ont pas lu ma consigne et m'ont appelé l'un et l'autre avec un rire nerveux : "Mais pourquoi tu m'as envoyé ça ? Bien sûr que je coche toutes les cases ! Ha c'est pour toi ? Ha non ça ne me dit rien… !!!"</p>
+      <p>Me voilà donc avec un questionnaire DIVA dans les pattes que j'ai envoyé à mes parents pour qu'ils le remplissent sur la partie "enfance". Mes géniteurs n'ont pas lu ma consigne et m'ont appelé l'un et l'autre avec un rire nerveux : "Mais pourquoi tu m'as envoyé ça ? Bien sûr que je coche toutes les cases ! Ha c'est pour toi ? Ha non ça ne me dit rien... !!!"</p>
 
-      <p class="aparte">C'est que je cachais bien mon jeu mes cocos.</p>
+      <p>C'est que je cachais bien mon jeu mes cocos.</p>
+
+      <p>Bref.</p>
 
       <p>Je vais donc voir le psychiatre armée de mon questionnaire dûment complété et revu avec la psychologue. Il me regarde et me demande :</p>
 
       <div class="dialogue">
-        <p><span class="who">— Le psychiatre :</span> Pourquoi vous êtes là ?</p>
-        <p><span class="who">— Moi :</span> [Je lui refais l'histoire : mon fils, héréditaire, bla-bla-bla.]</p>
-        <p><span class="who">— Le psychiatre :</span> Je sais ça, c'est écrit dans votre dossier. Vous voulez quoi un diagnostic ? Bien sûr que vous êtes TDAH. Vous êtes contente ?!</p>
+        <p><span class="who">— Psychiatre :</span> Pourquoi vous êtes là ?</p>
       </div>
 
-      <p>Euh…</p>
+      <p>Alors, bonne élève je lui refais l'histoire écrite dans mon dossier : mon fils, héréditaire, bla-bla-bla.</p>
+
+      <p>Le mec m'interrompt agacé :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Psychiatre :</span> Je sais ça, c'est écrit dans votre dossier. Vous voulez quoi un diagnostic ? Bien sûr que vous êtes TDAH. Vous êtes contente ?!</p>
+      </div>
+
+      <p class="punch">Euh…</p>
 
       <p>Et le mec enchaîne de façon hyper aléatoire sur le fonctionnement du cerveau, se lève, se rassoit, me pose des questions sans écouter mes réponses et conclut 30 minutes plus tard d'un sobre :</p>
 
       <div class="dialogue">
-        <p><span class="who">— Le psychiatre :</span> Ça va j'ai répondu à vos questions ?</p>
+        <p><span class="who">— Psychiatre :</span> Ça va j'ai répondu à vos questions ?</p>
         <p><span class="who">— Moi :</span> Euh… Non.</p>
       </div>
 
-      <p>Clairement j'ai pété un plomb. Je pensais être une nana décousue mais là j'avais trouvé mon champion. Je lui ai donc dit ma façon de penser concernant sa manière de traiter des patients qui viennent le voir et qui sont vulnérables, et je suis partie avec mon diag "évident" et mes larmes en travers de la gorge. Vous devinerez sans mal qu'il n'a pas pris la peine de me raccompagner jusqu'à la sortie.</p>
+      <p>Clairement j'ai pété un plomb. Je pensais être une nana décousue mais là <span class="hl">j'avais trouvé mon champion</span>. Je lui ai donc dit ma façon de penser concernant sa manière de traiter des patients qui viennent le voir et qui sont vulnérables, et je suis partie avec mon diag "évident" et mes larmes en travers de la gorge. Vous devinerez sans mal qu'il n'a pas pris la peine de me raccompagner jusqu'à la sortie.</p>
 
-      <p>Sur le trajet du retour, j'étais très exaltée, bien contente de lui avoir rabattu son caquet et de ne pas m'être laissée faire pour une fois. À la maison, c'était pas la même limonade. Je m'effondre en larmes dans les bras de mon mari. <span class="hl-y">40 ans.</span> Il m'aura fallu 40 ans pour avoir un début de réponse ! Et en plus je la prends dans la tronche.</p>
+      <p>Sur le trajet du retour, j'étais très exaltée, bien contente de lui avoir rabattu son caquet et de ne pas m'être laissée faire pour une fois. À la maison, c'était pas la même limonade. Je m'effondre en larmes dans les bras de mon mari. 40 ans. Il m'aura fallu 40 ans pour avoir un début de réponse ! Et en plus je la prends dans la tronche.</p>
 
-      <p>Mon fils, 12 ans à l'époque, m'interpelle et me dit avec un air goguenard : "T'arrête pas de me dire que le TDAH c'est pas grave et que ça ne me définit pas. Et toi, tu fais tout un drama ?" <em>(On aime les ados.)</em></p>
+      <p>Mon fils, 12 ans à l'époque, m'interpelle et me dit avec un air goguenard :</p>
+
+      <div class="dialogue">
+        <p><span class="who">— l'Ado :</span> T'arrête pas de me dire que le TDAH c'est pas grave et que ça ne me définit pas. Et toi, tu fais tout un drama ? (<em>On aime les ados</em>)</p>
+      </div>
 
       <p>Alors je lui ai expliqué :</p>
 
       <div class="dialogue">
         <p><span class="who">— Moi :</span> Jusqu'à tes 9 ans tu te posais 1000 questions et tu étais triste de te sentir différent des autres. C'était dur ?</p>
-        <p><span class="who">— Lui :</span> Oui.</p>
+        <p><span class="who">— l'Ado :</span> Oui</p>
         <p><span class="who">— Moi :</span> Quand tu as eu ton diagnostic tu étais en colère, dans le déni. Tu ne voulais pas qu'on te voit comme un handicapé.</p>
-        <p><span class="who">— Lui :</span> C'est vrai.</p>
+        <p><span class="who">— l'Ado :</span> C'est vrai.</p>
         <p><span class="who">— Moi :</span> Maintenant 3 ans après, tu acceptes et tu navigues avec ton TDAH au quotidien. C'est plus un problème pour toi.</p>
-        <p><span class="who">— Lui :</span> Non, j'assume.</p>
-        <p><span class="who">— Moi :</span> Tu vois, moi là tout de suite, je suis dans tes baskets de quand tu avais 9 ans, sauf que j'en ai 40.</p>
+        <p><span class="who">— l'Ado :</span> Non, j'assume.</p>
+        <p><span class="who">— Moi :</span> Tu vois moi là tout de suite, je suis dans tes baskets de quand tu avais 9 ans, sauf que j'en ai 40.</p>
       </div>
 
       <p>Regard intense de l'ado…</p>
 
-      <p class="punch">« Je comprends. Du coup ça veut dire que tu ne sais pas du tout qui tu es… »</p>
+      <div class="dialogue">
+        <p><span class="who">— l'Ado :</span> Je comprends. Du coup ça veut dire que tu ne sais pas du tout qui tu es…</p>
+      </div>
 
-      <p>Voilà. Et maintenant je dois le découvrir…</p>
+      <p class="punch">Voilà. Et maintenant je dois le découvrir…</p>
     </div>
+
   </article>
 
   <footer>

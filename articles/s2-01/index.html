@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s2-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -75,9 +75,12 @@
   footer a{color:var(--encre-soft);text-decoration:none}
   footer a:hover{color:var(--encre)}
 
-  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
+  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{padding:26px 32px}.ctx-center{font-size:11px}}
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:32px
+    .litanie{font-style:italic;margin-bottom:10px}
+    .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
@@ -99,7 +102,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -115,12 +118,13 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·01</span>On m’évite ?</button>
     <a href="../s1-05/" class="ctx-nav ctx-prev" style="color:#FF2D78"><span class="ctx-arrow">←</span><span class="ctx-num">05</span></a>
@@ -133,7 +137,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -155,37 +159,41 @@
       </div>
     </header>
 
+    
     <div class="prose">
-      <p class="punch">« Si tu attrapes ma maladie, alors tes parents pourront appeler mes parents pour se plaindre. »</p>
+      <p class="punch">« Si tu attrapes ma maladie, alors tes parents pourront appeler mes parents pour se plaindre. »</p>
 
-      <p>Ça c'est moi dans la cour de récré, je devais avoir 4 ou 5 ans et je m'en rappelle comme si c'était hier.</p>
+      <p>Ça c’est moi dans la cour de récré, je devais avoir 4 ou 5 ans et je m’en rappelle comme si c’était hier.</p>
 
-      <p>J'avais de l'eczéma sur les mains. Beaucoup. Franchement c'était difficile à vivre, et le pire, c'est que je ne pouvais pas le cacher. Mes petits camarades avaient peur de jouer avec moi, de faire la ronde avec moi. Je trouvais ça absolument absurde alors au début, je m'en fichais. Mon truc à moi c'étaient les histoires. Les écouter puis les lire. Les autres ne savaient pas encore lire. Néanmoins, j'étais perdue sur le <strong>pourquoi</strong>. Pourquoi on ne jouait pas avec moi ? Alors j'ai posé la question à Alice pour savoir comment intégrer leur jeu.</p>
+      <p>J’avais de l’eczéma sur les mains. Beaucoup. Franchement c’était difficile à vivre, et le pire, c’est que je ne pouvais pas le cacher. Mes petits camarades avaient peur de jouer avec moi, de faire la ronde avec moi. Je trouvais ça absolument absurde alors au début, je m’en fichais. Mon truc à moi c’étaient les histoires. Les écouter puis les lire. Les autres ne savaient pas encore lire. Néanmoins, j’étais perdue sur le pourquoi. Pourquoi on ne jouait pas avec moi ? Alors j’ai posé la question à Alice pour savoir comment intégrer leur jeu.</p>
 
-      <div class="dialogue">
-        <p><span class="who">— Alice :</span> Ma mère m'a dit que ça s'attrape.</p>
-      </div>
+      <p>Elle m’a répondu : « ma mère m’a dit que ça s’attrape. »</p>
 
-      <p>WTF ?</p>
+      <p>WTF ?</p>
 
-      <p>Alors je lui ai attrapé le bras sans réfléchir, c'était complètement impulsif. Elle était terrorisée, a ouvert ses yeux et sa bouche en grand. Je me rappelle la colère que j'ai ressentie à ce moment-là, j'avais chaud, j'entendais mon cœur battre dans mes tempes. Puis je l'ai laissée là, tremblante, sans doute en train de réfléchir à ce qu'elle allait pouvoir dire à sa mère. Moi ? J'étais terrifiée à l'idée qu'elle se fasse gronder, et que je me fasse gronder aussi.</p>
+      <p class="punch">Alors je lui ai attrapé le bras sans réfléchir,</p>
 
-      <p>Il n'en a rien été : Alice n'a rien dit à sa mère et est devenue ma meilleure copine de maternelle. Elle avait compris, et les autres avec elle, que j'étais inoffensive.</p>
+      <p>c’était complètement impulsif. Elle était terrorisée, a ouvert ses yeux et sa bouche en grand. Je me rappelle la colère que j’ai ressentie à ce moment-là, j’avais chaud, j’entendais mon cœur battre dans mes tempes. Puis je l’ai laissée là, tremblante, sans doute en train de réfléchir à ce qu’elle allait pouvoir dire à sa mère. Moi ? J’étais terrifiée à l’idée qu’elle se fasse gronder, et que je me fasse gronder aussi.</p>
 
-      <p>J'étais rejetée par les enfants à cause d'une maladie de peau qu'ils ne comprenaient pas et dont ils avaient peur. Enfin, dont leurs parents avaient peur. Par ignorance ? Sûrement. Par bêtise ? Sans doute. Par méchanceté ? Je ne crois pas.</p>
+      <p>Il n’en a rien été : Alice n’a rien dit à sa mère et est devenue ma meilleure copine de maternelle. Elle avait compris, et les autres avec elle, que j’étais inoffensive.</p>
 
-      <p>Pendant l'année de CP, mes parents se sont séparés et j'ai déménagé. Souvent. Parfois en milieu d'année. À chaque fois, tout était à refaire. Une nouvelle routine, de nouveaux visages, de nouvelles questions sur mon eczéma : <em>Ça s'attrape ?</em></p>
+      <p>J’étais rejetée par les enfants à cause d’une maladie de peau qu’ils ne comprenaient pas et dont ils avaient peur. Enfin, dont leurs parents avaient peur. Par ignorance ? Sûrement. Par bêtise ? Sans doute. Par méchanceté ? Je ne crois pas.</p>
 
-      <p><span class="hl">Parfois je disais oui, juste pour avoir la paix.</span></p>
+      <p>Pendant l’année de CP, mes parents se sont séparés et j’ai déménagé. Souvent. Parfois en milieu d’année. A chaque fois, tout était à refaire. Une nouvelle routine, de nouveaux visages, de nouvelles questions sur mon eczéma : Ça s’attrape ?</p>
 
-      <p>Honnêtement, je ne peux pas dire que j'ai vraiment cherché à me faire des amis. Je ne sais même pas si c'était moi ou eux qui n'étaient pas intéressés. À force de déménager, je pense que je m'étais dit que ça n'en valait tout simplement pas la peine. Mais il y a une chose que je savais : faire le pitre, c'était un super moyen d'être appréciée. Alors je suis devenue clown. Comme mon doudou (oui c'était un clown, évidemment) ! J'ai tellement bien incarné mon personnage, que j'en ai reçu un autre de la part d'une de mes institutrices avant un énième déménagement. J'avais la cote avec les maîtresses. Avec les adultes en général.</p>
+      <p>Parfois je disais oui, juste pour avoir la paix.</p>
 
-      <p>En même temps, j'étais bonne à l'école, sage à la maison, sérieuse. Ça peut paraître contradictoire mais je faisais vraiment coexister : clown et sérieux. Je faisais de l'esprit, j'avais de la répartie, de l'humour. Un humour de grand. Ça me permettait d'être appréciée par les adultes et de ne pas trop courir après les autres enfants… que je ne comprenais pas, et qui me le rendaient bien.</p>
+      <p>Honnêtement, je ne peux pas dire que j’ai vraiment cherché à me faire des amis. Je ne sais même pas si c’était moi ou eux qui n’étaient pas intéressés. A force de déménager, je pense que je m’étais dit que ça n’en valait tout simplement pas la peine. Mais il y a une chose que je savais : faire le pitre, c’était un super moyen d’être appréciée. <span class="hl-y">Alors je suis devenue clown.</span> Comme mon doudou (<em>oui c’était un clown, évidemment</em>) ! J’ai tellement bien incarné mon personnage, que j’en ai reçu un autre de la part d’une de mes institutrices avant un énième déménagement. J’avais la cote avec les maitresses. Avec les adultes en général.</p>
 
-      <p>Pour moi ce n'était pas bizarre d'être avec des adultes tout le temps. J'avais l'impression d'appartenir à leur groupe. Aux adultes. Ce n'était pas le cas bien sûr. Je n'étais qu'une enfant, qu'on pouvait renvoyer dans sa chambre, juste après avoir débattu sur le sens de la vie pendant une demi-heure à l'apéro. Je me rappelle que c'était pour moi l'équivalent d'une grande gifle. D'aussi loin que je me souvienne, <span class="hl-y">je rêvais d'être une adulte pour pouvoir enfin rester et être à ma place.</span></p>
+      <p>En même temps, j’étais bonne à l’école, sage à la maison, sérieuse.</p>
 
-      <p>Heureusement qu'il y avait les bouquins, au moins je savais où j'étais et à quoi m'en tenir…</p>
+      <p>Ça peut paraitre contradictoire mais je faisais vraiment coexister : clown et sérieux. Je faisais de l’esprit, j’avais de la répartie, de l’humour. Un humour de grand. Ça me permettait d’être appréciée par les adultes et de ne pas trop courir après les autres enfants… que je ne comprenais pas, et qui me le rendaient bien.</p>
+
+      <p>Pour moi ce n’était pas bizarre d’être avec des adultes tout le temps. J’avais l’impression d’appartenir à leur groupe. Aux adultes. Ce n’était pas le cas bien sûr. <span class="hl">Je n’étais qu’une enfant, qu’on pouvait renvoyer dans sa chambre</span>, juste après avoir débattu sur le sens de la vie pendant une demi-heure à l’apéro. Je me rappelle que c’était pour moi l’équivalent d’une grande gifle. D’aussi loin que je me souvienne, je rêvais d’être une adulte pour pouvoir enfin rester et être à ma place.</p>
+
+      <p class="punch">Heureusement qu’il y avait les bouquins, au moins je savais où j’étais et à quoi m’en tenir…</p>
     </div>
+
   </article>
 
   <footer>

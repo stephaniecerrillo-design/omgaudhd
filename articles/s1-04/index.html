@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s1-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -77,7 +77,9 @@
 
   @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:32px
+    .litanie{font-size:15px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
@@ -96,7 +98,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -112,12 +114,14 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-style:italic;margin-bottom:10px}
+        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·04</span>Evidemment</button>
     <a href="../s1-03/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">03</span></a>
@@ -130,7 +134,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -152,79 +156,101 @@
       </div>
     </header>
 
+    
     <div class="prose">
-      <p>21 mars 2025. J'assiste à la soirée annuelle du Centre des Jeunes Dirigeants du Béarn sur le thème : Transformez les contraintes en opportunités. J'étais très excitée à l'idée de m'y rendre. Les conférences du CJD m'ont toujours beaucoup apporté, mis en lumière des choses que je ne voyais pas. Et puis je suis toujours contente de voir mes copines et copains. Bref. J'étais joie.</p>
+      <p><em>21 mars 2025.</em> J’assiste à la soirée annuelle du Centre des Jeunes Dirigeants du Béarn sur le thème : Transformez les contraintes en opportunités. J’étais très excitée à l’idée de m’y rendre. Les conférences du CJD m’ont toujours beaucoup apporté, mis en lumière des choses que je ne voyais pas. Et puis je suis toujours contente de voir mes copines et copains. Bref. J’étais joie.</p>
 
-      <p>L'invitée principale était Virginie Delalande qui venait nous parler de résilience et de dépassement de soi. Inconnue au bataillon en ce qui me concernait.</p>
+      <p>L’invitée principale était Virginie Delalande qui venait nous parler de résilience et de dépassement de soi. Inconnue au bataillon en ce qui me concernait.</p>
 
-      <p>La lumière s'éteint dans la salle, et Virginie illumine la scène. Quand elle commence à parler, je ne la comprends pas, parce que sa voix est différente, son élocution particulière (je ne savais pas qu'elle était sourde, ça surprend !). Petit à petit, elle m'embarque. Finalement, yeux et bouche grands ouverts, je fixe la scène et je ne la vois plus. <span class="hl-y">Je ME vois.</span></p>
+      <p>La lumière s’éteint dans la salle, et Virginie illumine la scène. Quand elle commence à parler, je ne la comprends pas, parce que sa voix est différente, son élocution particulière (<em>je ne savais pas qu’elle était sourde, ça surprend !</em>). Petit à petit, elle m’embarque. Finalement, yeux et bouche grands ouverts, je fixe la scène et je ne la vois plus. <span class="hl">Je ME vois.</span></p>
 
-      <p>Tout mon corps me dit : c'est là que tu dois être !</p>
+      <p>Tout mon corps me dit :</p>
 
-      <p>Mais c'est impossible. De quoi je pourrais bien parler ? C'est toujours pareil avec moi… je voulais être coach, formatrice et même enseignante. Mais pour enseigner quoi ? Et surtout à qui ? Et à quel titre ? Bref.</p>
+      <p class="punch">c’est là que tu dois être !</p>
 
-      <p>Je tourne la tête sur ma droite à la fin de la conférence et je dis à ma voisine, que j'avais rencontrée juste avant : « Oh lala, j'aimerais tellement faire ça comme boulot ! »</p>
+      <p>Mais c’est impossible. De quoi je pourrais bien parler ? C’est toujours pareil avec moi… je voulais être coach, formatrice et même enseignante. Mais pour enseigner quoi ? Et surtout à qui ? Et à quel titre ? Bref.</p>
+
+      <p>Je tourne la tête sur ma droite à la fin de la conférence et je dis à ma voisine, que j’avais rencontré juste avant : « Oh lala, j’aimerai tellement faire ça comme boulot ! »</p>
 
       <p>Elle sourit.</p>
 
-      <p>On avait un peu échangé avant la conférence et le courant était passé. Elle me demande pourquoi. Alors je me lance. Sans filet, ça sort tout seul. C'était la première fois que j'exprimais ça à voix haute : mon envie de transmettre et mon incapacité à me sentir légitime de le faire. J'enchaîne en lui parlant de mon TDAH, de la difficulté que j'ai eue pour me faire diagnostiquer, et puis finalement je lui ai tenu la jambe sur ce sujet pendant 15 bonnes minutes sans respirer.</p>
+      <p>On avait un peu échangé avant la conférence et le courant était passé.</p>
 
-      <p>Elle sourit encore, me regarde avec attention, et me dit :</p>
+      <p>Elle me demande pourquoi.</p>
+
+      <p>Alors je me lance. Sans filet, ça sort tout seul. C’était la première fois que j’exprimais ça à voix haute : mon envie de transmettre et mon incapacité à me sentir légitime de le faire. J’enchaîne en lui parlant de mon TDAH, de la difficulté que j’ai eue pour me faire diagnostiquer, et puis finalement je lui ai tenu la jambe sur ce sujet pendant 15 bonnes minutes sans respirer.</p>
+
+      <p>Elle sourit encore, me regarde avec attention, et me dit.</p>
 
       <div class="dialogue">
-        <p><span class="who">— Elle :</span> Evidemment ! C'est ça ton sujet.</p>
-        <p><span class="who">— Moi :</span> Je ne comprends pas ! De quoi tu parles ?</p>
-        <p><span class="who">— Elle :</span> Du TDAH féminin bien sûr ! Tu es tellement captivante quand tu en parles ! Vraiment je sens que c'est quelque chose qui t'anime et tu devrais tenter ! Je suis sûre que ça fonctionnerait.</p>
+        <p><span class="who">— Voisine :</span> Evidemment ! C’est ça ton sujet.</p>
+      </div>
+
+      <p>Je ne comprends pas ! De quoi elle parle ?</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Voisine :</span> Du TDAH féminin bien sûr ! Tu es tellement captivante quand tu en parles ! Vraiment je sens que c’est quelque chose qui t’anime et tu devrais tenter ! Je suis sûre que ça fonctionnerait.</p>
       </div>
 
       <p>Je la regarde, incrédule.</p>
 
-      <p>N'importe quoi. Je ne suis personne. Qui voudrait m'écouter déblatérer sur ce sujet ? Ok je suis bien documentée mais je ne suis ni médecin, ni psychologue… ni une actrice connue. Non vraiment je vois pas ce que je fais dans cette histoire.</p>
+      <p>N’importe quoi. <span class="hl-y">Je ne suis personne.</span> Qui voudrait m’écouter déblatérer sur ce sujet ? Ok je suis bien documentée mais je ne suis ni médecin, ni psychologue… ni une actrice connue. Non vraiment je vois pas ce que je fais dans cette histoire.</p>
 
       <p>Mais… ça reste dans ma tête…</p>
 
-      <p>Ce qu'il faut savoir à ce moment-là c'est que je suis dans une période un peu dense de ma vie. J'étais encore en train de digérer la liquidation de mon entreprise 6 mois plus tôt. Je cherchais un boulot salarié pour me prouver que je pouvais encore bosser et en même temps je venais de finir un accompagnement de 3 mois avec une dirigeante qui voulait opérer un repositionnement de son entreprise.</p>
+      <p>Ce qu’il faut savoir à ce moment-là c’est que je suis dans une période un peu dense de ma vie. J’étais encore en train de digérer la liquidation de mon entreprise 6 mois plus tôt. Je cherchais un boulot salarié pour me prouver que je pouvais encore bosser et en même temps je venais de finir un accompagnement de 3 mois avec une dirigeante qui voulait opérer un repositionnement de son entreprise.</p>
 
-      <p class="aparte">Oui je sais, ça fait beaucoup… mais je voulais rester occupée pour ne pas m'effondrer. Mon entreprise m'avait littéralement épuisée, et comme je ne sais pas me reposer j'ai préféré me noyer sous les projets. Très sain comme réaction on en conviendra.</p>
+      <p>Oui je sais, ça fait beaucoup… mais je voulais rester occupée pour ne pas m’effondrer. Mon entreprise m’avait littéralement épuisée, et comme je ne sais pas me reposer j’ai préféré me noyer sous les projets. Très sain comme réaction on en conviendra.</p>
 
-      <p>Anyway. J'en étais là.</p>
+      <p>Anyway. J’en étais là.</p>
 
-      <p>Tout se bouscule dans ma tête et je panique. Le boulot salarié, ce sera ma priorité. Donc est arrivé ce qui devait arriver : j'ai trouvé du boulot. Démarrage en juin. Les autres projets partent au placard.</p>
+      <p>Tout se bouscule dans ma tête et je panique. Le boulot salarié, ce sera ma priorité. Donc est arrivé ce qui devait arriver : j’ai trouvé du boulot. Démarrage en juin. Les autres projets partent au placard.</p>
 
-      <p>Sauf que… j'ai du mal à m'adapter à l'entreprise. Ça faisait 6 ans que je n'avais pas mis les pieds derrière un bureau pour avoir un salaire. J'avais du mal à m'intégrer et surtout, <span class="hl">je m'ennuyais à mourir toute la journée</span>.</p>
+      <p>Sauf que… j’ai du mal à m’adapter à l’entreprise. Ça faisait 6 ans que je n’avais pas mis les pieds derrière un bureau pour avoir un salaire. J’avais du mal à m’intégrer et surtout, je m’ennuyais à mourir toute la journée.</p>
 
-      <p>Mon instinct de survie s'est alors déclenché et je me suis lancé un défi — de taille : écrire une conférence sur le TDAH féminin. Jusqu'au bout.</p>
+      <p>Mon instinct de survie s’est alors déclenché et je me suis lancé un défi – de taille : écrire une conférence sur le TDAH féminin. Jusqu’au bout.</p>
 
       <p>La bonne blague.</p>
 
-      <p>Mon cerveau s'est allumé et l'hyperfocus qui va avec aussi. Des heures et des heures d'écriture, de relecture. Le jour. La nuit. Tout. Le. Temps.</p>
+      <p>Mon cerveau s’est allumé et l’hyperfocus qui va avec aussi. Des heures et des heures d’écriture, de relecture.</p>
 
-      <p>C'était difficile. Difficile parce que je ne me sentais pas légitime pour en parler. Je ne voulais pas sortir de mon rôle, ne pas donner de leçon, ne pas être une féministe trop engagée qui perdrait la moitié de mon auditoire, ne pas entrer trop dans mon intimité pour me préserver. J'avais peur. De mal faire, de ne pas assez bien écrire, de trop en dire. Avoir l'air prétentieuse, ou à côté de la plaque. Me faire attaquer pour des approximations…</p>
+      <div class="litanie-block">
+        <p class="litanie">Le jour.</p>
+        <p class="litanie">La nuit.</p>
+        <p class="litanie">Tout. Le. Temps.</p>
+      </div>
 
-      <p>Mais je ne lâche pas. Je cherche mon ton. Peaufine mon texte.</p>
+      <p>C’était difficile.</p>
 
-      <p>Je m'offre le luxe de prendre du temps pour écrire. Dans des endroits qui m'inspirent. Seule. Je me sens tellement à ma place dans ces moments-là. Je voudrais que ma vie soit comme ça tout le temps.</p>
+      <p>Difficile parce que je ne me sentais pas légitime pour en parler. Je ne voulais pas sortir de mon rôle, ne pas donner de leçon, ne pas être une féministe trop engagée qui perdrait la moitié de mon auditoire, ne pas entrer trop dans mon intimité pour me préserver. J’avais peur. De mal faire, de ne pas assez bien écrire, de trop en dire. Avoir l’air prétentieuse, ou à côté de la plaque. Me faire attaquer pour des approximations…</p>
 
-      <p>16 juillet 2025. C'est le départ d'un changement de vie radical. Nous allons partir en expatriation à la fin de l'année.</p>
+      <p>Mais je ne lâche pas. Je cherche mon ton. Peaufine mon texte. Bon, il faut être honnête, ChatGPT me coache aussi pas mal. Sans doute trop. Mais ça me rassure. Et surtout, j’avance.</p>
 
-      <p>Putain… j'avais pas prévu ça moi.</p>
+      <p>Je m’offre le luxe de prendre du temps pour écrire. Dans des endroits qui m’inspirent. Seule. Je me sens tellement à ma place dans ces moments là. Je voudrais que ma vie soit comme ça tout le temps.</p>
 
-      <p>Le temps presse. Je me fixe une deadline : je dois avoir terminé ma conférence et l'avoir dite devant du public au moins une fois avant notre départ.</p>
+      <p><em>16 juillet 2025.</em> C’est le départ d’un changement de vie radical. Nous allons partir en expatriation à la fin de l’année.</p>
 
-      <p>Chiche ?</p>
+      <p class="punch">Putain… j’avais pas prévu ça moi.</p>
 
-      <p>Cette urgence était exactement ce qu'il me fallait pour boucler la conférence. J'ai commencé à en parler autour de moi, à mes collègues, à mes amis du CJD, partout. Je me suis mise dans la m*** pour avoir non pas une mais 2 dates durant lesquelles j'allais dire ma conférence à DES GENS…</p>
+      <p>Le temps presse. Je me fixe une deadline : Je dois avoir terminé ma conférence et l’avoir dite devant du public au moins une fois avant notre départ.</p>
 
-      <p class="punch">Je l'ai fait. Je l'ai fait je l'ai fait ! J'ai adoré ça.</p>
+      <p>Chiche ?</p>
 
-      <p>Premier round avec des amis avec une médecin dans l'assistance. J'étais pétrifiée de trac, j'avais tellement peur qu'elle me juge… Il m'a fallu plusieurs verres pour me lancer. Petit à petit, sous leur regard bienveillant, je me suis détendue et j'ai déroulé mon texte avec de plus en plus de confiance. À la fin, j'ai bien cru que j'allais m'écrouler… Ensuite nous avons eu un échange très intéressant sur les statistiques, le fond de la conférence, et sa forme. C'était trop bien.</p>
+      <p>Cette urgence était exactement ce qu’il me fallait pour boucler la conférence, toi-même tu sais… J’ai commencé à en parler autour de moi, à mes collègues, à mes amis du CJD, partout. Je me suis mise dans la m**** pour avoir non pas une mais 2 dates durant lesquelles j’allais dire ma conférence à DES GENS…</p>
 
-      <p>Deuxième round devant une trentaine de personnes dans une association pour entrepreneurs en liquidation. Je pensais clôturer la séance mais ils m'ont prise par surprise et j'ai ouvert les hostilités. Finalement c'était mieux, je n'ai pas eu le temps de stresser. Cette fois je me sentais mieux. À ma place. Heureuse. L'échange qui a eu lieu après était magique. Quand une coach, autiste, est venue me serrer dans les bras et me dire : j'avais envie de me lever et de dire « oui ! c'est ça ! Bravo ».</p>
+      <p>Je l’ai fait. Je l’ai fait ! JE L’AI FAIT !</p>
 
-      <p>J'étais tellement fière de l'avoir fait. J'étais gonflée à bloc ! Et très heureuse de rentrer me coucher…</p>
+      <p class="punch">J’ai adoré ça.</p>
 
-      <p>Pourtant, j'allais devoir me réinventer. Encore une fois. De l'autre côté de l'Atlantique cette fois.</p>
+      <p>Premier round avec des amis avec une médecin dans l’assistance. J’étais pétrifiée de trac, j’avais tellement peur qu’elle me juge… Il m’a fallu plusieurs verres pour me lancer. Petit à petit, sous leur regard bienveillant, je me suis détendue et j’ai déroulé mon texte avec de plus en plus de confiance. A la fin, j’ai bien cru que j’allais m’écrouler... Ensuite nous avons eu un échange très intéressant sur les statistiques, le fond de la conférence, et sa forme. C’était trop bien.</p>
+
+      <p>Deuxième round devant une trentaine de personnes dans une association pour entrepreneurs en liquidation. Je pensais clôturer la séance mais ils m’ont prise par surprise et j’ai ouvert les hostilités. Finalement c’était mieux, je n’ai pas eu le temps de stresser. Cette fois je me sentais mieux.  A ma place. Heureuse. L’échange qui a eu lieu après était magique. Quand une coach, autiste est venue me serrer dans ses bras et me dire : j’avais envie de me lever et de dire « oui ! c’est ça ! Bravo ».</p>
+
+      <p>J’étais tellement fière de l’avoir fait. J’étais gonflée à bloc ! Et très heureuse de rentrer me coucher…</p>
+
+      <p>Pourtant j’allais devoir me réinventer... de l’autre côté de l’Atlantique cette fois.</p>
     </div>
+
   </article>
 
   <footer>

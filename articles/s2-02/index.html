@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s2-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s2-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -75,9 +75,13 @@
   footer a{color:var(--encre-soft);text-decoration:none}
   footer a:hover{color:var(--encre)}
 
-  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
+  @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{padding:26px 32px}.ctx-center{font-size:11px}}
+  .litanie{font-style:italic;margin-bottom:10px}
+  .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
+
   @media(max-width:680px){
     .art-head h1{font-size:28px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
@@ -96,7 +100,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -112,12 +116,13 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
+  
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·02</span>Tuto de la collégienne…</button>
     <a href="../s2-01/" class="ctx-nav ctx-prev" style="color:var(--s2)"><span class="ctx-arrow">←</span><span class="ctx-num">01</span></a>
@@ -130,7 +135,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -144,7 +149,7 @@
 
     <header class="art-head">
       <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
-      <h1>Tuto de la collégienne normale… tu parles !</h1>
+      <h1>Tuto de la collégienne normale…<br>tu parles !</h1>
       <div class="art-meta">
         <span class="num">02</span>
         <span>· 6 min de lecture</span>
@@ -152,48 +157,76 @@
       </div>
     </header>
 
+    
     <div class="prose">
-      <p>Après les années de primaire à déménager à répétition, me voilà balancée dans un grand collège. Je n'en menais pas large.</p>
 
-      <p>Et là… j'ai rencontré Emilie.</p>
+      <p>Comment le collège m’a poussée à créer mon premier personnage, avant même que je sache que ça s’appelait du masking.</p>
 
-      <p>Emilie c'était une relation fusionnelle. Le genre de complicité immédiate, absolue, où on se comprend sans vraiment expliquer. On était tout le temps ensemble. Inséparables. Ce n'était pas compliqué à comprendre : Emilie était ma première vraie amie. Ma première relation où j'avais le sentiment d'appartenir, d'être choisie pour ce que j'étais.</p>
+      <p class="punch">« Si tu continues comme ça, tu finiras en prison. »</p>
 
-      <p>Et puis… Emilie est partie. Du jour au lendemain.</p>
+      <p>Ma prof d’Allemand en 4e alors que je me faisais harceler en cours.</p>
 
-      <p>Pas de dispute. Pas d'explication. Juste une amitié qui s'arrête, comme ça, sans crier gare. Elle a changé de groupe. Elle ne m'a plus adressé la parole de la même façon. J'ai mis un temps fou à comprendre ce qui s'était passé et, surtout, à ne plus me demander ce que j'avais fait de mal. <span class="hl">Parce que bien sûr, c'était forcément ma faute.</span></p>
+      <p>Le collège n’a pas été une sinécure. Doux pléonasme…</p>
 
-      <p>En attendant, il fallait survivre au collège.</p>
+      <p>J’avais été parachutée dans un immense collège en 6e. Je ne connaissais évidemment personne et on m’a assez rapidement fait comprendre que je n’avais pas le bon pédigrée pour m’intégrer.</p>
 
-      <p>J'ai regardé autour de moi et j'ai fait ce que je savais faire depuis la maternelle : j'ai observé. J'ai observé les filles qui avaient l'air normale. Les filles qui avaient un groupe. Les filles qu'on ne regardait pas de travers. J'ai étudié leurs codes.</p>
+      <p>Lunettes, appareil dentaire et chevelure de lion indompté venaient compléter le tableau de l’eczéma et de mon look de première de la classe. Autant porter un panneau « harcelez moi » autour du cou !</p>
 
-      <p class="aparte">Le jean. La coiffure. La façon de parler. La musique qu'on écoute. Ce qu'on aime, ce qu'on n'aime pas.</p>
+      <p>Le collège… rien ne nous prépare à ça.</p>
 
-      <p>Et j'ai commencé à copier. Méthodiquement. Consciencieusement.</p>
+      <p>Au début, je ne me posais pas trop de questions et je pensais que tout allait bien se passer. J’étais anxieuse bien sûr mais bon, c’est normal quand on change de ville et d’école… Je n’en étais pas à mon coup d’essai non plus…</p>
 
-      <p>J'ai demandé à avoir un jean. À me faire lisser les cheveux. J'ai mis de côté mes lectures, mes lubies, mes centres d'intérêt d'adulte miniature. J'ai appris à rire des choses qu'on était censé trouver drôles. À m'intéresser à ce qui était supposé m'intéresser.</p>
+      <p>Dès le premier jour, j’ai pris de plein fouet la méchanceté des collégiens qui m’entouraient. Insultée, et ignorée. Juste parce que je respirais.</p>
 
-      <p class="punch">Je construisais un personnage. Et j'étais douée.</p>
+      <p class="punch">Ça partait carrément bien !</p>
 
-      <p>J'ai changé d'école. Nouveau départ, nouveau masque. Cette fois j'avais décidé d'incarner quelque chose de différent : la fille un peu rebelle, un peu bad-ass. Pas méchante, mais avec du caractère. Quelqu'un qu'on n'embête pas.</p>
+      <p>Et puis Emilie m’est tombée dessus. Jolie, rebelle et très cool. Tout le contraire de moi. Personne ne s’en prenait à elle. Pour une obscure raison, elle s’est entichée de moi et nous sommes devenues amies, de cette façon fusionnelle, déraisonnable et absolue que peuvent avoir les adolescentes. Tout nous opposait et je pense que c’est ce qui nous a plu l’une chez l’autre. La plus jeune de sa fratrie, elle portait des jeans, disait des gros mots, et admirait mon vocabulaire (<em>en vrai ça aide moyen à se faire des potes quand tu as un vocabulaire d’adulte à 10 ans</em>). Nous avions des choses à nous apprendre, nous pouvions nous entraider. Alors on a fait un deal : je lui apprenais les bonnes manières et du vocabulaire, elle m’apprenait à être cool, et elle prenait ma défense auprès des autres. J’étais sauvée. Pour moi c’était le jackpot : j’allais avoir un « tuto de la collégienne normale », et une amie pour la vie.</p>
 
-      <p>Ça a plutôt bien marché.</p>
+      <p>Mais le naturel est tenace. Nous étions complètement auto-suffisantes et nous ne cherchions absolument pas à nous faire d’autres amis. Et puis tout s’est arrêté aussi soudainement que ça a démarré. Elle est apparue et elle a disparu de ma vie, sans que je comprenne pourquoi. J’étais devenue persona non grata. Sans préavis.</p>
 
-      <p>J'ai intégré un groupe. J'avais une réputation. Les gens savaient qui j'étais — enfin, qui j'avais décidé d'être. C'était reposant, paradoxalement. Moins d'imprévisible. Moins de questions auxquelles je ne savais pas répondre.</p>
+      <p>Qu’est-ce que j’avais bien pu faire ? Ne pas faire ? Dire ? Ne pas dire ?</p>
 
-      <p>Sauf que.</p>
+      <p>C’était comme ça.</p>
 
-      <p>Ce que je ne savais pas encore, c'est que tout ça avait un nom. Que ce travail permanent d'observation, d'analyse, de copie et d'adaptation des codes sociaux — ce travail que je faisais naturellement, instinctivement, depuis que j'avais conscience d'être différente — s'appelait le <span class="hl-y">masking</span>.</p>
+      <p>J’étais dévastée comme après un premier chagrin d’amour. Parce que je l’avais perdue oui, mais surtout parce que je ne comprenais pas pourquoi ? En plus, je n’étais toujours pas une collégienne cool. Je me sentais seule, dans un monde qui me rejetait sans explication.</p>
 
-      <p>Je m'étais mise en apnée pour ressembler à tout le monde.</p>
+      <p>De mon point de vue, Emilie était cool, populaire, bien intégrée au collège. C’était complètement faux. Le fait que nous ne nous mélangions pas aux autres quand nous étions ensemble en était la preuve. Si on avait été si différentes l’une de l’autre, elle aurait fait partie d’une bande de potes. Mais ça, je n’étais pas encore capable de le reconnaitre.</p>
 
-      <p>Et comme toutes les apnées, ça se termine. Il faut bien remonter à la surface pour respirer.</p>
+      <p>Alors je l’ai singée. <span class="hl-y">J’ai fait comme si j’étais cool</span>, blasée, pour me fondre dans la masse. Mais ça sonnait faux. Tellement faux...</p>
 
-      <p>Je ne le savais pas encore. Mais la facture, elle arrivait.</p>
+      <p>Pourtant je mettais des jeans ! (<em>Tu noteras l’importance capitale du jean pour avoir l’air cool</em>). J’ai même essayé d’anticiper et de corriger ce qui pouvait déplaire. Par exemple, je complexais à cause de mes cheveux frisés, alors je les ai fait lisser. À les brûler. Mais je ne faisais pas illusion… je crois même que c‘était pire.</p>
+
+      <p>Je dérangeais. Je le voyais, je le ressentais. Parfois je me disais que je me faisais des idées, alors je redoublais d’efforts. Sourire, tentative d’intégrer une conversation. Du coup on me disait de partir. Ce n’était pas si cool d’essayer d’être cool.</p>
+
+      <p>J’étais la caricature de la proie parfaite. On m’a menacée, menti, volé mes devoirs, dénoncée à tort, poussée à faire des bêtises qui m’empêchaient de dormir la nuit. Ils se sont passé le mot pour me faire vivre un enfer, jusqu’à ce que je change d’établissement. Épuisée d’avoir tant essayé. Pour rien.</p>
+
+      <p>Changement de décor, on passe du public au privé catholique. Je prends une décision : il est absolument hors de question que ça recommence. Je fais table rase du passé.</p>
+
+      <div class="litanie-block">
+        <p class="litanie">On se moque de mes cheveux ? Je les coupe à la garçonne.</p>
+        <p class="litanie">On se moque de mes fringues ? Je change de look complètement.</p>
+        <p class="litanie">On se fout de ma politesse et de ma ringardise ? Je deviens une ado grande gueule et nonchalante.</p>
+      </div>
+
+      <p>On ne me prendra plus pour une victime. Jamais.</p>
+
+      <p>LOL.</p>
+
+      <p>J’arrive en 3e avec un air conquérant et « Bad’ass » en étant terrifiée à l’intérieur. Et si ça ne marchait pas ? Ça va se voir que je ne suis pas vraiment comme ça, c’est sûr. Mais non ! Ça fonctionne ! Manifestement j’ai appris de mes erreurs. Je gagne en assurance et je me prends au jeu. J’aime avoir cette sensation de maîtrise, de contrôle. Je peux choisir de montrer ce que je veux à l’extérieur, <span class="hl">peu importe ce qui se passe à l’intérieur</span>. Je ne cherche plus à me faire des amis, je me mets en apnée. Je cherche seulement à passer le cap du collège et à sortir vivante de cet enfer.</p>
+
+      <p>Au final, j’ai fait tout ce qu’il fallait pour aller de l’avant. Mes notes remontées, le brevet passé. Je pensais dur comme fer que j’étais prête pour affronter le lycée.</p>
+
+      
+
+      <p>Ce que je souhaitais par-dessus tout à ce moment-là, c’était retourner dans une grande structure pour pouvoir être anonyme. Qu’on m’oublie.</p>
+
+      <p class="punch">Que je puisse me laisser un peu respirer.</p>
+    
     </div>
+
   </article>
 
-  <footer>
+    <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
     <div>
       <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>

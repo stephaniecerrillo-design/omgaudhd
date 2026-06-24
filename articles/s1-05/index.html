@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s1-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -76,7 +76,9 @@
   footer a:hover{color:var(--encre)}
 
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:32px
+    .litanie{font-size:15px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .dialogue{padding-left:32px;font-size:14px}
@@ -101,7 +103,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -117,12 +119,14 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
+  .litanie{font-style:italic;margin-bottom:10px}
+        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·05</span>Explaining…</button>
     <a href="../s1-04/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">04</span></a>
@@ -135,7 +139,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -157,90 +161,116 @@
       </div>
     </header>
 
+    
     <div class="prose">
-      <p>Partir en expatriation en famille, ce n'est pas une petite décision. Et psychologiquement, je sentais que j'avais besoin d'un coup de pouce.</p>
+      <p>Partir en expatriation en famille, ce n’est pas une petite décision. Et psychologiquement, je sentais que j’avais besoin d’un coup de pouce.</p>
 
-      <p>Je suis donc allée chercher de l'aide. Et des médocs.</p>
+      <p>Je suis donc allée chercher de l’aide.</p>
 
-      <p>Attention, je ne fais pas l'apologie des médocs, mais disons qu'à un moment, être contre pour être contre, c'est un peu limité comme motif. J'en avais besoin. Je le savais. Le psychiatre aussi, mais voyant que j'étais récalcitrante, ce petit malin a eu un argument imparable :</p>
+      <p class="punch">Et des médocs.</p>
+
+      <p>Attention, je ne fais pas l’apologie des médocs, mais disons qu’à un moment, être contre pour être contre, c’est un peu limité comme motif. J’en avais besoin. Je le savais. Le psychiatre aussi, mais voyant que j’étais récalcitrante, ce petit malin a eu un argument imparable :</p>
 
       <div class="dialogue">
-        <p><span class="who">— Le psychiatre :</span> Ça devrait lisser votre SPM…</p>
+        <p><span class="who">— Psychiatre :</span> Ça devrait lisser votre SPM…</p>
       </div>
 
-      <p>Oh My F****** God ! Je peux ne pas m'effondrer et me transformer en dragon fumant entre J16 et J21 ? Sérieux ? Allez-y docteur, prescrivez-moi vite cet antidépresseur !</p>
+      <p>Oh My F**** God ! Je peux ne pas m’effondrer et me transformer en dragon fumant entre J16 et J21 ? Sérieux ? Allez-y docteur, prescrivez-moi vite cet antidépresseur !</p>
 
-      <p class="aparte">Bon, j'ai quand même demandé confirmation à ma sœur (pharmacienne) pour vérifier que le type ne m'avait pas embobinée. Il ne m'avait pas menti.</p>
+      <p>Bon, j’ai quand même demandé confirmation à ma sœur (<em>pharmacienne</em>) pour vérifier que le type ne m’avait pas embobinée.</p>
 
-      <p>Mieux, il m'avait dit de ne pas m'attendre à des miracles. Sauf que je me suis rendue compte que je n'avais <strong><em>jamais</em></strong> ressenti un tel <strong><em>calme</em></strong>, un tel recul. Comme si d'un coup, je pouvais réagir sans sur-réagir. Penser sans boucler à l'infini… enfin la plupart du temps.</p>
+      <p>Spoiler alert. Il ne m’avait pas menti !</p>
+
+      <p>Mieux, il m’avait dit de ne pas m’attendre à des miracles. Sauf que je me suis rendue compte que je n’avais jamais ressenti un tel calme, un tel recul. Comme si d’un coup, je pouvais réagir sans sur-réagir. <span class="hl">Penser sans boucler à l’infini…</span> enfin la plupart du temps.</p>
 
       <p><em>Décembre 2025, grand départ.</em></p>
 
-      <p>On traverse l'Atlantique… et je me perds quelque part en chemin.</p>
+      <p>On traverse l’Atlantique… et je me perds quelque part en chemin.</p>
 
       <p>Trois mois que nous sommes arrivés et déjà, la couture pète.</p>
 
-      <p>Je savais que ce ne serait pas un long fleuve tranquille cette expat, mais j'étais optimiste et, comme toujours, je me suis mise une pression de dingo : je voulais être le <strong><em>pilier inébranlable</em></strong> pour tout le monde. J'ai plutôt bien géré au début.</p>
+      <p>Je savais que ce ne serait pas un long fleuve tranquille cette expat, mais j’étais optimiste et, comme toujours, je me suis mise une pression de dingo : je voulais être le pilier inébranlable pour tout le monde. J’ai plutôt bien géré au début.</p>
 
-      <p>La lune de miel a duré 3 mois. J'ai fini par imploser.</p>
+      <p>La lune de miel a duré 3 mois. J’ai fini par imploser.</p>
 
-      <p>Comment ? En faisant le minimum ! Non vraiment ! Pas grand-chose : les enfants gérés, le ménage fait, le frigo plein, le linge propre plié et rangé dans les placards. Bref, le quotidien normal d'une femme au foyer (je les <strong>admire</strong> ces femmes…).</p>
+      <p>Comment ? En faisant le minimum ! Non vraiment ! Pas grand-chose : les enfants gérés, le ménage fait, le frigo plein, le linge propre plié et rangé dans les placards. Bref, le quotidien normal d’une femme au foyer (<em>je les admire ces femmes…</em>).</p>
 
-      <p>Le déménagement dans la nouvelle maison ? J'ai géré. L'arrivée des meubles en mars ? Pas de problème, je vais gérer. <em>Non en vrai ça commençait à tirer.</em> La décharge de stress des enfants après l'école ? <em>Ça vaaaa. C'était l'Enfer.</em></p>
+      <p>Le déménagement dans la nouvelle maison ? J’ai géré.</p>
 
-      <p>Les enfants ont enchaîné les maladies l'un après l'autre, les nerfs de tout le monde ont commencé à lâcher et j'avais l'impression de me noyer. Je me sentais nulle, incapable de protéger mes enfants.</p>
+      <p>L’arrivée des meubles en mars ? Pas de problème, je vais gérer. Non en vrai ça commençait à tirer.</p>
 
-      <p>Les antidépresseurs ne faisaient plus d'effet mais comme j'étais très à l'aise avec mon déni, j'ai quand même voulu commencer le traitement TDAH. Attention, on est tous différents mais pour moi, <strong><em>mauvaise magie</em></strong>. Un cœur qui s'emballe, des insomnies, des larmes. Je n'y arrivais plus.</p>
+      <p>La décharge de stress des enfants après l’école ? Ça vaaaa. C’était l’Enfer.</p>
 
-      <p>Quand on est neuroA on passe <em>un peu</em> de temps à se documenter… Depuis quelques semaines j'étais intriguée par le concept de <span class="hl-y">AuDHD</span>, la co-occurrence du TDAH et de l'autisme.</p>
+      <p>Les enfants ont enchaîné les maladies l’un après l’autre, les nerfs de tout le monde ont commencé à lâcher et j’avais l’impression de me noyer. Je me sentais nulle, incapable de protéger mes enfants.</p>
 
-      <p>J'avais déjà demandé à mon psychiatre en France s'il était possible que je sois également autiste. Il l'a balayé d'un revers de main :</p>
+      <p>Les antidépresseurs ne faisaient plus d’effet mais comme j’étais très à l’aise avec mon déni, j’ai quand même voulu commencer le traitement TDAH. Attention, on est tous différents mais pour moi, mauvaise magie. Un cœur qui s’emballe, des insomnies, des larmes. Je n’y arrivais plus.</p>
+
+      <p>Quand on est neuroA on passe un peu de temps à se documenter… Depuis quelques semaines j’étais intriguée par le concept de AuDHD, la co-occurrence du TDAH et de l’autisme.</p>
+
+      <p>J’avais déjà demandé à mon psychiatre en France s’il était possible que je sois également autiste. Il l’a balayé d’un revers de main :</p>
 
       <div class="dialogue">
-        <p><span class="who">— Le psychiatre :</span> Vous êtes seulement allergique à la bêtise.</p>
+        <p><span class="who">— Psychiatre :</span> Vous êtes seulement allergique à la bêtise.</p>
         <p><span class="who">— Moi :</span> Ah bon ?</p>
       </div>
 
-      <p>Idem ici, j'ai reposé la question à ma psychiatre.</p>
+      <p>Idem ici, j’ai reposé la question à ma psychiatre.</p>
 
       <div class="dialogue">
-        <p><span class="who">— La psychiatre :</span> Très peu probable, vous fonctionnez trop bien.</p>
+        <p><span class="who">— Psychiatre :</span> Très peu probable, vous fonctionnez trop bien.</p>
         <p><span class="who">— Moi :</span> Vous trouvez ?</p>
       </div>
 
-      <p>Du coup je cherchais de mon côté, et comme je ne suis pas non plus une adepte du diagnostic par les contenus des réseaux sociaux, je me suis cherché un bouquin <strong>sérieux</strong>.</p>
+      <p>Du coup je cherchais de mon côté, et comme je ne suis pas non plus une adepte du diagnostic par les contenus des réseaux sociaux, je me suis cherchée un bouquin sérieux.</p>
 
-      <p>J'ai trouvé <strong><em>Explaining AuDHD</em></strong> de Khurram Sadiq. Autant dire que le gars, c'est pas <em>Jo le Clodo</em> : psychiatre spécialisé, AuDHD lui-même. Tous les forums et avis s'accordent à dire que son livre est barbant et répétitif…</p>
+      <p>J’ai trouvé Explaining AuDHD de Khurram Sadiq.</p>
 
-      <p>J'ai passé tout le bouquin à chercher ce qui ne collait pas avec moi. Vraiment, je n'étais pas en mode <em>oh oui ! oh oui !</em> Les gens qui pensent qu'on est comme ça se gourent complètement. On est plutôt en mode :</p>
+      <p>Autant dire que le gars, c’est pas Jo le Clodo : psychiatre spécialisé, AuDHD lui-même. Tous les forums et avis s’accordent à dire que son livre est barbant et répétitif…</p>
 
-      <p class="punch">« Oh putaiiiiiin…… Mais non… Ohhhhh… Ça aussi ? »</p>
+      <p>J’ai passé tout le bouquin à chercher ce qui ne collait pas avec moi. Vraiment, je n’étais pas en mode</p>
 
-      <p>En vrai de vrai, comme dirait mon fils. On n'est pas heureux de coller au tableau clinique. On est à la fois soulagé <strong>ET</strong> désespéré !</p>
+      <p><em>Oh oui ! oh oui !</em></p>
 
-      <p>Bref. C'est trop d'un coup.</p>
+      <p>Les gens qui pensent qu’on est comme ça se gourent complètement.</p>
 
-      <p>La composante autiste de mon profil, je la soupçonnais depuis longtemps (<em>toujours</em>) mais c'est pas glamour, et puis je ne collais pas à l'image de Sheldon Cooper. Depuis peu, plusieurs femmes influentes ont commencé à en parler et je me reconnaissais déjà plus dans leurs profils. Tellement que quand j'en parle à ma sœur elle me dit :</p>
+      <p>On est plutôt en mode.</p>
+
+      <p><em>Oh putaiiiiiin…… Mais non... Ohhhhh… Ça aussi ?</em><br>Suivi d’un « Palm face » sur l’absurdité de la vie.</p>
+
+      <p>En vrai de vrai, comme dirait mon fils. <span class="hl-y">On n’est pas heureux de coller au tableau clinique</span>. On est à la fois soulagé ET désespéré !</p>
+
+      <p>Bref.</p>
+
+      <p class="punch">C’est trop d’un coup.</p>
+
+      <p>La composante autiste de mon profil, je la soupçonnais depuis longtemps (<em>toujours</em>) mais c’est pas glamour, et puis je ne collais pas à l’image de Sheldon Cooper.<br>Depuis peu, plusieurs femmes influentes ont commencé à en parler et je me reconnaissais déjà plus dans leurs profils. Tellement que quand j’en parle à ma sœur elle me dit :</p>
 
       <div class="dialogue">
-        <p><span class="who">— Ma sœur :</span> Bah bien sûr ma sœur que t'es autiste !</p>
+        <p><span class="who">— Sœur :</span> Bah bien sûr ma sœur que t’es autiste !</p>
         <p><span class="who">— Moi :</span> Wtf ???</p>
       </div>
 
-      <p>Comme par hasard, mon envie — que dis-je mon <strong><em>besoin</em></strong> — de transmettre revient. Comment peut-on passer à côté de l'évidence ?</p>
+      <p>Ça me fait tilt.</p>
+
+      <p>Comme par hasard, mon envie que dis-je mon besoin de transmettre revient. Comment peut-on passer à côté de l’évidence ?</p>
 
       <p>Je repense à ma conférence. Mais je me dis que je ne suis pas encore complètement dans cette dynamique.</p>
 
-      <p>Ma thérapeute m'avait donné des devoirs à l'issue de notre premier entretien : écrire mes objectifs de thérapie. Quand je lui ai lu mes réponses elle m'a dit :</p>
+      <p>Ma thérapeute m’avait donné des devoirs à l’issue de notre premier entretien, écrire mes objectifs de thérapie. Quand je lui ai lu elle m’a dit :</p>
 
-      <p class="punch">« You are a writer ! »</p>
+      <p class="punch">You are a writer!</p>
 
-      <p>J'ai souri. Et puis j'ai réfléchi.</p>
+      <p>J’ai souri. Et puis j’ai réfléchi.</p>
 
-      <p>Mon rêve depuis toujours, c'est d'écrire un livre. Mon rêve depuis toujours c'est de raconter quelque chose. Mon rêve depuis toujours, c'est de transmettre, d'une façon ou d'une autre.</p>
+      <div class="litanie-block">
+        <p class="litanie">Mon rêve depuis toujours, c’est d’écrire un livre.</p>
+        <p class="litanie">Mon rêve depuis toujours c’est de raconter quelque chose.</p>
+        <p class="litanie">Mon rêve depuis toujours, c’est de transmettre, d’une façon ou d’une autre.</p>
+      </div>
 
-      <p><span class="hl">J'ai senti la machine à l'intérieur de mon crâne démarrer en trombe…</span></p>
+      <p>J’ai senti la machine à l’intérieur de mon crâne démarrer en trombe…</p>
     </div>
+
   </article>
 
   <footer>

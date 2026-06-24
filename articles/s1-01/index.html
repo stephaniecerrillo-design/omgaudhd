@@ -40,7 +40,7 @@
   .crumb a:hover{color:var(--encre)}
   .crumb .here{color:var(--s1-deep)}
 
-  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--s1-deep);margin-bottom:18px}
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
@@ -71,7 +71,9 @@
 
   @media(max-width:640px){.ctx-brand-txt{display:none}.ctx-inner{gap:8px}.ctx-center{font-size:11px}}
   @media(max-width:680px){
-    .art-head h1{font-size:32px}
+    .art-head h1{font-size:32px
+    .litanie{font-size:15px;padding-left:14px}
+  }
     .prose{font-size:17px}
     .punch{font-size:22px}
     .navlinks{gap:16px;font-size:12px}
@@ -89,7 +91,7 @@
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
-  .ctx-inner{max-width:1080px;margin:0 auto;padding:0 32px;height:52px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
   .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
   .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
   .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
@@ -105,12 +107,13 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
 </style>
 </head>
 <body>
 <div class="ctx-bar" id="ctx-bar">
   <div class="ctx-inner">
-    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></span></a>
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·01</span>Connais toi toi-même !</button>
     <a href="../s1-02/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">02</span><span class="ctx-arrow">→</span></a>
@@ -122,7 +125,7 @@
 <div class="wrap">
 
   <nav>
-    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;letter-spacing:-2px">&hellip;</span><span style="font-style:italic;font-weight:500">AuDHD</span></a>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
     <div class="navlinks">
       <a href="../../#series">Saisons</a>
       <a href="../../a-propos/">À propos</a>
@@ -136,7 +139,7 @@
 
     <header class="art-head">
       <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
-      <h1>Connais toi toi-même… facile à dire !</h1>
+      <h1>Connais toi toi-même…<br>facile à dire !</h1>
       <div class="art-meta">
         <span class="num">01</span>
         <span>· 4 min de lecture</span>
@@ -145,35 +148,35 @@
     </header>
 
     <div class="prose">
-      <p><span class="hl">TDAH.</span> Bon sang mais quelle est cette diablerie ! Non mais déjà, ça veut dire quoi TDAH ? <strong>T</strong>rouble <strong>D</strong>e l'<strong>A</strong>ttention avec ou sans (sinon c'est pas drôle) <strong>H</strong>yperactivité. Quel est le génie qui a pondu un nom pareil ?</p>
+      <p>TDAH. Bon sang mais quelle est cette diablerie ! Non mais déjà, ça veut dire quoi TDAH ? <strong style="color:var(--s1)">T</strong>rouble <strong style="color:var(--s1)">D</strong>e l’<strong style="color:var(--s1)">A</strong>ttention avec ou sans (<em>sinon c’est pas drôle</em>) <strong style="color:var(--s1)">H</strong>yperactivité. Quel est le génie qui a pondu un nom pareil ?</p>
 
-      <p>Bref. Bienvenue dans le merveilleux monde de la neuroatypie un peu vénère.</p>
+      <p>Bref. <span class="hl">Bienvenue dans le merveilleux monde de la neuroatypie un peu vénère.</span></p>
 
-      <p>Pourtant la neurodiversité, c'est vraiment pas un sujet sur lequel je me suis penchée avant mon entrée dans le monde du travail. Environnement dans lequel je me sentais complètement, mais alors complètement, à côté des rails.</p>
+      <p>Pourtant la neurodiversité, c’est vraiment pas un sujet sur lequel je me suis penchée avant mon entrée dans le monde du travail. Environnement dans lequel je me sentais complètement, mais alors complètement, à côté des rails.</p>
 
-      <p>Pendant ma scolarité je me sentais déjà en décalage, mais je mettais ça d'une part sur mon parcours de vie un peu chaotique et d'autre part sur le fait que les autres enfants étaient peut-être juste méchants et mal élevés.</p>
+      <p>Pendant ma scolarité je me sentais déjà en décalage, mais je mettais ça d’une part sur mon parcours de vie un peu chaotique et d’autre part sur le fait que les autres enfants étaient peut-être juste méchants et mal élevés.</p>
 
       <p>Hum.</p>
 
-      <p>Bon bah au boulot ils n'étaient ni vraiment plus sympa ni mieux éduqués. Au regard de l'avalanche de particules dans les patronymes de mes collègues, je peux même dire que visiblement je n'avais pas le bon pedigree. Et que c'était pas une bonne nouvelle…</p>
+      <p>Bon bah au boulot ils n’étaient ni vraiment plus sympa ni mieux éduqués. Au regard de l’avalanche de particules dans les patronymes de mes collègues, je peux même dire que visiblement je n’avais pas le bon pedigree. Et que c’était pas une bonne nouvelle…</p>
 
-      <p>Un jour d'errance dans une librairie je suis tombée sur le premier bouquin qui m'a fait toucher du doigt que peut être, il y avait autre chose à chercher. Alors ok ça parlait de <em>préférence hémisphérique</em>, cerveau droit vs cerveau gauche, qui est avec le recul une petite aberration scientifique… mais quand même. Les fonctionnements décrits me parlaient et la conclusion qui disait en substance :</p>
+      <p>Un jour d’errance dans une librairie je suis tombée sur le premier bouquin qui m’a fait toucher du doigt que peut être, il y avait autre chose à chercher. Alors ok ça parlait de <em>préférence hémisphérique</em>, cerveau droit vs cerveau gauche, qui est avec le recul une petite aberration scientifique… mais quand même. Les fonctionnements décrits me parlaient et la conclusion qui disait en substance :</p>
 
-      <p class="punch">« Vous n'êtes pas seuls mais vous n'êtes pas majoritaires alors… adaptez-vous. »</p>
+      <p class="punch">“Vous n’êtes pas seuls mais vous n’êtes pas majoritaires alors… adaptez vous.”</p>
 
-      <p>Je l'ai bien intégré. Merci.</p>
+      <p>Je l’ai bien intégré. Merci.</p>
 
-      <p>Et puis je suis devenue mère. Hin hin hin (rire hystérique). <em>IYKYK</em>.</p>
+      <p>Et puis je suis devenue mère. Hin hin hin (<em>rire hystérique</em>). <em>IYKYK</em>.</p>
 
-      <p>Assez rapidement on a compris que notre petit bonhomme avait un fonctionnement unique. D'instit dépassée, en passant par le pédopsychiatre et le pétage de plomb parental, nous avons fini par avoir un diagnostic pour ce merveilleux petit être de 9 ans qui pensait qu'on serait plus heureux sans lui.</p>
+      <p>Assez rapidement on a compris que notre petit bonhomme avait un fonctionnement unique. D’instit dépassée, en passant par le pédopsychiatre et le pétage de plomb parental, nous avons fini par avoir un diagnostic pour ce merveilleux petit être de 9 ans qui pensait qu’on serait plus heureux sans lui.</p>
 
       <p>TDAH. Il ne se tape pas la tête contre les murs pourtant…</p>
 
-      <p>Me voilà donc partie en quête de la compréhension d'un trouble du neurodéveloppement avec mon petit bagage de bobo parisienne pleine de préjugés. J'ai alors découvert un mode de fonctionnement stéréotypé, mal documenté, à la limite de la légende urbaine. Qu'à cela ne tienne, j'étais bien décidée à comprendre à quoi j'avais affaire. J'ai donc plongé corps et âme dans tous les supports possibles et imaginables.</p>
+      <p>Me voilà donc partie en quête de la compréhension d’un trouble du neurodéveloppement avec mon petit bagage de bobo parisienne pleine de préjugés. J’ai alors découvert un mode de fonctionnement stéréotypé, mal documenté, à la limite de la légende urbaine. Qu’à cela ne tienne, j’étais bien décidée à comprendre à quoi j’avais affaire. J’ai donc plongé corps et âme dans tous les supports possibles et imaginables.</p>
 
-      <p>Au fur et à mesure je me suis rendue compte que ça faisait des déflagrations dans ma tête. J'ai pris des ondes de chocs les unes après les autres. Au début j'ai culpabilisé de ne pas avoir compris plus tôt avec quelles difficultés mon fils se battait. Ce sentiment de solitude et d'incompréhension qu'il devait ressentir au quotidien. Mais en me familiarisant avec les concepts et en ouvrant la discussion avec lui, je le vois mieux se comprendre, prendre confiance en lui et ne plus s'excuser d'exister.</p>
+      <p>Au fur et à mesure je me suis rendue compte que ça faisait des déflagrations dans ma tête. J’ai pris des ondes de chocs les unes après les autres. Au début j’ai culpabilisé de ne pas avoir compris plus tôt avec quelles difficultés mon fils se battait. Ce sentiment de solitude et d’incompréhension qu’il devait ressentir au quotidien. Mais en me familiarisant avec les concepts et en ouvrant la discussion avec lui, je le vois mieux se comprendre, prendre confiance en lui et ne plus s’excuser d’exister.</p>
 
-      <p>Pendant le même temps, je me débats avec un mot qui tourne en boucle dans mon esprit : <span class="hl-y">génétique</span>. C'est gé-né-tique.</p>
+      <p>Pendant le même temps, je me débats avec un mot qui tourne en boucle dans mon esprit : génétique. <span class="hl-y">C’est gé-né-tique.</span></p>
 
       <p class="punch">Vertige.<br>Déni.<br>Évidence.<br>Colère.</p>
     </div>
