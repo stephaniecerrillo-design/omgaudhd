@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En fait, j'étais normale… — OMGAUDHD S1·03</title>
-<meta name="description" content="Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit. Épisode 03 de la Saison 01 d'OMGAUDHD.">
+<title>(Des)orientée — OMGAUDHD S2·04</title>
+<meta name="description" content="Un CIO, une fiche Onisep, un chef de produit — et moi qui ne savais même pas ce que je voulais manger. Épisode 04 de la Saison 02 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
     --encre:#231F20;
     --encre-soft:#5A5550;
     --jaune:#FFE800;
-    --s1:#FF2D78;
-    --s1-deep:#9B0040;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
     --hair:rgba(35,31,32,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -28,47 +28,57 @@
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
   .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
   .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
-  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
   .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
   .ig-icon:hover{opacity:1;border-bottom:none !important}
 
-  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+  /* progress bar */
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
   article{max-width:760px;margin:0 auto}
   .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
   .crumb a{color:var(--encre-soft);text-decoration:none}
   .crumb a:hover{color:var(--encre)}
-  .crumb .here{color:var(--s1-deep)}
+  .crumb .here{color:var(--s2-deep)}
 
   .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
   .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
-  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
 
   .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
   .prose p{margin-bottom:24px}
-  .prose .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s2-deep);font-weight:700}
 
   .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
 
-  .realisation{font-family:'Space Mono',monospace;font-size:15px;line-height:1.8;color:var(--encre);padding:28px 32px;margin:30px 0;border-left:3px solid var(--s1)}
-  .realisation p{margin-bottom:12px}
-  .realisation p:last-child{margin-bottom:0}
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
 
   .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
-  .next:hover{border-color:var(--s1)}
+  .next:hover{border-color:var(--s2)}
   .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
   .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
-  .next .ar{font-size:24px;color:var(--s1)}
+  .next .ar{font-size:24px;color:var(--s2)}
 
   footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
   footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
   footer a{color:var(--encre-soft);text-decoration:none}
   footer a:hover{color:var(--encre)}
 
+
+  .litanie{font-style:italic;margin-bottom:10px}
+  .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
 
 
 
@@ -99,27 +109,13 @@
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* NEXT MOBILE (mobile uniquement) */
-  .next-mobile{display:none}
-  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
-  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
-  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
-  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
-  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
-  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
-  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
-  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
-  .nm-ar{font-size:24px;transition:color .18s}
   @media(max-width:680px){
     .art-head h1{font-size:32px;}
-    .litanie{font-size:15px;padding-left:14px}
     .prose{font-size:17px}
     .punch{font-size:22px}
-    .realisation{padding:20px 22px;font-size:14px}
+    .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
-    .next-mobile{display:block}
     .wrap{padding:0 16px}
     .art-meta{flex-wrap:wrap;gap:10px}
     .nav-articles{flex-direction:column;gap:12px}
@@ -136,10 +132,10 @@
   .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
   .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
   .prev{flex-direction:row-reverse;text-align:right}
-  .art-head h1 .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
-  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s1);line-height:1.2;margin:2px 0 5px}
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s2);line-height:1.2;margin:2px 0 5px}
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
@@ -153,14 +149,13 @@
   .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
   .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
   .ctx-center:hover{opacity:.6}
-  .ctx-ep{color:var(--s1);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
-  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s1);width:0%;transition:width .1s;pointer-events:none}
-  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s1);cursor:pointer;color:var(--s1);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .ctx-ep{color:var(--s2);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s2);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s2);cursor:pointer;color:var(--s2);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
-  .litanie{font-style:italic;margin-bottom:10px}
-        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
+
   @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
 </style>
 </head>
@@ -169,9 +164,8 @@
   <div class="ctx-inner">
     <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
-    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·03</span>En fait, j’étais normale…</button>
-    <a href="../s1-02/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
-    <a href="../s1-04/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·04</span>(Des)orientée</button>
+    <a href="../s2-03/" class="ctx-nav ctx-prev" style="color:var(--s2)"><span class="ctx-arrow">←</span><span class="ctx-num">03</span></a>
     <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
@@ -218,94 +212,99 @@
   <article>
 
     <header class="art-head">
-      <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
-      <h1>En fait, j'étais normale…</h1>
+      <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
+      <h1>(Des)orientée</h1>
       <div class="art-meta">
-        <span class="num">03</span>
-        <span>· 5 min de lecture</span>
-        <span>· #TDAHFÉMININ #MASKING #ÉVIDENCE</span>
+        <span class="num">04</span>
+        <span>· 7 min de lecture</span>
+        <span>· #PRÉPA #INDÉCISION #CAMÉLÉON</span>
       </div>
     </header>
 
-    
+
     <div class="prose">
-      <p>Quand il est rentré en maternelle, on nous a fait tester notre fils pour un HPI mais les résultats ont été trop hétérogènes pour être interprétés.</p>
 
-      <p>C'était une piste mais à l'époque je ne le savais pas.</p>
+      <p>Après le lycée, on passe une étape. Avant cela, on est absent de toute décision logistique, nourris logés et blanchis… puis on est lâché dans le grand monde, sans filet ou presque. On est censé savoir…</p>
 
-      <p>Et puis il y avait un truc qui ne collait pas complètement. Genre « oui mais pas que… »</p>
+      <p>Alors perso, je rêvais de cette autonomie, mais je n’avais pas imaginé toutes les étapes et les remises en question qui allaient en découler. Découvrir que finalement, je n’avais pas le savoir ni les repères nécessaires à cette transition. Moi qui pensais être une adulte à 8 ans, le principe de réalité m’a démontré que je n’avais aucune idée de ce que cela signifiait.</p>
 
-      <p>Toute seule dans mon coin, je ne laissais pas tomber. Je voulais comprendre et être là pour lui. Un jour je suis tombée sur un flyer chez le médecin sur le TDAH. Les « vrais » symptômes.</p>
+      <p>Pour commencer, il faut savoir où on va, avoir une trajectoire… ou au moins en avoir une (toute petite) idée</p>
 
-      <p>Franchement j'en avais vraiment une idée très floue mais là…. En lisant le document, mon cœur a manqué un battement puis il a accéléré.</p>
+      <p>Je n’avais pas prévu d’aller en classe préparatoire. Non, vraiment pas. En fait j’ai toujours été une grande indécise, donc j’ai tout fait pour retarder mon orientation scolaire au maximum. Je suis restée dans la voie la plus généraliste aussi longtemps que possible. Tout ça me paraissait tellement lointain... Comment est-ce qu’une ado qui avait déjà du mal à savoir ce qu’elle voulait manger pouvait seulement se projeter sur un avenir professionnel ?</p>
 
-      <p>C'était ça ! Bien sûr que c'était ça ! Le diagnostic de mon fils a été une formalité.</p>
+      <p>La seule chose que je savais, c’était que je voulais quitter la maison… le plus tôt possible.</p>
 
-      <p>Quand j'ai compris, toujours à force de chercher des infos valables, que c'était fortement héréditaire, je me suis penchée sur les symptômes des adultes. Mouais… Pas 100% convaincue. Et puis les spécificités du TDAH féminin. <span class="hl">Ça commence à piquer.</span></p>
+      <p>Je me rappelle que petite je voulais être boulangère… pour ne jamais mourir de faim (<em>pragmatique la gamine</em>). Ensuite, j’ai voulu être professeur de français (<em>ça mériterait un article entier</em>) puis psychologue (<em>avant de me rendre compte que j’avais déjà assez à gérer avec ma propre personne</em>). Finalement, j’ai pris la seule décision rationnelle : aller au centre d’orientation et d’information (le CIO) pour qu’on me dise quoi faire. S’en est suivi une batterie de questionnaires et un verdict. Tu seras (<em>roulement de tambour</em>) chef de produit (<em>tadam !!</em>). On me donne la petite fiche Onisep et on m’explique comment y parvenir. On me dit aussi que mon profil apparaissait comme hautement incompatible avec l’université et j’étais tout à fait d’accord avec eux (<em>trop de distraction, risque de faire 25 licences en sujets aussi divers que variés…</em>). Aller à la fac signerait automatiquement mon inscription à l’ANPE (<em>oui oui je sais, je suis une vieille dame</em>).</p>
 
-      <p>Le masking. La fluctuation hormonale. Les changements de jobs tous les 18 mois.</p>
+      <p>Donc il fallait faire une école de commerce. Ok. On m’orienta vers un IUT Technique de Commercialisation.</p>
 
-      <p>Je me refais le film de ma vie, cette vie à chercher la raison pour laquelle je me sentais si différente et incapable de me plier au monde qui m'entoure.</p>
+      <p>J’avais un objectif très clair et le chemin était tracé. La trajectoire définie.</p>
 
-      <p>J'ai compris :</p>
+      <p>J’ai fait les dossiers pour plusieurs IUT et passé quelques entretiens… dont un fut absolument mémorable :</p>
 
-      <div class="litanie-block">
-        <p class="litanie">Que mon SPM était bien supérieur à la moyenne.</p>
-
-        <p class="litanie">Que mon sentiment de rejet était bien supérieur à la normale.</p>
-
-        <p class="litanie">Que mes trous de mémoire étaient bien plus fréquents que pour les autres.</p>
-
-        <p class="litanie">Que mes lubies étaient bien plus hétérogènes et aléatoires que des hobbys traditionnels.</p>
-
-        <p class="litanie">Que ma concentration était bien plus intense mais pas quand je voulais.</p>
-
-        <p class="litanie">Que tout ça était... la normalité d'une personne avec un TDAH.</p>
+      <div class="dialogue">        <p><span class="who">— Jury : </span>Pouvez-vous me donner le volume de la pièce ?</p>        <p><span class="who">— Moi : </span>Pardon ?</p>        <p><span class="who">— Jury : </span>Pouvez-vous me donner le volume de la pièce (<em>yeux au ciel</em>) ?!</p>        <p><span class="who">— Moi : </span>Non. Pourquoi est-ce que vous me demandez ça ? (<em>Je ne comprends vraiment pas</em>)</p>        <p><span class="who">— Jury : </span>Pardon ? (<em>Chacun son tour…</em>) Je vous demande ce que je veux. Donnez-moi le volume de la pièce, c’est tout. (<em>Là elle est agacée</em>)</p>        <p><span class="who">— Moi : </span>Écoutez madame, je suis très stressée, je ne me rappelle plus la formule, je ne connais même pas la dimension de la pièce. Donc je ne vous donnerai pas son volume ! En plus je ne vois pas le rapport.</p>        <p><span class="who">— Jury : </span>Ça alors, c’est la meilleure… Vous êtes complètement caractérielle jeune fille ! (<em>Très agacée même</em>)</p>        <p><span class="who">— Moi : </span>Appelez ça comme vous voulez, mais je ne vous donnerai pas le volume de la pièce. (<em>Je suis décomposée, assez furax et en même temps dévastée. J’avais foiré mon entretien</em>).</p>
       </div>
 
-      <p class="punch">En fait j'étais normale.</p>
+      <p>A l’époque j’avais été tellement prise au dépourvu par cette question absurde… Je pensais passer un entretien pour un IUT tech de co’ pas un IUT géométrie aléatoire… En réalité, je ne savais pas la réponse, j’avais honte… c’était tellement insupportable que mon indignation a pris le dessus.</p>
 
-      <p>Et moi qui me détestait de ne pas arriver à faire comme tout le monde…</p>
+      <p>Je me suis rendue compte que c’était un mécanisme de défense devenu presque systématique avec le temps, et j’avoue que ça peut encore m’arriver aujourd’hui.</p>
 
-      <p>J'ai beaucoup pleuré. Pleuré sur cette jeune femme qui voulait toujours bien faire et qui en faisait toujours trop. J'ai ressenti une grande bouffée de compassion pour elle. Et une énorme sensation de temps perdu.</p>
+      <p class="punch">Défiant toute logique, j’ai été acceptée dans cet établissement.</p>
 
-      <p>J'étais aussi super en colère.</p>
+      <p>Sauf que… (<em>évidemment il y a un sauf que</em>) mon papounet ne le voyait pas comme ça : École de Commerce, ça veut dire HEC (il ignorait sans doute qu’il y en avait 60 des écoles, pas seulement HEC), et HEC ça veut dire « voie royale » aka classe préparatoire. C’était <strong>Non négociable</strong>. Bon.</p>
 
-      <p>Puisque mon TDAH se voyait comme le nez au milieu de ma figure, pourquoi est ce qu'il aura fallu si longtemps pour le débusquer ?</p>
+      <p><em>Ironie du sort, j’ai rencontré l’amour de ma vie sur les bancs de la prépa… Merci Papa !</em></p>
 
-      <p>C'est pas faute d'avoir consulté pourtant : dépression, anxiété, burn-out même.</p>
+      <p>Me voilà donc en train de faire un dossier à l’arrache pour la prépa la plus proche, dans laquelle j’ai été reçue sans problème. C’était une petite prépa sans prétention mais efficace, avec les pieds sur terre. Intègre et honnête.</p>
 
-      <p>Non.</p>
+      <p>Ok, ce n’était pas le plan prévu, mais mon objectif d’émancipation était respecté : je quittais (<em>enfin</em>) la maison pour vivre de mes propres ailes… en internat (<em>lol</em>) ! La LI-BE-RTE ! C’était mon mot d’ordre. Je voulais être une nana libre, fun, sexy (<em>avec de bonnes notes, bien sûr</em>). Sans Dieu ni Maître. (<em>YOLO !</em>) J’étais bien décidée à vivre à fond.</p>
 
-      <p>Il aura fallu que je passe par mon gamin pour enfin voir mon reflet dans un miroir.</p>
+      <p>Mais l’émancipation c’est aussi savoir se gérer et surtout gérer son argent. J’ai compris ça en deuxième année quand j’ai eu mon premier appartement. Je voulais montrer à mes parents que j’étais responsable, digne de confiance. J’avais donc conservé tous mes tickets de caisse dans une petite enveloppe afin de déterminer avec précision le montant dont j’avais besoin… et aussi pour prouver que je n’abuserais pas de leur générosité. Ça passait par être paralysée dans les rayons du supermarché, à faire des arbitrages parfois compliqués.</p>
 
-      <p>Alors quoi ?</p>
+      <p>Vous allez penser que mes parents étaient bien rudes. Vous auriez tort. Ils ne m’avaient absolument rien ni demandé, ni imposé, ni sous-entendu. <span class="hl">Tout était dans ma tête.</span> J’allais découvrir une nouvelle façon de vivre, en quasi-autonomie, dont j’ignorais les usages. Alors je suis allée au plus coercitif, par peur d’enfreindre une règle tacite que je ne connaissais pas. Bien plus rigoriste que nécessaire, sans fondement autre que celui d’avoir finalement une bonne image de moi-même. Cette rigidité me caractérise sur beaucoup d’aspects de ma vie dès que je manque d’information pour être sûre de faire « ce qu’il faut ».</p>
 
-      <p>Il n'en fallait pas plus pour que je passe en hyperfocus sur le TDAH féminin. Podcasts, interviews, magazines, bouquin de psychologie, vulgarisation scientifique, Instagram (<em>oui aussi</em>). Tout y est passé et j'ai compris.</p>
+      <p>Bref, je trouvais cette nouvelle vie finalement très chouette malgré la difficulté de la prépa.</p>
 
-      <p><span class="hl-y">Ce qui m'est arrivé n'est pas un accident.</span> C'est systémique.</p>
+      <p>J’ai toujours été plutôt une élève facile. Sans être brillante, je n’étais pas le genre grande gueule en classe. Distraite, oui. Moyenne sans aucun doute. Bavarde, à l’occasion… Irrespectueuse, jamais. De plus j’ai ce truc de m’adapter tout le temps à mes profs. En début d’année, je jauge leurs attentes avec application, et je colle au profil demandé. Par conséquent, j’étais plutôt une élève appréciée par mes professeurs. Malheureusement, ça ne fonctionne pas à tous les coups… C’est avec mon prof d’Allemand de prépa que j’ai découvert ce que ça faisait d’être saquée. D’accord, je n’étais pas vraiment douée, mais additionné à mon côté désinvolte (<em>supposé</em>), ça lui donnait la nausée. J’étais abonnée aux notes merdiques certes mais surtout d’une constance déconcertante : 3/20 à l’écrit, 7/20 à l’oral. Et ce indépendamment de la quantité et de la qualité de travail fournie ! Mon premier réflexe dans une situation de conflit, c’est toujours de penser que je suis en faute ou que j’exagère, alors j’essaye de comprendre ce que je fais de travers, de rendre les choses plus objectives. J’avais tout essayé, du « rien foutu » à « tout par cœur », mes notes étaient inlassablement les mêmes… Le mec me saquait j’en étais sûre. Donc quand j’ai fait le tour et qu’objectivement, je ne suis pas en faute. Je ruminais, j’attendais la preuve irréfutable. Je me préparais à la confrontation…</p>
 
-      <p>De « en colère » je suis passée à « furieuse ». Je devais faire quelque chose pour augmenter la visibilité du TDAH des femmes.</p>
+      <p>Un jour pendant une colle (<em>les évaluations orales</em>), j’en ai eu la confirmation que j’attendais :</p>
 
-      <p>Déjà que j'étais une féministe un peu reloue, j'allais passer dans la catégorie féministe et porte parole de ma condition neurologique.</p>
+      <div class="dialogue">        <p><span class="who">— Prof d’Allemand : </span><em>Allez, je vous mets 8/20 pour vous donner l’illusion que vous progressez.</em></p>
+      </div>
 
-      <p>Une vraie perle.</p>
+      <p>Il souriait, content de lui.</p>
 
-      <p class="punch">Vous n'êtes pas prêts pour ce qui arrive…</p>
+      <p class="punch">J’ai dégoupillé.</p>
+
+      <div class="dialogue">        <p><span class="who">— Moi : </span>Si vous pensez que ça vaut 7 laissez 7, si vous pensez que ça vaut 8 ou 3 c’est pareil. Qu’est-ce que ça veut dire ? Vous n’avez qu’à mettre ce que vous voulez puisque mon travail ne rentre pas en ligne de compte. Je ne viendrais plus à vos colles. Je réussirai sans vous.</p>
+      </div>
+
+      <p>Il a osé s’indigner.</p>
+
+      <p>J’ai tenu parole.</p>
+
+      <p>Contrairement à l’entretien de l’IUT, là, j’étais prête.</p>
+
+      <p>Si j'ai été plutôt performante pendant ces deux années, on ne change pas une équipe qui perd… Je m'explique.</p>
+
+      <p>Ma technique de caméléon pour correspondre aux profils de mes profs, finalement, c’est pas foufou. Déjà, tu l’as vu ça ne marche pas avec toute le monde et en plus ça ne fonctionne bien qu’en contrôle continu. Pas du tout dans les concours ou examens nationaux. Bah non… puisque ce n'est pas mon prof qui corrige. C'est comme ça que j'ai une excellente moyenne en contrôle continu et que j'ai mon bac de justesse. Alors en prépa où la seule chose qui compte, c’est une serie d’épreuves de concours… <span class="hl-y">c’est carrément la stratégie de l’échec</span>. Mais ça, j’ai mis des années à le comprendre.</p>
+
+      <p class="punch">Spoiler alert, je n’ai pas eu HEC…</p>
+
     </div>
 
-
-  <div class="next-mobile" style="--nm-color:var(--s1)">
-    <a href="../s1-04/">
-      <div class="nm-meta">
-        <span class="nm-label">Article suivant</span>
-        <span class="nm-num" style="color:var(--s1)">S1·04</span>
-        <span class="nm-ttl">Evidemment</span>
-      </div>
-      <span class="nm-ar" style="color:var(--s1)">→</span>
-    </a>
-  </div>
   </article>
+
+
+  <!-- Article suivant — à activer quand S2-05 sera publié
+  <a class="next" href="../s2-05/">
+    <div>
+      <div class="lbl">ARTICLE SUIVANT · S2</div>
+      <div class="ttl">Synthèse — ce que masquer m'a coûté</div>
+    </div>
+    <div class="ar">→</div>
+  </a>
+  -->
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>

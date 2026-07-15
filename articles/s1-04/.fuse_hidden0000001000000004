@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En fait, j'étais normale… — OMGAUDHD S1·03</title>
-<meta name="description" content="Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit. Épisode 03 de la Saison 01 d'OMGAUDHD.">
+<title>Evidemment — OMGAUDHD S1·04</title>
+<meta name="description" content="Une conférence, une inconnue, et deux mots qui font basculer quelque chose. Épisode 04 de la Saison 01 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -52,11 +52,17 @@
   .prose .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s1)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s1-deep);font-weight:700}
+
   .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
 
-  .realisation{font-family:'Space Mono',monospace;font-size:15px;line-height:1.8;color:var(--encre);padding:28px 32px;margin:30px 0;border-left:3px solid var(--s1)}
-  .realisation p{margin-bottom:12px}
-  .realisation p:last-child{margin-bottom:0}
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
 
   .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
   .next:hover{border-color:var(--s1)}
@@ -113,10 +119,10 @@
   .nm-ar{font-size:24px;transition:color .18s}
   @media(max-width:680px){
     .art-head h1{font-size:32px;}
-    .litanie{font-size:15px;padding-left:14px}
+    .litanie{font-size:15px}
     .prose{font-size:17px}
     .punch{font-size:22px}
-    .realisation{padding:20px 22px;font-size:14px}
+    .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
     .next-mobile{display:block}
@@ -169,9 +175,9 @@
   <div class="ctx-inner">
     <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
-    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·03</span>En fait, j’étais normale…</button>
-    <a href="../s1-02/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
-    <a href="../s1-04/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·04</span>Evidemment</button>
+    <a href="../s1-03/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">03</span></a>
+    <a href="../s1-05/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">05</span><span class="ctx-arrow">→</span></a>
     <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
@@ -209,7 +215,6 @@
           <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
           <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
           <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
-          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
         </div>
       </div>
     </div>
@@ -219,88 +224,116 @@
 
     <header class="art-head">
       <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
-      <h1>En fait, j'étais normale…</h1>
+      <h1>Evidemment</h1>
       <div class="art-meta">
-        <span class="num">03</span>
-        <span>· 5 min de lecture</span>
-        <span>· #TDAHFÉMININ #MASKING #ÉVIDENCE</span>
+        <span class="num">04</span>
+        <span>· 7 min de lecture</span>
+        <span>· #CONFÉRENCE #LÉGITIMITÉ #TDAHFÉMININ</span>
       </div>
     </header>
 
     
     <div class="prose">
-      <p>Quand il est rentré en maternelle, on nous a fait tester notre fils pour un HPI mais les résultats ont été trop hétérogènes pour être interprétés.</p>
+      <p><em>21 mars 2025.</em> J’assiste à la soirée annuelle du Centre des Jeunes Dirigeants du Béarn sur le thème : Transformez les contraintes en opportunités. J’étais très excitée à l’idée de m’y rendre. Les conférences du CJD m’ont toujours beaucoup apporté, mis en lumière des choses que je ne voyais pas. Et puis je suis toujours contente de voir mes copines et copains. Bref. J’étais joie.</p>
 
-      <p>C'était une piste mais à l'époque je ne le savais pas.</p>
+      <p>L’invitée principale était Virginie Delalande qui venait nous parler de résilience et de dépassement de soi. Inconnue au bataillon en ce qui me concernait.</p>
 
-      <p>Et puis il y avait un truc qui ne collait pas complètement. Genre « oui mais pas que… »</p>
+      <p>La lumière s’éteint dans la salle, et Virginie illumine la scène. Quand elle commence à parler, je ne la comprends pas, parce que sa voix est différente, son élocution particulière (<em>je ne savais pas qu’elle était sourde, ça surprend !</em>). Petit à petit, elle m’embarque. Finalement, yeux et bouche grands ouverts, je fixe la scène et je ne la vois plus. <span class="hl">Je ME vois.</span></p>
 
-      <p>Toute seule dans mon coin, je ne laissais pas tomber. Je voulais comprendre et être là pour lui. Un jour je suis tombée sur un flyer chez le médecin sur le TDAH. Les « vrais » symptômes.</p>
+      <p>Tout mon corps me dit :</p>
 
-      <p>Franchement j'en avais vraiment une idée très floue mais là…. En lisant le document, mon cœur a manqué un battement puis il a accéléré.</p>
+      <p class="punch">c’est là que tu dois être !</p>
 
-      <p>C'était ça ! Bien sûr que c'était ça ! Le diagnostic de mon fils a été une formalité.</p>
+      <p>Mais c’est impossible. De quoi je pourrais bien parler ? C’est toujours pareil avec moi… je voulais être coach, formatrice et même enseignante. Mais pour enseigner quoi ? Et surtout à qui ? Et à quel titre ? Bref.</p>
 
-      <p>Quand j'ai compris, toujours à force de chercher des infos valables, que c'était fortement héréditaire, je me suis penchée sur les symptômes des adultes. Mouais… Pas 100% convaincue. Et puis les spécificités du TDAH féminin. <span class="hl">Ça commence à piquer.</span></p>
+      <p>Je tourne la tête sur ma droite à la fin de la conférence et je dis à ma voisine, que j’avais rencontré juste avant : « Oh lala, j’aimerai tellement faire ça comme boulot ! »</p>
 
-      <p>Le masking. La fluctuation hormonale. Les changements de jobs tous les 18 mois.</p>
+      <p>Elle sourit.</p>
 
-      <p>Je me refais le film de ma vie, cette vie à chercher la raison pour laquelle je me sentais si différente et incapable de me plier au monde qui m'entoure.</p>
+      <p>On avait un peu échangé avant la conférence et le courant était passé.</p>
 
-      <p>J'ai compris :</p>
+      <p>Elle me demande pourquoi.</p>
 
-      <div class="litanie-block">
-        <p class="litanie">Que mon SPM était bien supérieur à la moyenne.</p>
+      <p>Alors je me lance. Sans filet, ça sort tout seul. C’était la première fois que j’exprimais ça à voix haute : mon envie de transmettre et mon incapacité à me sentir légitime de le faire. J’enchaîne en lui parlant de mon TDAH, de la difficulté que j’ai eue pour me faire diagnostiquer, et puis finalement je lui ai tenu la jambe sur ce sujet pendant 15 bonnes minutes sans respirer.</p>
 
-        <p class="litanie">Que mon sentiment de rejet était bien supérieur à la normale.</p>
+      <p>Elle sourit encore, me regarde avec attention, et me dit.</p>
 
-        <p class="litanie">Que mes trous de mémoire étaient bien plus fréquents que pour les autres.</p>
-
-        <p class="litanie">Que mes lubies étaient bien plus hétérogènes et aléatoires que des hobbys traditionnels.</p>
-
-        <p class="litanie">Que ma concentration était bien plus intense mais pas quand je voulais.</p>
-
-        <p class="litanie">Que tout ça était... la normalité d'une personne avec un TDAH.</p>
+      <div class="dialogue">
+        <p><span class="who">— Voisine :</span> Evidemment ! C’est ça ton sujet.</p>
       </div>
 
-      <p class="punch">En fait j'étais normale.</p>
+      <p>Je ne comprends pas ! De quoi elle parle ?</p>
 
-      <p>Et moi qui me détestait de ne pas arriver à faire comme tout le monde…</p>
+      <div class="dialogue">
+        <p><span class="who">— Voisine :</span> Du TDAH féminin bien sûr ! Tu es tellement captivante quand tu en parles ! Vraiment je sens que c’est quelque chose qui t’anime et tu devrais tenter ! Je suis sûre que ça fonctionnerait.</p>
+      </div>
 
-      <p>J'ai beaucoup pleuré. Pleuré sur cette jeune femme qui voulait toujours bien faire et qui en faisait toujours trop. J'ai ressenti une grande bouffée de compassion pour elle. Et une énorme sensation de temps perdu.</p>
+      <p>Je la regarde, incrédule.</p>
 
-      <p>J'étais aussi super en colère.</p>
+      <p>N’importe quoi. <span class="hl-y">Je ne suis personne.</span> Qui voudrait m’écouter déblatérer sur ce sujet ? Ok je suis bien documentée mais je ne suis ni médecin, ni psychologue… ni une actrice connue. Non vraiment je vois pas ce que je fais dans cette histoire.</p>
 
-      <p>Puisque mon TDAH se voyait comme le nez au milieu de ma figure, pourquoi est ce qu'il aura fallu si longtemps pour le débusquer ?</p>
+      <p>Mais… ça reste dans ma tête…</p>
 
-      <p>C'est pas faute d'avoir consulté pourtant : dépression, anxiété, burn-out même.</p>
+      <p>Ce qu’il faut savoir à ce moment-là c’est que je suis dans une période un peu dense de ma vie. J’étais encore en train de digérer la liquidation de mon entreprise 6 mois plus tôt. Je cherchais un boulot salarié pour me prouver que je pouvais encore bosser et en même temps je venais de finir un accompagnement de 3 mois avec une dirigeante qui voulait opérer un repositionnement de son entreprise.</p>
 
-      <p>Non.</p>
+      <p>Oui je sais, ça fait beaucoup… mais je voulais rester occupée pour ne pas m’effondrer. Mon entreprise m’avait littéralement épuisée, et comme je ne sais pas me reposer j’ai préféré me noyer sous les projets. Très sain comme réaction on en conviendra.</p>
 
-      <p>Il aura fallu que je passe par mon gamin pour enfin voir mon reflet dans un miroir.</p>
+      <p>Anyway. J’en étais là.</p>
 
-      <p>Alors quoi ?</p>
+      <p>Tout se bouscule dans ma tête et je panique. Le boulot salarié, ce sera ma priorité. Donc est arrivé ce qui devait arriver : j’ai trouvé du boulot. Démarrage en juin. Les autres projets partent au placard.</p>
 
-      <p>Il n'en fallait pas plus pour que je passe en hyperfocus sur le TDAH féminin. Podcasts, interviews, magazines, bouquin de psychologie, vulgarisation scientifique, Instagram (<em>oui aussi</em>). Tout y est passé et j'ai compris.</p>
+      <p>Sauf que… j’ai du mal à m’adapter à l’entreprise. Ça faisait 6 ans que je n’avais pas mis les pieds derrière un bureau pour avoir un salaire. J’avais du mal à m’intégrer et surtout, je m’ennuyais à mourir toute la journée.</p>
 
-      <p><span class="hl-y">Ce qui m'est arrivé n'est pas un accident.</span> C'est systémique.</p>
+      <p>Mon instinct de survie s’est alors déclenché et je me suis lancé un défi – de taille : écrire une conférence sur le TDAH féminin. Jusqu’au bout.</p>
 
-      <p>De « en colère » je suis passée à « furieuse ». Je devais faire quelque chose pour augmenter la visibilité du TDAH des femmes.</p>
+      <p>La bonne blague.</p>
 
-      <p>Déjà que j'étais une féministe un peu reloue, j'allais passer dans la catégorie féministe et porte parole de ma condition neurologique.</p>
+      <p>Mon cerveau s’est allumé et l’hyperfocus qui va avec aussi. Des heures et des heures d’écriture, de relecture.</p>
 
-      <p>Une vraie perle.</p>
+      <div class="litanie-block">
+        <p class="litanie">Le jour.</p>
+        <p class="litanie">La nuit.</p>
+        <p class="litanie">Tout. Le. Temps.</p>
+      </div>
 
-      <p class="punch">Vous n'êtes pas prêts pour ce qui arrive…</p>
+      <p>C’était difficile.</p>
+
+      <p>Difficile parce que je ne me sentais pas légitime pour en parler. Je ne voulais pas sortir de mon rôle, ne pas donner de leçon, ne pas être une féministe trop engagée qui perdrait la moitié de mon auditoire, ne pas entrer trop dans mon intimité pour me préserver. J’avais peur. De mal faire, de ne pas assez bien écrire, de trop en dire. Avoir l’air prétentieuse, ou à côté de la plaque. Me faire attaquer pour des approximations…</p>
+
+      <p>Mais je ne lâche pas. Je cherche mon ton. Peaufine mon texte. Bon, il faut être honnête, ChatGPT me coache aussi pas mal. Sans doute trop. Mais ça me rassure. Et surtout, j’avance.</p>
+
+      <p>Je m’offre le luxe de prendre du temps pour écrire. Dans des endroits qui m’inspirent. Seule. Je me sens tellement à ma place dans ces moments là. Je voudrais que ma vie soit comme ça tout le temps.</p>
+
+      <p><em>16 juillet 2025.</em> C’est le départ d’un changement de vie radical. Nous allons partir en expatriation à la fin de l’année.</p>
+
+      <p class="punch">Putain… j’avais pas prévu ça moi.</p>
+
+      <p>Le temps presse. Je me fixe une deadline : Je dois avoir terminé ma conférence et l’avoir dite devant du public au moins une fois avant notre départ.</p>
+
+      <p>Chiche ?</p>
+
+      <p>Cette urgence était exactement ce qu’il me fallait pour boucler la conférence, toi-même tu sais… J’ai commencé à en parler autour de moi, à mes collègues, à mes amis du CJD, partout. Je me suis mise dans la m**** pour avoir non pas une mais 2 dates durant lesquelles j’allais dire ma conférence à DES GENS…</p>
+
+      <p>Je l’ai fait. Je l’ai fait ! JE L’AI FAIT !</p>
+
+      <p class="punch">J’ai adoré ça.</p>
+
+      <p>Premier round avec des amis avec une médecin dans l’assistance. J’étais pétrifiée de trac, j’avais tellement peur qu’elle me juge… Il m’a fallu plusieurs verres pour me lancer. Petit à petit, sous leur regard bienveillant, je me suis détendue et j’ai déroulé mon texte avec de plus en plus de confiance. A la fin, j’ai bien cru que j’allais m’écrouler... Ensuite nous avons eu un échange très intéressant sur les statistiques, le fond de la conférence, et sa forme. C’était trop bien.</p>
+
+      <p>Deuxième round devant une trentaine de personnes dans une association pour entrepreneurs en liquidation. Je pensais clôturer la séance mais ils m’ont prise par surprise et j’ai ouvert les hostilités. Finalement c’était mieux, je n’ai pas eu le temps de stresser. Cette fois je me sentais mieux.  A ma place. Heureuse. L’échange qui a eu lieu après était magique. Quand une coach, autiste est venue me serrer dans ses bras et me dire : j’avais envie de me lever et de dire « oui ! c’est ça ! Bravo ».</p>
+
+      <p>J’étais tellement fière de l’avoir fait. J’étais gonflée à bloc ! Et très heureuse de rentrer me coucher…</p>
+
+      <p>Pourtant j’allais devoir me réinventer... de l’autre côté de l’Atlantique cette fois.</p>
     </div>
 
 
   <div class="next-mobile" style="--nm-color:var(--s1)">
-    <a href="../s1-04/">
+    <a href="../s1-05/">
       <div class="nm-meta">
         <span class="nm-label">Article suivant</span>
-        <span class="nm-num" style="color:var(--s1)">S1·04</span>
-        <span class="nm-ttl">Evidemment</span>
+        <span class="nm-num" style="color:var(--s1)">S1·05</span>
+        <span class="nm-ttl">Explaining…</span>
       </div>
       <span class="nm-ar" style="color:var(--s1)">→</span>
     </a>

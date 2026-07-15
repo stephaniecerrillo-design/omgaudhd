@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En fait, j'étais normale… — OMGAUDHD S1·03</title>
-<meta name="description" content="Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit. Épisode 03 de la Saison 01 d'OMGAUDHD.">
+<title>On m'évite ? — OMGAUDHD S2·01</title>
+<meta name="description" content="L'eczéma, la cour de récré, et la première fois qu'on devient le problème. Épisode 01 de la Saison 02 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
     --encre:#231F20;
     --encre-soft:#5A5550;
     --jaune:#FFE800;
-    --s1:#FF2D78;
-    --s1-deep:#9B0040;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
     --hair:rgba(35,31,32,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
@@ -28,41 +28,47 @@
   .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
   .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
   .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
-  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
   .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
   .ig-icon:hover{opacity:1;border-bottom:none !important}
 
-  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
 
   article{max-width:760px;margin:0 auto}
   .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
   .crumb a{color:var(--encre-soft);text-decoration:none}
   .crumb a:hover{color:var(--encre)}
-  .crumb .here{color:var(--s1-deep)}
+  .crumb .here{color:var(--s2-deep)}
 
   .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
   .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
   .art-head a.tag:hover{border-bottom-color:currentColor}
   .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
   .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
-  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
 
   .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
   .prose p{margin-bottom:24px}
-  .prose .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s2-deep);font-weight:700}
 
   .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
 
-  .realisation{font-family:'Space Mono',monospace;font-size:15px;line-height:1.8;color:var(--encre);padding:28px 32px;margin:30px 0;border-left:3px solid var(--s1)}
-  .realisation p{margin-bottom:12px}
-  .realisation p:last-child{margin-bottom:0}
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
 
   .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
-  .next:hover{border-color:var(--s1)}
+  .next:hover{border-color:var(--s2)}
   .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
   .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
-  .next .ar{font-size:24px;color:var(--s1)}
+  .next .ar{font-size:24px;color:var(--s2)}
 
   footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
   footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
@@ -113,10 +119,11 @@
   .nm-ar{font-size:24px;transition:color .18s}
   @media(max-width:680px){
     .art-head h1{font-size:32px;}
-    .litanie{font-size:15px;padding-left:14px}
+    .litanie{font-style:italic;margin-bottom:10px}
+    .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
     .prose{font-size:17px}
     .punch{font-size:22px}
-    .realisation{padding:20px 22px;font-size:14px}
+    .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
     .next-mobile{display:block}
@@ -136,10 +143,13 @@
   .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
   .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
   .prev{flex-direction:row-reverse;text-align:right}
-  .art-head h1 .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .s1-prev .ar{color:#FF2D78!important}
+  .s1-prev:hover{border-color:#FF2D78}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
   .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 
-  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s1);line-height:1.2;margin:2px 0 5px}
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s2);line-height:1.2;margin:2px 0 5px}
+  .s1-prev .card-num{color:#FF2D78}
 
   .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
   .ctx-bar.visible{transform:translateY(0)}
@@ -153,14 +163,13 @@
   .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
   .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
   .ctx-center:hover{opacity:.6}
-  .ctx-ep{color:var(--s1);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
-  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s1);width:0%;transition:width .1s;pointer-events:none}
-  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s1);cursor:pointer;color:var(--s1);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .ctx-ep{color:var(--s2);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s2);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s2);cursor:pointer;color:var(--s2);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
-  .litanie{font-style:italic;margin-bottom:10px}
-        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
   @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
 </style>
 </head>
@@ -169,9 +178,9 @@
   <div class="ctx-inner">
     <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
-    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·03</span>En fait, j’étais normale…</button>
-    <a href="../s1-02/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
-    <a href="../s1-04/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·01</span>On m’évite ?</button>
+    <a href="../s1-05/" class="ctx-nav ctx-prev" style="color:#FF2D78"><span class="ctx-arrow">←</span><span class="ctx-num">05</span></a>
+    <a href="../s2-02/" class="ctx-nav ctx-next" style="color:var(--s2)"><span class="ctx-num">02</span><span class="ctx-arrow">→</span></a>
     <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
@@ -209,7 +218,6 @@
           <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
           <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
           <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
-          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
         </div>
       </div>
     </div>
@@ -218,91 +226,59 @@
   <article>
 
     <header class="art-head">
-      <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
-      <h1>En fait, j'étais normale…</h1>
+      <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
+      <h1>On m'évite ?</h1>
       <div class="art-meta">
-        <span class="num">03</span>
+        <span class="num">01</span>
         <span>· 5 min de lecture</span>
-        <span>· #TDAHFÉMININ #MASKING #ÉVIDENCE</span>
+        <span>· #ENFANCE #REJET #MASKING</span>
       </div>
     </header>
 
     
     <div class="prose">
-      <p>Quand il est rentré en maternelle, on nous a fait tester notre fils pour un HPI mais les résultats ont été trop hétérogènes pour être interprétés.</p>
+      <p class="punch">« Si tu attrapes ma maladie, alors tes parents pourront appeler mes parents pour se plaindre. »</p>
 
-      <p>C'était une piste mais à l'époque je ne le savais pas.</p>
+      <p>Ça c’est moi dans la cour de récré, je devais avoir 4 ou 5 ans et je m’en rappelle comme si c’était hier.</p>
 
-      <p>Et puis il y avait un truc qui ne collait pas complètement. Genre « oui mais pas que… »</p>
+      <p>J’avais de l’eczéma sur les mains. Beaucoup. Franchement c’était difficile à vivre, et le pire, c’est que je ne pouvais pas le cacher. Mes petits camarades avaient peur de jouer avec moi, de faire la ronde avec moi. Je trouvais ça absolument absurde alors au début, je m’en fichais. Mon truc à moi c’étaient les histoires. Les écouter puis les lire. Les autres ne savaient pas encore lire. Néanmoins, j’étais perdue sur le pourquoi. Pourquoi on ne jouait pas avec moi ? Alors j’ai posé la question à Alice pour savoir comment intégrer leur jeu.</p>
 
-      <p>Toute seule dans mon coin, je ne laissais pas tomber. Je voulais comprendre et être là pour lui. Un jour je suis tombée sur un flyer chez le médecin sur le TDAH. Les « vrais » symptômes.</p>
+      <p>Elle m’a répondu : « ma mère m’a dit que ça s’attrape. »</p>
 
-      <p>Franchement j'en avais vraiment une idée très floue mais là…. En lisant le document, mon cœur a manqué un battement puis il a accéléré.</p>
+      <p>WTF ?</p>
 
-      <p>C'était ça ! Bien sûr que c'était ça ! Le diagnostic de mon fils a été une formalité.</p>
+      <p class="punch">Alors je lui ai attrapé le bras sans réfléchir,</p>
 
-      <p>Quand j'ai compris, toujours à force de chercher des infos valables, que c'était fortement héréditaire, je me suis penchée sur les symptômes des adultes. Mouais… Pas 100% convaincue. Et puis les spécificités du TDAH féminin. <span class="hl">Ça commence à piquer.</span></p>
+      <p>c’était complètement impulsif. Elle était terrorisée, a ouvert ses yeux et sa bouche en grand. Je me rappelle la colère que j’ai ressentie à ce moment-là, j’avais chaud, j’entendais mon cœur battre dans mes tempes. Puis je l’ai laissée là, tremblante, sans doute en train de réfléchir à ce qu’elle allait pouvoir dire à sa mère. Moi ? J’étais terrifiée à l’idée qu’elle se fasse gronder, et que je me fasse gronder aussi.</p>
 
-      <p>Le masking. La fluctuation hormonale. Les changements de jobs tous les 18 mois.</p>
+      <p>Il n’en a rien été : Alice n’a rien dit à sa mère et est devenue ma meilleure copine de maternelle. Elle avait compris, et les autres avec elle, que j’étais inoffensive.</p>
 
-      <p>Je me refais le film de ma vie, cette vie à chercher la raison pour laquelle je me sentais si différente et incapable de me plier au monde qui m'entoure.</p>
+      <p>J’étais rejetée par les enfants à cause d’une maladie de peau qu’ils ne comprenaient pas et dont ils avaient peur. Enfin, dont leurs parents avaient peur. Par ignorance ? Sûrement. Par bêtise ? Sans doute. Par méchanceté ? Je ne crois pas.</p>
 
-      <p>J'ai compris :</p>
+      <p>Pendant l’année de CP, mes parents se sont séparés et j’ai déménagé. Souvent. Parfois en milieu d’année. A chaque fois, tout était à refaire. Une nouvelle routine, de nouveaux visages, de nouvelles questions sur mon eczéma : Ça s’attrape ?</p>
 
-      <div class="litanie-block">
-        <p class="litanie">Que mon SPM était bien supérieur à la moyenne.</p>
+      <p>Parfois je disais oui, juste pour avoir la paix.</p>
 
-        <p class="litanie">Que mon sentiment de rejet était bien supérieur à la normale.</p>
+      <p>Honnêtement, je ne peux pas dire que j’ai vraiment cherché à me faire des amis. Je ne sais même pas si c’était moi ou eux qui n’étaient pas intéressés. A force de déménager, je pense que je m’étais dit que ça n’en valait tout simplement pas la peine. Mais il y a une chose que je savais : faire le pitre, c’était un super moyen d’être appréciée. <span class="hl-y">Alors je suis devenue clown.</span> Comme mon doudou (<em>oui c’était un clown, évidemment</em>) ! J’ai tellement bien incarné mon personnage, que j’en ai reçu un autre de la part d’une de mes institutrices avant un énième déménagement. J’avais la cote avec les maitresses. Avec les adultes en général.</p>
 
-        <p class="litanie">Que mes trous de mémoire étaient bien plus fréquents que pour les autres.</p>
+      <p>En même temps, j’étais bonne à l’école, sage à la maison, sérieuse.</p>
 
-        <p class="litanie">Que mes lubies étaient bien plus hétérogènes et aléatoires que des hobbys traditionnels.</p>
+      <p>Ça peut paraitre contradictoire mais je faisais vraiment coexister : clown et sérieux. Je faisais de l’esprit, j’avais de la répartie, de l’humour. Un humour de grand. Ça me permettait d’être appréciée par les adultes et de ne pas trop courir après les autres enfants… que je ne comprenais pas, et qui me le rendaient bien.</p>
 
-        <p class="litanie">Que ma concentration était bien plus intense mais pas quand je voulais.</p>
+      <p>Pour moi ce n’était pas bizarre d’être avec des adultes tout le temps. J’avais l’impression d’appartenir à leur groupe. Aux adultes. Ce n’était pas le cas bien sûr. <span class="hl">Je n’étais qu’une enfant, qu’on pouvait renvoyer dans sa chambre</span>, juste après avoir débattu sur le sens de la vie pendant une demi-heure à l’apéro. Je me rappelle que c’était pour moi l’équivalent d’une grande gifle. D’aussi loin que je me souvienne, je rêvais d’être une adulte pour pouvoir enfin rester et être à ma place.</p>
 
-        <p class="litanie">Que tout ça était... la normalité d'une personne avec un TDAH.</p>
-      </div>
-
-      <p class="punch">En fait j'étais normale.</p>
-
-      <p>Et moi qui me détestait de ne pas arriver à faire comme tout le monde…</p>
-
-      <p>J'ai beaucoup pleuré. Pleuré sur cette jeune femme qui voulait toujours bien faire et qui en faisait toujours trop. J'ai ressenti une grande bouffée de compassion pour elle. Et une énorme sensation de temps perdu.</p>
-
-      <p>J'étais aussi super en colère.</p>
-
-      <p>Puisque mon TDAH se voyait comme le nez au milieu de ma figure, pourquoi est ce qu'il aura fallu si longtemps pour le débusquer ?</p>
-
-      <p>C'est pas faute d'avoir consulté pourtant : dépression, anxiété, burn-out même.</p>
-
-      <p>Non.</p>
-
-      <p>Il aura fallu que je passe par mon gamin pour enfin voir mon reflet dans un miroir.</p>
-
-      <p>Alors quoi ?</p>
-
-      <p>Il n'en fallait pas plus pour que je passe en hyperfocus sur le TDAH féminin. Podcasts, interviews, magazines, bouquin de psychologie, vulgarisation scientifique, Instagram (<em>oui aussi</em>). Tout y est passé et j'ai compris.</p>
-
-      <p><span class="hl-y">Ce qui m'est arrivé n'est pas un accident.</span> C'est systémique.</p>
-
-      <p>De « en colère » je suis passée à « furieuse ». Je devais faire quelque chose pour augmenter la visibilité du TDAH des femmes.</p>
-
-      <p>Déjà que j'étais une féministe un peu reloue, j'allais passer dans la catégorie féministe et porte parole de ma condition neurologique.</p>
-
-      <p>Une vraie perle.</p>
-
-      <p class="punch">Vous n'êtes pas prêts pour ce qui arrive…</p>
+      <p class="punch">Heureusement qu’il y avait les bouquins, au moins je savais où j’étais et à quoi m’en tenir…</p>
     </div>
 
 
-  <div class="next-mobile" style="--nm-color:var(--s1)">
-    <a href="../s1-04/">
+  <div class="next-mobile" style="--nm-color:var(--s2)">
+    <a href="../s2-02/">
       <div class="nm-meta">
         <span class="nm-label">Article suivant</span>
-        <span class="nm-num" style="color:var(--s1)">S1·04</span>
-        <span class="nm-ttl">Evidemment</span>
+        <span class="nm-num" style="color:var(--s2)">S2·02</span>
+        <span class="nm-ttl">Tuto de la collégienne normale… tu parles !</span>
       </div>
-      <span class="nm-ar" style="color:var(--s1)">→</span>
+      <span class="nm-ar" style="color:var(--s2)">→</span>
     </a>
   </div>
   </article>

@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>En fait, j'étais normale… — OMGAUDHD S1·03</title>
-<meta name="description" content="Le film de toute une vie relu à la lumière du TDAH féminin — et la colère qui s'ensuit. Épisode 03 de la Saison 01 d'OMGAUDHD.">
+<title>Connais toi toi-même… facile à dire ! — OMGAUDHD S1·01</title>
+<meta name="description" content="TDAH, génétique, et la première fois que le mot revient en boucle. Épisode 01 de la Saison 01 d'OMGAUDHD.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
@@ -54,9 +54,9 @@
 
   .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
 
-  .realisation{font-family:'Space Mono',monospace;font-size:15px;line-height:1.8;color:var(--encre);padding:28px 32px;margin:30px 0;border-left:3px solid var(--s1)}
-  .realisation p{margin-bottom:12px}
-  .realisation p:last-child{margin-bottom:0}
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
 
   .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
   .next:hover{border-color:var(--s1)}
@@ -116,7 +116,6 @@
     .litanie{font-size:15px;padding-left:14px}
     .prose{font-size:17px}
     .punch{font-size:22px}
-    .realisation{padding:20px 22px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
     .next-mobile{display:block}
@@ -159,8 +158,7 @@
   .fab.visible{opacity:1;transform:scale(1)}
   .fab:hover{transform:scale(1.1)!important}
   .fab:hover{transform:scale(1.1)!important}
-  .litanie{font-style:italic;margin-bottom:10px}
-        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
   @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
 </style>
 </head>
@@ -169,9 +167,8 @@
   <div class="ctx-inner">
     <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
     <div style="flex:1"></div>
-    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·03</span>En fait, j’étais normale…</button>
-    <a href="../s1-02/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
-    <a href="../s1-04/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·01</span>Connais toi toi-même !</button>
+    <a href="../s1-02/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">02</span><span class="ctx-arrow">→</span></a>
     <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
@@ -209,7 +206,6 @@
           <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
           <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
           <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
-          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
         </div>
       </div>
     </div>
@@ -219,88 +215,54 @@
 
     <header class="art-head">
       <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
-      <h1>En fait, j'étais normale…</h1>
+      <h1>Connais toi toi-même…<br>facile à dire !</h1>
       <div class="art-meta">
-        <span class="num">03</span>
-        <span>· 5 min de lecture</span>
-        <span>· #TDAHFÉMININ #MASKING #ÉVIDENCE</span>
+        <span class="num">01</span>
+        <span>· 4 min de lecture</span>
+        <span>· #TDAH #DIAGNOSTIC #GÉNÉTIQUE</span>
       </div>
     </header>
 
-    
     <div class="prose">
-      <p>Quand il est rentré en maternelle, on nous a fait tester notre fils pour un HPI mais les résultats ont été trop hétérogènes pour être interprétés.</p>
+      <p>TDAH. Bon sang mais quelle est cette diablerie ! Non mais déjà, ça veut dire quoi TDAH ? <strong style="color:var(--s1)">T</strong>rouble <strong style="color:var(--s1)">D</strong>e l’<strong style="color:var(--s1)">A</strong>ttention avec ou sans (<em>sinon c’est pas drôle</em>) <strong style="color:var(--s1)">H</strong>yperactivité. Quel est le génie qui a pondu un nom pareil ?</p>
 
-      <p>C'était une piste mais à l'époque je ne le savais pas.</p>
+      <p>Bref. <span class="hl">Bienvenue dans le merveilleux monde de la neuroatypie un peu vénère.</span></p>
 
-      <p>Et puis il y avait un truc qui ne collait pas complètement. Genre « oui mais pas que… »</p>
+      <p>Pourtant la neurodiversité, c’est vraiment pas un sujet sur lequel je me suis penchée avant mon entrée dans le monde du travail. Environnement dans lequel je me sentais complètement, mais alors complètement, à côté des rails.</p>
 
-      <p>Toute seule dans mon coin, je ne laissais pas tomber. Je voulais comprendre et être là pour lui. Un jour je suis tombée sur un flyer chez le médecin sur le TDAH. Les « vrais » symptômes.</p>
+      <p>Pendant ma scolarité je me sentais déjà en décalage, mais je mettais ça d’une part sur mon parcours de vie un peu chaotique et d’autre part sur le fait que les autres enfants étaient peut-être juste méchants et mal élevés.</p>
 
-      <p>Franchement j'en avais vraiment une idée très floue mais là…. En lisant le document, mon cœur a manqué un battement puis il a accéléré.</p>
+      <p>Hum.</p>
 
-      <p>C'était ça ! Bien sûr que c'était ça ! Le diagnostic de mon fils a été une formalité.</p>
+      <p>Bon bah au boulot ils n’étaient ni vraiment plus sympa ni mieux éduqués. Au regard de l’avalanche de particules dans les patronymes de mes collègues, je peux même dire que visiblement je n’avais pas le bon pedigree. Et que c’était pas une bonne nouvelle…</p>
 
-      <p>Quand j'ai compris, toujours à force de chercher des infos valables, que c'était fortement héréditaire, je me suis penchée sur les symptômes des adultes. Mouais… Pas 100% convaincue. Et puis les spécificités du TDAH féminin. <span class="hl">Ça commence à piquer.</span></p>
+      <p>Un jour d’errance dans une librairie je suis tombée sur le premier bouquin qui m’a fait toucher du doigt que peut être, il y avait autre chose à chercher. Alors ok ça parlait de <em>préférence hémisphérique</em>, cerveau droit vs cerveau gauche, qui est avec le recul une petite aberration scientifique… mais quand même. Les fonctionnements décrits me parlaient et la conclusion qui disait en substance :</p>
 
-      <p>Le masking. La fluctuation hormonale. Les changements de jobs tous les 18 mois.</p>
+      <p class="punch">“Vous n’êtes pas seuls mais vous n’êtes pas majoritaires alors… adaptez vous.”</p>
 
-      <p>Je me refais le film de ma vie, cette vie à chercher la raison pour laquelle je me sentais si différente et incapable de me plier au monde qui m'entoure.</p>
+      <p>Je l’ai bien intégré. Merci.</p>
 
-      <p>J'ai compris :</p>
+      <p>Et puis je suis devenue mère. Hin hin hin (<em>rire hystérique</em>). <em>IYKYK</em>.</p>
 
-      <div class="litanie-block">
-        <p class="litanie">Que mon SPM était bien supérieur à la moyenne.</p>
+      <p>Assez rapidement on a compris que notre petit bonhomme avait un fonctionnement unique. D’instit dépassée, en passant par le pédopsychiatre et le pétage de plomb parental, nous avons fini par avoir un diagnostic pour ce merveilleux petit être de 9 ans qui pensait qu’on serait plus heureux sans lui.</p>
 
-        <p class="litanie">Que mon sentiment de rejet était bien supérieur à la normale.</p>
+      <p>TDAH. Il ne se tape pas la tête contre les murs pourtant…</p>
 
-        <p class="litanie">Que mes trous de mémoire étaient bien plus fréquents que pour les autres.</p>
+      <p>Me voilà donc partie en quête de la compréhension d’un trouble du neurodéveloppement avec mon petit bagage de bobo parisienne pleine de préjugés. J’ai alors découvert un mode de fonctionnement stéréotypé, mal documenté, à la limite de la légende urbaine. Qu’à cela ne tienne, j’étais bien décidée à comprendre à quoi j’avais affaire. J’ai donc plongé corps et âme dans tous les supports possibles et imaginables.</p>
 
-        <p class="litanie">Que mes lubies étaient bien plus hétérogènes et aléatoires que des hobbys traditionnels.</p>
+      <p>Au fur et à mesure je me suis rendue compte que ça faisait des déflagrations dans ma tête. J’ai pris des ondes de chocs les unes après les autres. Au début j’ai culpabilisé de ne pas avoir compris plus tôt avec quelles difficultés mon fils se battait. Ce sentiment de solitude et d’incompréhension qu’il devait ressentir au quotidien. Mais en me familiarisant avec les concepts et en ouvrant la discussion avec lui, je le vois mieux se comprendre, prendre confiance en lui et ne plus s’excuser d’exister.</p>
 
-        <p class="litanie">Que ma concentration était bien plus intense mais pas quand je voulais.</p>
+      <p>Pendant le même temps, je me débats avec un mot qui tourne en boucle dans mon esprit : génétique. <span class="hl-y">C’est gé-né-tique.</span></p>
 
-        <p class="litanie">Que tout ça était... la normalité d'une personne avec un TDAH.</p>
-      </div>
-
-      <p class="punch">En fait j'étais normale.</p>
-
-      <p>Et moi qui me détestait de ne pas arriver à faire comme tout le monde…</p>
-
-      <p>J'ai beaucoup pleuré. Pleuré sur cette jeune femme qui voulait toujours bien faire et qui en faisait toujours trop. J'ai ressenti une grande bouffée de compassion pour elle. Et une énorme sensation de temps perdu.</p>
-
-      <p>J'étais aussi super en colère.</p>
-
-      <p>Puisque mon TDAH se voyait comme le nez au milieu de ma figure, pourquoi est ce qu'il aura fallu si longtemps pour le débusquer ?</p>
-
-      <p>C'est pas faute d'avoir consulté pourtant : dépression, anxiété, burn-out même.</p>
-
-      <p>Non.</p>
-
-      <p>Il aura fallu que je passe par mon gamin pour enfin voir mon reflet dans un miroir.</p>
-
-      <p>Alors quoi ?</p>
-
-      <p>Il n'en fallait pas plus pour que je passe en hyperfocus sur le TDAH féminin. Podcasts, interviews, magazines, bouquin de psychologie, vulgarisation scientifique, Instagram (<em>oui aussi</em>). Tout y est passé et j'ai compris.</p>
-
-      <p><span class="hl-y">Ce qui m'est arrivé n'est pas un accident.</span> C'est systémique.</p>
-
-      <p>De « en colère » je suis passée à « furieuse ». Je devais faire quelque chose pour augmenter la visibilité du TDAH des femmes.</p>
-
-      <p>Déjà que j'étais une féministe un peu reloue, j'allais passer dans la catégorie féministe et porte parole de ma condition neurologique.</p>
-
-      <p>Une vraie perle.</p>
-
-      <p class="punch">Vous n'êtes pas prêts pour ce qui arrive…</p>
+      <p class="punch">Vertige.<br>Déni.<br>Évidence.<br>Colère.</p>
     </div>
 
-
   <div class="next-mobile" style="--nm-color:var(--s1)">
-    <a href="../s1-04/">
+    <a href="../s1-02/">
       <div class="nm-meta">
         <span class="nm-label">Article suivant</span>
-        <span class="nm-num" style="color:var(--s1)">S1·04</span>
-        <span class="nm-ttl">Evidemment</span>
+        <span class="nm-num" style="color:var(--s1)">S1·02</span>
+        <span class="nm-ttl">Héréditaire</span>
       </div>
       <span class="nm-ar" style="color:var(--s1)">→</span>
     </a>

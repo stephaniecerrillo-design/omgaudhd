@@ -109,6 +109,18 @@
   .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .burger.open span:nth-child(2){opacity:0}
   .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* NEXT MOBILE (mobile uniquement) */
+  .next-mobile{display:none}
+  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
+  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
+  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
+  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
+  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
+  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
+  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
+  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
+  .nm-ar{font-size:24px;transition:color .18s}
   @media(max-width:680px){
     .art-head h1{font-size:32px;}
     .prose{font-size:17px}
@@ -116,6 +128,7 @@
     .dialogue{padding-left:32px;font-size:14px}
     .navlinks{gap:16px;font-size:12px}
     .brand{font-size:20px}
+    .next-mobile{display:block}
     .wrap{padding:0 16px}
     .art-meta{flex-wrap:wrap;gap:10px}
     .nav-articles{flex-direction:column;gap:12px}
@@ -166,6 +179,7 @@
     <div style="flex:1"></div>
     <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·03</span>Le lycée ? RAS…</button>
     <a href="../s2-02/" class="ctx-nav ctx-prev" style="color:var(--s2)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
+    <a href="../s2-04/" class="ctx-nav ctx-next" style="color:var(--s2)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
     <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <div class="ctx-prog" id="ctx-prog"></div>
   </div>
@@ -203,6 +217,7 @@
           <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
           <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
           <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
+          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
         </div>
       </div>
     </div>
@@ -265,21 +280,29 @@
       <p>Le plus drôle dans tout ça, c’est qu’au lycée je ne connaissais presque personne. Quand j’étais en 2e année à l’ESC, j’ai fait l’accueil des étudiants admissibles et tous ceux qui étaient passés par mon lycée m’ont reconnue. </p>
 
       <p class="punch">Visiblement j’avais marqué les esprits, et je l’ignorais complètement.</p>
-    
+
+      <div class="next-mobile" style="--nm-color:#38C9A3">
+        <a href="../s2-04/">
+          <div class="nm-meta">
+            <span class="nm-label">Article suivant</span>
+            <span class="nm-num" style="color:var(--s2)">S2·04</span>
+            <span class="nm-ttl">(Des)orientée</span>
+          </div>
+          <span class="nm-ar" style="color:var(--s2)">→</span>
+        </a>
+      </div>
+
     </div>
 
   </article>
 
-
-  <!-- Article suivant — à activer quand S2-04 sera publié
   <a class="next" href="../s2-04/">
     <div>
       <div class="lbl">ARTICLE SUIVANT · S2</div>
-      <div class="ttl">Prépa &amp; école de commerce</div>
+      <div class="ttl">(Des)orientée</div>
     </div>
     <div class="ar">→</div>
   </a>
-  -->
 
   <footer>
     <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
