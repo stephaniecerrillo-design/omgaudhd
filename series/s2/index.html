@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saison 02 — Trouver un chemin · OMGAUDHD</title>
+<meta name="description" content="Le masking scolaire, de la primaire à l'école de commerce. Comment on apprend à devenir quelqu'un d'autre pour rentrer dans le moule — et tout ce que ça coûte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a.active{border-bottom-color:var(--s2)}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+
+  .serie-head{padding:18px 0 50px;border-bottom:1px solid var(--hair);margin-bottom:48px}
+  .serie-head .tag{font-size:13px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
+  .serie-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(36px,5vw,58px);line-height:1.18;letter-spacing:-1px}
+  .serie-head h1 .hl{background:var(--s2);color:#fff;padding:0 10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .serie-head .thesis{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:21px;line-height:1.5;color:var(--encre);margin-top:26px;padding-left:18px;border-left:3px solid var(--s2)}
+  .serie-head .intro{font-size:15px;line-height:1.7;color:var(--encre-soft);margin-top:24px}
+
+  .art-list{display:flex;flex-direction:column;gap:0}
+  .art{display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;padding:26px 4px;border-top:1px solid var(--hair);text-decoration:none;color:var(--encre);transition:padding .18s}
+  .art:last-child{border-bottom:1px solid var(--hair)}
+  .art:hover{padding-left:14px}
+  .art .num{font-family:'Playfair Display',serif;font-weight:900;font-size:40px;color:var(--s2);line-height:1}
+  .art .body h3{font-family:'Playfair Display',serif;font-weight:700;font-size:25px;line-height:1.15;margin-bottom:5px}
+  .art .body .desc{font-size:13px;color:var(--encre-soft);line-height:1.5}
+  .art .status{font-size:11px;letter-spacing:1px;padding:5px 11px;border-radius:30px;white-space:nowrap}
+  .st-pub{background:var(--s2);color:#fff}
+  .st-wip{background:var(--jaune);color:var(--encre)}
+  .st-soon{background:transparent;color:var(--encre-soft);border:1px solid var(--hair)}
+  .art .arrow{font-size:18px;color:var(--s2);opacity:0;transition:opacity .18s;margin-left:6px}
+  .art:hover .arrow{opacity:1}
+  .art.locked{opacity:.5;pointer-events:none}
+
+  footer{margin-top:90px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  @media(max-width:680px){
+    .serie-head h1{font-size:38px}
+    .art{grid-template-columns:44px 1fr auto;gap:14px}
+    .art .num{font-size:28px}
+    .brand{font-size:20px}
+    .wrap{padding:0 16px}
+    .serie-head .thesis{font-size:18px}
+    footer{flex-direction:column;gap:14px;align-items:flex-start}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a href="../../#series" class="active">Saisons</a>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener" class="ig-icon" aria-label="Instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <header class="serie-head">
+    <div class="tag">SAISON 02</div>
+    <h1>Trouver un <span class="hl">chemin</span></h1>
+    <p class="thesis">« Plus tu masques bien, plus tu t'éloignes de toi. »</p>
+    <p class="intro">Le masking scolaire, de la primaire à l'école de commerce. Comment on apprend à devenir quelqu'un d'autre pour rentrer dans le moule — et tout ce que ça coûte.</p>
+  </header>
+
+  <div class="art-list">
+
+    <a class="art" href="../../articles/s2-01/">
+      <div class="num">01</div>
+      <div class="body">
+        <h3>On m'évite ?</h3>
+        <div class="desc">L'eczéma, la cour de récré, et la première fois qu'on devient le problème.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s2-02/">
+      <div class="num">02</div>
+      <div class="body">
+        <h3>Tuto de la collégienne normale… tu parles !</h3>
+        <div class="desc">Première stratégie consciente : observer, copier, disparaître dans la masse.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s2-03/">
+      <div class="num">03</div>
+      <div class="body">
+        <h3>Le lycée ? RAS… ou presque !</h3>
+        <div class="desc">L'armure censée me rendre invisible — qui me rendait justement inoubliable.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <a class="art" href="../../articles/s2-04/">
+      <div class="num">04</div>
+      <div class="body">
+        <h3>(Des)orientée</h3>
+        <div class="desc">Un CIO, une fiche Onisep, un chef de produit — et moi qui ne savais même pas ce que je voulais manger.</div>
+      </div>
+      <div style="display:flex;align-items:center"><span class="status st-pub">Publié</span><span class="arrow">→</span></div>
+    </a>
+
+    <div class="art locked">
+      <div class="num">05</div>
+      <div class="body">
+        <h3>Synthèse — ce que masquer m'a coûté</h3>
+        <div class="desc">À venir.</div>
+      </div>
+      <div><span class="status st-soon">Bientôt</span></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+
+
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var nav = document.getElementById('navlinks');
+  if(!btn||!nav) return;
+  btn.addEventListener('click', function(){
+    btn.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      btn.classList.remove('open');
+      nav.classList.remove('open');
+    });
+  });
+})();
+</script>
+</body>
+</html>

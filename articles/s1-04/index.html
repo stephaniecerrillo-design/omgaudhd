@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evidemment — OMGAUDHD S1·04</title>
+<meta name="description" content="Une conférence, une inconnue, et deux mots qui font basculer quelque chose. Épisode 04 de la Saison 01 d'OMGAUDHD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s1:#FF2D78;
+    --s1-deep:#9B0040;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a:hover{border-bottom-color:var(--s1)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s1);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+
+  article{max-width:760px;margin:0 auto}
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s1-deep)}
+
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
+  .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
+  .art-head a.tag:hover{border-bottom-color:currentColor}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s1)}
+
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose p{margin-bottom:24px}
+  .prose .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s1)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s1-deep);font-weight:700}
+
+  .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
+
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
+
+  .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s1)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s1)}
+
+  footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+
+
+
+  /* ACCORDÉON NAV */
+  .nav-section{display:none;border-bottom:1px solid var(--hair)}
+  .nav-section-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;padding:14px 0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--encre);font-family:inherit;text-align:left}
+  .nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--sec)}
+  .nav-chevron{margin-left:auto;color:var(--sec);flex-shrink:0;transition:transform .2s;display:block}
+  .nav-section-btn.open .nav-chevron{transform:rotate(90deg)}
+  .nav-section-items{display:none;flex-direction:column;padding:0 0 14px 18px}
+  .nav-section-items.open{display:flex}
+  .nav-section-items a{font-size:13px;padding:8px 0;color:var(--encre);text-decoration:none;letter-spacing:.3px}
+  .nav-section-items a:hover{opacity:.6}
+  .ep-num{color:var(--sec);font-weight:700}
+  .nav-flat{display:none;flex-direction:column;gap:14px;padding-top:16px;align-items:flex-start}
+  .nav-flat a{color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.5px;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .nav-flat a:hover{border-bottom-color:var(--jaune)}
+  .nav-section-items a:hover{border-bottom-color:var(--sec) !important;opacity:1}
+  /* CTX BURGER */
+  .ctx-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .ctx-burger span{display:block;width:18px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .ctx-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .ctx-burger.open span:nth-child(2){opacity:0}
+  .ctx-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* NEXT MOBILE (mobile uniquement) */
+  .next-mobile{display:none}
+  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
+  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
+  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
+  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
+  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
+  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
+  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
+  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
+  .nm-ar{font-size:24px;transition:color .18s}
+  @media(max-width:680px){
+    .art-head h1{font-size:32px;}
+    .litanie{font-size:15px}
+    .prose{font-size:17px}
+    .punch{font-size:22px}
+    .dialogue{padding-left:32px;font-size:14px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+    .next-mobile{display:block}
+    .wrap{padding:0 16px}
+    .art-meta{flex-wrap:wrap;gap:10px}
+    .nav-articles{flex-direction:column;gap:12px}
+    .nav-articles .next,.nav-articles .serie-next{width:100%;flex:none;margin-left:0 !important}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
+    .nav-dt{display:none}
+    .nav-section{display:block}
+    .nav-flat{display:flex}
+  }
+
+  .nav-articles{max-width:760px;margin:54px auto 0;display:flex;align-items:stretch}
+  .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
+  .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
+  .prev{flex-direction:row-reverse;text-align:right}
+  .art-head h1 .hl{background:var(--s1);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s1);line-height:1.2;margin:2px 0 5px}
+
+  .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
+  .ctx-bar.visible{transform:translateY(0)}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
+  .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
+  .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
+  .ctx-nav:hover{opacity:1;box-shadow:inset 0 0 0 999px currentColor}.ctx-nav:hover .ctx-arrow,.ctx-nav:hover .ctx-num{color:var(--creme)}
+  .ctx-spacer{width:74px;flex-shrink:0}
+  .ctx-arrow{font-size:12px}
+  .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
+  .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
+  .ctx-center:hover{opacity:.6}
+  .ctx-ep{color:var(--s1);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s1);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s1);cursor:pointer;color:var(--s1);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .fab.visible{opacity:1;transform:scale(1)}
+  .fab:hover{transform:scale(1.1)!important}
+  .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-style:italic;margin-bottom:10px}
+        .litanie-block{border-left:3px solid var(--s1);padding-left:20px;margin:24px 0 28px}
+  @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
+</style>
+</head>
+<body>
+<div class="ctx-bar" id="ctx-bar">
+  <div class="ctx-inner">
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
+    <div style="flex:1"></div>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S1·04</span>Evidemment</button>
+    <a href="../s1-03/" class="ctx-nav ctx-prev" style="color:var(--s1)"><span class="ctx-arrow">←</span><span class="ctx-num">03</span></a>
+    <a href="../s1-05/" class="ctx-nav ctx-next" style="color:var(--s1)"><span class="ctx-num">05</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="ctx-prog" id="ctx-prog"></div>
+  </div>
+</div>
+<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,10 7,4 13,10"/></svg></button>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a class="nav-dt" href="../../#series">Saisons</a>
+      <div class="nav-section" style="--sec:#FF2D78">
+        <button class="nav-section-btn" data-target="nav-s1">
+          <span class="nav-dot"></span>
+          <span>SAISON 01 · ME DÉCOUVRIR</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s1">
+          <a href="../../articles/s1-01/"><span class="ep-num">S1·01</span> — Connais toi toi-même… facile à dire !</a>
+          <a href="../../articles/s1-02/"><span class="ep-num">S1·02</span> — Héréditaire</a>
+          <a href="../../articles/s1-03/"><span class="ep-num">S1·03</span> — En fait, j'étais normale…</a>
+          <a href="../../articles/s1-04/"><span class="ep-num">S1·04</span> — Evidemment</a>
+          <a href="../../articles/s1-05/"><span class="ep-num">S1·05</span> — Explaining…</a>
+        </div>
+      </div>
+      <div class="nav-section" style="--sec:#38C9A3">
+        <button class="nav-section-btn" data-target="nav-s2">
+          <span class="nav-dot"></span>
+          <span>SAISON 02 · TROUVER UN CHEMIN</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s2">
+          <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
+          <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
+          <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
+          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+
+    <header class="art-head">
+      <a class="tag" href="../../series/s1/">SAISON 01 · ME DÉCOUVRIR</a>
+      <h1>Evidemment</h1>
+      <div class="art-meta">
+        <span class="num">04</span>
+        <span>· 7 min de lecture</span>
+        <span>· #CONFÉRENCE #LÉGITIMITÉ #TDAHFÉMININ</span>
+      </div>
+    </header>
+
+    
+    <div class="prose">
+      <p><em>21 mars 2025.</em> J’assiste à la soirée annuelle du Centre des Jeunes Dirigeants du Béarn sur le thème : Transformez les contraintes en opportunités. J’étais très excitée à l’idée de m’y rendre. Les conférences du CJD m’ont toujours beaucoup apporté, mis en lumière des choses que je ne voyais pas. Et puis je suis toujours contente de voir mes copines et copains. Bref. J’étais joie.</p>
+
+      <p>L’invitée principale était Virginie Delalande qui venait nous parler de résilience et de dépassement de soi. Inconnue au bataillon en ce qui me concernait.</p>
+
+      <p>La lumière s’éteint dans la salle, et Virginie illumine la scène. Quand elle commence à parler, je ne la comprends pas, parce que sa voix est différente, son élocution particulière (<em>je ne savais pas qu’elle était sourde, ça surprend !</em>). Petit à petit, elle m’embarque. Finalement, yeux et bouche grands ouverts, je fixe la scène et je ne la vois plus. <span class="hl">Je ME vois.</span></p>
+
+      <p>Tout mon corps me dit :</p>
+
+      <p class="punch">c’est là que tu dois être !</p>
+
+      <p>Mais c’est impossible. De quoi je pourrais bien parler ? C’est toujours pareil avec moi… je voulais être coach, formatrice et même enseignante. Mais pour enseigner quoi ? Et surtout à qui ? Et à quel titre ? Bref.</p>
+
+      <p>Je tourne la tête sur ma droite à la fin de la conférence et je dis à ma voisine, que j’avais rencontré juste avant : « Oh lala, j’aimerai tellement faire ça comme boulot ! »</p>
+
+      <p>Elle sourit.</p>
+
+      <p>On avait un peu échangé avant la conférence et le courant était passé.</p>
+
+      <p>Elle me demande pourquoi.</p>
+
+      <p>Alors je me lance. Sans filet, ça sort tout seul. C’était la première fois que j’exprimais ça à voix haute : mon envie de transmettre et mon incapacité à me sentir légitime de le faire. J’enchaîne en lui parlant de mon TDAH, de la difficulté que j’ai eue pour me faire diagnostiquer, et puis finalement je lui ai tenu la jambe sur ce sujet pendant 15 bonnes minutes sans respirer.</p>
+
+      <p>Elle sourit encore, me regarde avec attention, et me dit.</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Voisine :</span> Evidemment ! C’est ça ton sujet.</p>
+      </div>
+
+      <p>Je ne comprends pas ! De quoi elle parle ?</p>
+
+      <div class="dialogue">
+        <p><span class="who">— Voisine :</span> Du TDAH féminin bien sûr ! Tu es tellement captivante quand tu en parles ! Vraiment je sens que c’est quelque chose qui t’anime et tu devrais tenter ! Je suis sûre que ça fonctionnerait.</p>
+      </div>
+
+      <p>Je la regarde, incrédule.</p>
+
+      <p>N’importe quoi. <span class="hl-y">Je ne suis personne.</span> Qui voudrait m’écouter déblatérer sur ce sujet ? Ok je suis bien documentée mais je ne suis ni médecin, ni psychologue… ni une actrice connue. Non vraiment je vois pas ce que je fais dans cette histoire.</p>
+
+      <p>Mais… ça reste dans ma tête…</p>
+
+      <p>Ce qu’il faut savoir à ce moment-là c’est que je suis dans une période un peu dense de ma vie. J’étais encore en train de digérer la liquidation de mon entreprise 6 mois plus tôt. Je cherchais un boulot salarié pour me prouver que je pouvais encore bosser et en même temps je venais de finir un accompagnement de 3 mois avec une dirigeante qui voulait opérer un repositionnement de son entreprise.</p>
+
+      <p>Oui je sais, ça fait beaucoup… mais je voulais rester occupée pour ne pas m’effondrer. Mon entreprise m’avait littéralement épuisée, et comme je ne sais pas me reposer j’ai préféré me noyer sous les projets. Très sain comme réaction on en conviendra.</p>
+
+      <p>Anyway. J’en étais là.</p>
+
+      <p>Tout se bouscule dans ma tête et je panique. Le boulot salarié, ce sera ma priorité. Donc est arrivé ce qui devait arriver : j’ai trouvé du boulot. Démarrage en juin. Les autres projets partent au placard.</p>
+
+      <p>Sauf que… j’ai du mal à m’adapter à l’entreprise. Ça faisait 6 ans que je n’avais pas mis les pieds derrière un bureau pour avoir un salaire. J’avais du mal à m’intégrer et surtout, je m’ennuyais à mourir toute la journée.</p>
+
+      <p>Mon instinct de survie s’est alors déclenché et je me suis lancé un défi – de taille : écrire une conférence sur le TDAH féminin. Jusqu’au bout.</p>
+
+      <p>La bonne blague.</p>
+
+      <p>Mon cerveau s’est allumé et l’hyperfocus qui va avec aussi. Des heures et des heures d’écriture, de relecture.</p>
+
+      <div class="litanie-block">
+        <p class="litanie">Le jour.</p>
+        <p class="litanie">La nuit.</p>
+        <p class="litanie">Tout. Le. Temps.</p>
+      </div>
+
+      <p>C’était difficile.</p>
+
+      <p>Difficile parce que je ne me sentais pas légitime pour en parler. Je ne voulais pas sortir de mon rôle, ne pas donner de leçon, ne pas être une féministe trop engagée qui perdrait la moitié de mon auditoire, ne pas entrer trop dans mon intimité pour me préserver. J’avais peur. De mal faire, de ne pas assez bien écrire, de trop en dire. Avoir l’air prétentieuse, ou à côté de la plaque. Me faire attaquer pour des approximations…</p>
+
+      <p>Mais je ne lâche pas. Je cherche mon ton. Peaufine mon texte. Bon, il faut être honnête, ChatGPT me coache aussi pas mal. Sans doute trop. Mais ça me rassure. Et surtout, j’avance.</p>
+
+      <p>Je m’offre le luxe de prendre du temps pour écrire. Dans des endroits qui m’inspirent. Seule. Je me sens tellement à ma place dans ces moments là. Je voudrais que ma vie soit comme ça tout le temps.</p>
+
+      <p><em>16 juillet 2025.</em> C’est le départ d’un changement de vie radical. Nous allons partir en expatriation à la fin de l’année.</p>
+
+      <p class="punch">Putain… j’avais pas prévu ça moi.</p>
+
+      <p>Le temps presse. Je me fixe une deadline : Je dois avoir terminé ma conférence et l’avoir dite devant du public au moins une fois avant notre départ.</p>
+
+      <p>Chiche ?</p>
+
+      <p>Cette urgence était exactement ce qu’il me fallait pour boucler la conférence, toi-même tu sais… J’ai commencé à en parler autour de moi, à mes collègues, à mes amis du CJD, partout. Je me suis mise dans la m**** pour avoir non pas une mais 2 dates durant lesquelles j’allais dire ma conférence à DES GENS…</p>
+
+      <p>Je l’ai fait. Je l’ai fait ! JE L’AI FAIT !</p>
+
+      <p class="punch">J’ai adoré ça.</p>
+
+      <p>Premier round avec des amis avec une médecin dans l’assistance. J’étais pétrifiée de trac, j’avais tellement peur qu’elle me juge… Il m’a fallu plusieurs verres pour me lancer. Petit à petit, sous leur regard bienveillant, je me suis détendue et j’ai déroulé mon texte avec de plus en plus de confiance. A la fin, j’ai bien cru que j’allais m’écrouler... Ensuite nous avons eu un échange très intéressant sur les statistiques, le fond de la conférence, et sa forme. C’était trop bien.</p>
+
+      <p>Deuxième round devant une trentaine de personnes dans une association pour entrepreneurs en liquidation. Je pensais clôturer la séance mais ils m’ont prise par surprise et j’ai ouvert les hostilités. Finalement c’était mieux, je n’ai pas eu le temps de stresser. Cette fois je me sentais mieux.  A ma place. Heureuse. L’échange qui a eu lieu après était magique. Quand une coach, autiste est venue me serrer dans ses bras et me dire : j’avais envie de me lever et de dire « oui ! c’est ça ! Bravo ».</p>
+
+      <p>J’étais tellement fière de l’avoir fait. J’étais gonflée à bloc ! Et très heureuse de rentrer me coucher…</p>
+
+      <p>Pourtant j’allais devoir me réinventer... de l’autre côté de l’Atlantique cette fois.</p>
+    </div>
+
+
+  <div class="next-mobile" style="--nm-color:var(--s1)">
+    <a href="../s1-05/">
+      <div class="nm-meta">
+        <span class="nm-label">Article suivant</span>
+        <span class="nm-num" style="color:var(--s1)">S1·05</span>
+        <span class="nm-ttl">Explaining…</span>
+      </div>
+      <span class="nm-ar" style="color:var(--s1)">→</span>
+    </a>
+  </div>
+  </article>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const ctxBar = document.getElementById('ctx-bar');
+  const ctxProg = document.getElementById('ctx-prog');
+  const fab = document.getElementById('fab');
+  const progressEl = document.getElementById('progress');
+
+  new IntersectionObserver(
+    e => {
+      const hidden = !e[0].isIntersecting;
+      ctxBar.classList.toggle('visible', hidden);
+      fab.classList.toggle('visible', hidden);
+    },
+    { rootMargin: '-52px 0px 0px 0px' }
+  ).observe(document.querySelector('.art-head'));
+
+  const footer = document.querySelector('footer');
+
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    progressEl.style.width = pct + '%';
+    ctxProg.style.width = pct + '%';
+    const fTop = footer.getBoundingClientRect().top;
+    fab.style.bottom = fTop < window.innerHeight - 60
+      ? (window.innerHeight - fTop + 16) + 'px'
+      : '28px';
+  }, { passive: true });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var ctxBtn = document.getElementById('ctx-burger');
+  var nav = document.getElementById('navlinks');
+  if(!nav) return;
+  function openMenu(open){
+    nav.classList.toggle('open',open);
+    if(btn) btn.classList.toggle('open',open);
+    if(ctxBtn) ctxBtn.classList.toggle('open',open);
+  }
+  function toggle(){ openMenu(!nav.classList.contains('open')); }
+  if(btn) btn.addEventListener('click',toggle);
+  if(ctxBtn) ctxBtn.addEventListener('click',toggle);
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ openMenu(false); });
+  });
+  nav.querySelectorAll('.nav-section-btn').forEach(function(secBtn){
+    secBtn.addEventListener('click',function(){
+      var target=document.getElementById(this.dataset.target);
+      if(!target) return;
+      var isOpen=!target.classList.contains('open');
+      nav.querySelectorAll('.nav-section-items').forEach(function(el){el.classList.remove('open');});
+      nav.querySelectorAll('.nav-section-btn').forEach(function(el){el.classList.remove('open');});
+      if(isOpen){target.classList.add('open');secBtn.classList.add('open');}
+    });
+  });
+})();
+</script>
+</body>
+</html>

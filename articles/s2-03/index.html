@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le lycée ? RAS… ou presque ! — OMGAUDHD S2·03</title>
+<meta name="description" content="L'armure censée me rendre invisible — qui me rendait justement inoubliable. Épisode 03 de la Saison 02 d'OMGAUDHD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  /* progress bar */
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+
+  article{max-width:760px;margin:0 auto}
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s2-deep)}
+
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
+  .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
+  .art-head a.tag:hover{border-bottom-color:currentColor}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
+
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose p{margin-bottom:24px}
+  .prose .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s2-deep);font-weight:700}
+
+  .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
+
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
+
+  .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s2)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s2)}
+
+  footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+
+  .litanie{font-style:italic;margin-bottom:10px}
+  .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
+
+
+
+  /* ACCORDÉON NAV */
+  .nav-section{display:none;border-bottom:1px solid var(--hair)}
+  .nav-section-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;padding:14px 0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--encre);font-family:inherit;text-align:left}
+  .nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--sec)}
+  .nav-chevron{margin-left:auto;color:var(--sec);flex-shrink:0;transition:transform .2s;display:block}
+  .nav-section-btn.open .nav-chevron{transform:rotate(90deg)}
+  .nav-section-items{display:none;flex-direction:column;padding:0 0 14px 18px}
+  .nav-section-items.open{display:flex}
+  .nav-section-items a{font-size:13px;padding:8px 0;color:var(--encre);text-decoration:none;letter-spacing:.3px}
+  .nav-section-items a:hover{opacity:.6}
+  .ep-num{color:var(--sec);font-weight:700}
+  .nav-flat{display:none;flex-direction:column;gap:14px;padding-top:16px;align-items:flex-start}
+  .nav-flat a{color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.5px;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .nav-flat a:hover{border-bottom-color:var(--jaune)}
+  .nav-section-items a:hover{border-bottom-color:var(--sec) !important;opacity:1}
+  /* CTX BURGER */
+  .ctx-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .ctx-burger span{display:block;width:18px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .ctx-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .ctx-burger.open span:nth-child(2){opacity:0}
+  .ctx-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* NEXT MOBILE (mobile uniquement) */
+  .next-mobile{display:none}
+  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
+  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
+  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
+  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
+  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
+  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
+  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
+  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
+  .nm-ar{font-size:24px;transition:color .18s}
+  @media(max-width:680px){
+    .art-head h1{font-size:32px;}
+    .prose{font-size:17px}
+    .punch{font-size:22px}
+    .dialogue{padding-left:32px;font-size:14px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+    .next-mobile{display:block}
+    .wrap{padding:0 16px}
+    .art-meta{flex-wrap:wrap;gap:10px}
+    .nav-articles{flex-direction:column;gap:12px}
+    .nav-articles .next,.nav-articles .serie-next{width:100%;flex:none;margin-left:0 !important}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
+    .nav-dt{display:none}
+    .nav-section{display:block}
+    .nav-flat{display:flex}
+  }
+
+  .nav-articles{max-width:760px;margin:54px auto 0;display:flex;align-items:stretch}
+  .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
+  .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
+  .prev{flex-direction:row-reverse;text-align:right}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s2);line-height:1.2;margin:2px 0 5px}
+
+  .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
+  .ctx-bar.visible{transform:translateY(0)}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
+  .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
+  .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
+  .ctx-nav:hover{opacity:1;box-shadow:inset 0 0 0 999px currentColor}.ctx-nav:hover .ctx-arrow,.ctx-nav:hover .ctx-num{color:var(--creme)}
+  .ctx-spacer{width:74px;flex-shrink:0}
+  .ctx-arrow{font-size:12px}
+  .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
+  .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
+  .ctx-center:hover{opacity:.6}
+  .ctx-ep{color:var(--s2);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s2);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s2);cursor:pointer;color:var(--s2);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .fab.visible{opacity:1;transform:scale(1)}
+  .fab:hover{transform:scale(1.1)!important}
+  .fab:hover{transform:scale(1.1)!important}
+  
+  @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
+</style>
+</head>
+<body>
+<div class="ctx-bar" id="ctx-bar">
+  <div class="ctx-inner">
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
+    <div style="flex:1"></div>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·03</span>Le lycée ? RAS…</button>
+    <a href="../s2-02/" class="ctx-nav ctx-prev" style="color:var(--s2)"><span class="ctx-arrow">←</span><span class="ctx-num">02</span></a>
+    <a href="../s2-04/" class="ctx-nav ctx-next" style="color:var(--s2)"><span class="ctx-num">04</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="ctx-prog" id="ctx-prog"></div>
+  </div>
+</div>
+<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,10 7,4 13,10"/></svg></button>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a class="nav-dt" href="../../#series">Saisons</a>
+      <div class="nav-section" style="--sec:#FF2D78">
+        <button class="nav-section-btn" data-target="nav-s1">
+          <span class="nav-dot"></span>
+          <span>SAISON 01 · ME DÉCOUVRIR</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s1">
+          <a href="../../articles/s1-01/"><span class="ep-num">S1·01</span> — Connais toi toi-même… facile à dire !</a>
+          <a href="../../articles/s1-02/"><span class="ep-num">S1·02</span> — Héréditaire</a>
+          <a href="../../articles/s1-03/"><span class="ep-num">S1·03</span> — En fait, j'étais normale…</a>
+          <a href="../../articles/s1-04/"><span class="ep-num">S1·04</span> — Evidemment</a>
+          <a href="../../articles/s1-05/"><span class="ep-num">S1·05</span> — Explaining…</a>
+        </div>
+      </div>
+      <div class="nav-section" style="--sec:#38C9A3">
+        <button class="nav-section-btn" data-target="nav-s2">
+          <span class="nav-dot"></span>
+          <span>SAISON 02 · TROUVER UN CHEMIN</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s2">
+          <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
+          <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
+          <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
+          <a href="../../articles/s2-04/"><span class="ep-num">S2·04</span> — (Des)orientée</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+
+    <header class="art-head">
+      <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
+      <h1>Le lycée ? RAS… ou presque !</h1>
+      <div class="art-meta">
+        <span class="num">03</span>
+        <span>· 8 min de lecture</span>
+        <span>· #LYCÉE #MASKING #FAUXSELF</span>
+      </div>
+    </header>
+
+    
+    <div class="prose">
+
+      <p>Quand j’ai commencé à réfléchir à cette série d’articles, je me suis dit… bah, j’ai survolé le lycée, il ne s’est rien passé de fou… Il n’y a rien à raconter !</p>
+
+      <p>Mon mari m’a regardé en mode… « Whaaaaaat ? »</p>
+
+      <div class="dialogue">        <p><span class="who">— Lui : </span>Attends, ce n’est pas en seconde que tu as fait la grève pendant un trimestre entier à organiser des manifs et séché les cours ?</p>        <p><span class="who">— Moi : </span>Euh… ben si !</p>        <p><span class="who">— Lui : </span>C’est pas au lycée que t’as commencé à sortir avec des mecs plus vieux que toi (<em>gros dégueulasses…</em>).</p>        <p><span class="who">— Moi : </span>Ben si !</p>        <p><span class="who">— Lui : </span>Et c’est pas au lycée que tu t’habillais comme un mec et que t’avais les cheveux violets ?</p>        <p><span class="who">— Moi : </span>Si, si…</p>
+      </div>
+
+      <p>Rien de spécial quoi…</p>
+
+      <p>Anonyme. Invisible. C’était mon objectif à atteindre. Alors quand la grève de 98 est arrivée, j’ai très vite séché les cours pour traîner dehors (<em>pardon maman</em>). Jusqu’au jour où une élève de terminale me prend à parti</p>
+
+      <div class="dialogue">        <p><span class="who">— Élève : </span>Qu’est ce que tu fais là ? Tu devrais être en cours.</p>        <p><span class="who">— Moi : </span>Je fais la grève.</p>        <p><span class="who">— Élève : </span>Ah oui ? Et pourquoi ?</p>
+      </div>
+
+      <p>Silence. J’en savais absolument rien.</p>
+
+      <p>Elle m’a regardé avec mépris.</p>
+
+      <div class="dialogue">        <p><span class="who">— Élève : </span>Donc tu sèche les cours. Si tu ne partages pas notre combat, tu n’es qu’une <strong>profiteuse</strong>. Tu ne sers à rien. (<em>la violence du truc !!</em>)</p>
+      </div>
+
+      <p>J’ai eu honte. Sans le savoir, elle venait d’enrôler son plus jeune et fidèle soldat. Épousant la cause, ne tenant pas plus de 30 secondes en classe (<em>physiquement impossible de rester assise en entendant mes camarades rallier les lycéens dans les couloirs</em>). Travaillant les tracés des manifs, en tête de cortège… Je m’étais fait un devoir de jouer le jeu à fond pour faire bonne impression, et surtout pour racheter le fait que j'avais utilisé « la cause » à des fins personnelles.</p>
+
+      <p>Ma particularité, c’est que je l’avais dit à mes parents. J’avais vu pas mal de mes copains se faire choper parce qu’on voyait leurs bouilles au journal de 20h pendant le dîner, et je ne voulais pas dissimuler mes activités. En fait j’en étais juste totalement incapable. La notion de duplicité me rendait (<em>et me rend toujours</em>) malade. Donc j’ai plaidé ma cause et dit à mes parents la main sur le cœur que je me battais pour mes convictions, et certainement pas pour sécher mes cours. Ils m’ont laissée faire « à condition que je ne redouble pas ».</p>
+
+      <p class="punch">Spoiler alert : j’ai redoublé.</p>
+
+      <p>Pendant 3 mois, je vivais à contre-courant de la majorité des élèves de secondes, jugeais ceux qui séchaient les cours sans venir aux manifs… Bref. <span class="hl-y">Je suis rentrée dans la peau d’un nouveau personnage, rebelle et combatif.</span></p>
+
+      <p>Ironie du sort, le message lycéen que je portais de tout mon être (<em>rien que ça</em>) a fini par être récupéré politiquement. J’ai perdu le sens. J’ai rejeté l’ensemble. Je suis passée de gréviste zélée à regard méprisant pour ceux qui n’ont pas compris que leur combat n’était déjà plus le leur. Plus le mien. J’avais été trahie. Je n’ai plus jamais été dans un mouvement de grogne populaire depuis. C’est même devenu épidermiquement le contraire.</p>
+
+      <p>Mon personnage ne tenait plus. Je m’étais sentie manipulée et je ne voulais pas que ça recommence. Je n’avais pas trouvé la bonne approche. Avant d’arriver au lycée, j’avais déjà construit un personnage crédible avec ma nouvelle coupe et toute la panoplie de la meuf sûre d’elle, ça avait fonctionné mais mon côté naïf s’est fait avoir. Du coup, pour éviter que cela se reproduise, j’en ai littéralement fait des caisses. J’ai carrément avalé la boule à facette et fait comme si tout ça était absolument normal pour moi : cheveux courts ET fuchsia, puis orange, puis gris… vous avez l’idée. Je voulais avoir l’air plus âgée, plus cool, plus fun. Bon. J’étais toujours en solo et dans ma bulle, maiisss ça en jetait. <span class="hl">Je devais être intouchable. Inaccessible.</span> J’ai changé de peau en croyant dur comme fer, que là, c’était moi qui commandais, et personne d’autre. Hum…</p>
+
+      <p>Comme les lycéens avaient perdu tout attrait à mes yeux, j’ai passé le reste de ma scolarité à traîner avec des mecs de prépa qui étaient dans le lycée, plus âgés, plus « intelligents », donc plus intéressants. Je n’étais plus jamais en compagnie de gens de mon âge, mais avec des adultes… en devenir. </p>
+
+      <p class="punch">Finalement, je répétais ce que je faisais quand j’étais môme.</p>
+
+      <p>Cet état de fait m’a valu une grande incompréhension et du jugement de la part des autres, mais j’avais trouvé une parade. Je les jugeais inaptes à me comprendre. J’ai commencé à me croire au-dessus des autres. Parce que la vulnérabilité, c’était de la faiblesse. Et la faiblesse, je n’y avais pas le droit. La duplicité envers les autres, c’est compliqué, me mentir à moi-même, c’est beaucoup plus simple.</p>
+
+      <p>Le plus drôle dans tout ça, c’est qu’au lycée je ne connaissais presque personne. Quand j’étais en 2e année à l’ESC, j’ai fait l’accueil des étudiants admissibles et tous ceux qui étaient passés par mon lycée m’ont reconnue. </p>
+
+      <p class="punch">Visiblement j’avais marqué les esprits, et je l’ignorais complètement.</p>
+
+      <div class="next-mobile" style="--nm-color:#38C9A3">
+        <a href="../s2-04/">
+          <div class="nm-meta">
+            <span class="nm-label">Article suivant</span>
+            <span class="nm-num" style="color:var(--s2)">S2·04</span>
+            <span class="nm-ttl">(Des)orientée</span>
+          </div>
+          <span class="nm-ar" style="color:var(--s2)">→</span>
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+
+  <a class="next" href="../s2-04/">
+    <div>
+      <div class="lbl">ARTICLE SUIVANT · S2</div>
+      <div class="ttl">(Des)orientée</div>
+    </div>
+    <div class="ar">→</div>
+  </a>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const ctxBar = document.getElementById('ctx-bar');
+  const ctxProg = document.getElementById('ctx-prog');
+  const fab = document.getElementById('fab');
+  const progressEl = document.getElementById('progress');
+
+  new IntersectionObserver(
+    e => {
+      const hidden = !e[0].isIntersecting;
+      ctxBar.classList.toggle('visible', hidden);
+      fab.classList.toggle('visible', hidden);
+    },
+    { rootMargin: '-52px 0px 0px 0px' }
+  ).observe(document.querySelector('.art-head'));
+
+  const footer = document.querySelector('footer');
+
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    progressEl.style.width = pct + '%';
+    ctxProg.style.width = pct + '%';
+    const fTop = footer.getBoundingClientRect().top;
+    fab.style.bottom = fTop < window.innerHeight - 60
+      ? (window.innerHeight - fTop + 16) + 'px'
+      : '28px';
+  }, { passive: true });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var ctxBtn = document.getElementById('ctx-burger');
+  var nav = document.getElementById('navlinks');
+  if(!nav) return;
+  function openMenu(open){
+    nav.classList.toggle('open',open);
+    if(btn) btn.classList.toggle('open',open);
+    if(ctxBtn) ctxBtn.classList.toggle('open',open);
+  }
+  function toggle(){ openMenu(!nav.classList.contains('open')); }
+  if(btn) btn.addEventListener('click',toggle);
+  if(ctxBtn) ctxBtn.addEventListener('click',toggle);
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ openMenu(false); });
+  });
+  nav.querySelectorAll('.nav-section-btn').forEach(function(secBtn){
+    secBtn.addEventListener('click',function(){
+      var target=document.getElementById(this.dataset.target);
+      if(!target) return;
+      var isOpen=!target.classList.contains('open');
+      nav.querySelectorAll('.nav-section-items').forEach(function(el){el.classList.remove('open');});
+      nav.querySelectorAll('.nav-section-btn').forEach(function(el){el.classList.remove('open');});
+      if(isOpen){target.classList.add('open');secBtn.classList.add('open');}
+    });
+  });
+})();
+</script>
+</body>
+</html>

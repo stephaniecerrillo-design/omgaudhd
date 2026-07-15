@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On m'évite ? — OMGAUDHD S2·01</title>
+<meta name="description" content="L'eczéma, la cour de récré, et la première fois qu'on devient le problème. Épisode 01 de la Saison 02 d'OMGAUDHD.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --creme:#FFFDF6;
+    --encre:#231F20;
+    --encre-soft:#5A5550;
+    --jaune:#FFE800;
+    --s2:#38C9A3;
+    --s2-deep:#1B7A60;
+    --hair:rgba(35,31,32,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--creme);color:var(--encre);font-family:'Space Mono',monospace;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+  nav{position:sticky;top:0;z-index:100;background:var(--creme);display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--hair)}
+  .brand{font-family:'Playfair Display',serif;font-weight:900;font-size:26px;letter-spacing:-.5px;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+  .brand .dot{width:11px;height:11px;border-radius:50%;background:var(--jaune);display:inline-block;flex-shrink:0}
+  .navlinks{display:flex;align-items:center;gap:30px;font-size:13px;letter-spacing:.5px}
+  .navlinks a{color:var(--encre);text-decoration:none;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .navlinks a:hover{border-bottom-color:var(--s2)}
+  .ig-icon{display:flex;align-items:center;opacity:.65;transition:opacity .2s;border-bottom:none !important}
+  .ig-icon:hover{opacity:1;border-bottom:none !important}
+
+  .progress{position:fixed;top:0;left:0;height:3px;background:var(--s2);width:0%;z-index:50;border-radius:0 3px 3px 0;transition:width .1s}
+
+  article{max-width:760px;margin:0 auto}
+  .crumb{font-size:12px;letter-spacing:1px;color:var(--encre-soft);margin:34px 0 30px}
+  .crumb a{color:var(--encre-soft);text-decoration:none}
+  .crumb a:hover{color:var(--encre)}
+  .crumb .here{color:var(--s2-deep)}
+
+  .art-head .tag{font-size:12px;letter-spacing:2px;color:var(--encre-soft);margin-bottom:18px}
+  .art-head a.tag{text-decoration:none;display:inline-block;border-bottom:1px solid transparent;transition:border-color .2s}
+  .art-head a.tag:hover{border-bottom-color:currentColor}
+  .art-head h1{font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,46px);line-height:1.18;letter-spacing:-.5px;margin-bottom:22px}
+  .art-meta{display:flex;gap:18px;align-items:center;font-size:12px;letter-spacing:.5px;color:var(--encre-soft);padding-bottom:30px;border-bottom:1px solid var(--hair);margin-bottom:42px}
+  .art-meta .num{font-family:'Playfair Display',serif;font-weight:900;font-size:15px;color:var(--s2)}
+
+  .prose{font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.72;color:var(--encre)}
+  .prose p{margin-bottom:24px}
+  .prose .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .prose .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .dialogue{position:relative;font-family:'Space Mono',monospace;font-size:15px;line-height:1.7;padding:6px 0 8px 54px;margin:14px 0 30px;color:var(--encre)}
+  .dialogue::before{content:'\201C';position:absolute;left:-4px;top:-18px;font-family:'Playfair Display',serif;font-weight:900;font-size:96px;line-height:1;color:var(--s2)}
+  .dialogue p{margin-bottom:11px}
+  .dialogue p:last-child{margin-bottom:0}
+  .dialogue .who{color:var(--s2-deep);font-weight:700}
+
+  .punch{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:27px;line-height:1.4;text-align:center;margin:46px 0;color:var(--encre)}
+
+  .aparte{font-family:'Space Mono',monospace;font-size:14px;letter-spacing:.3px;color:var(--encre-soft);margin:6px 0 26px;padding-left:2px}
+  .aparte::before{content:'— ';}
+  .aparte::after{content:' —';}
+
+  .next{background:#fff;border:1px solid var(--hair);border-radius:8px;padding:24px 28px;text-decoration:none;color:var(--encre);display:flex;align-items:center;justify-content:space-between;transition:.18s}
+  .next:hover{border-color:var(--s2)}
+  .next .lbl{font-size:11px;letter-spacing:1.5px;color:var(--encre-soft);margin-bottom:6px}
+  .next .ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+  .next .ar{font-size:24px;color:var(--s2)}
+
+  footer{margin-top:70px;padding:40px 0;border-top:1px solid var(--hair);display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.5px;color:var(--encre-soft)}
+  footer .dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);display:inline-block;margin-right:8px;vertical-align:middle}
+  footer a{color:var(--encre-soft);text-decoration:none}
+  footer a:hover{color:var(--encre)}
+
+
+
+
+  /* ACCORDÉON NAV */
+  .nav-section{display:none;border-bottom:1px solid var(--hair)}
+  .nav-section-btn{display:flex;align-items:center;gap:10px;width:100%;background:none;border:none;padding:14px 0;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;color:var(--encre);font-family:inherit;text-align:left}
+  .nav-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--sec)}
+  .nav-chevron{margin-left:auto;color:var(--sec);flex-shrink:0;transition:transform .2s;display:block}
+  .nav-section-btn.open .nav-chevron{transform:rotate(90deg)}
+  .nav-section-items{display:none;flex-direction:column;padding:0 0 14px 18px}
+  .nav-section-items.open{display:flex}
+  .nav-section-items a{font-size:13px;padding:8px 0;color:var(--encre);text-decoration:none;letter-spacing:.3px}
+  .nav-section-items a:hover{opacity:.6}
+  .ep-num{color:var(--sec);font-weight:700}
+  .nav-flat{display:none;flex-direction:column;gap:14px;padding-top:16px;align-items:flex-start}
+  .nav-flat a{color:var(--encre);text-decoration:none;font-size:13px;letter-spacing:.5px;padding-bottom:3px;border-bottom:2px solid transparent;transition:.2s}
+  .nav-flat a:hover{border-bottom-color:var(--jaune)}
+  .nav-section-items a:hover{border-bottom-color:var(--sec) !important;opacity:1}
+  /* CTX BURGER */
+  .ctx-burger{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .ctx-burger span{display:block;width:18px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .ctx-burger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .ctx-burger.open span:nth-child(2){opacity:0}
+  .ctx-burger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  /* BURGER MENU (mobile uniquement) */
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;flex-shrink:0}
+  .burger span{display:block;width:22px;height:2px;background:var(--encre);border-radius:2px;transition:transform .22s,opacity .18s}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* NEXT MOBILE (mobile uniquement) */
+  .next-mobile{display:none}
+  .next-mobile a{display:flex;align-items:center;justify-content:space-between;gap:16px;text-decoration:none;color:var(--encre);background:var(--creme);border-top:3px solid var(--nm-color,currentColor);padding:24px 20px;margin-top:48px;transition:background .18s,color .18s}
+  .next-mobile a:hover,.next-mobile a:active{background:var(--nm-color,currentColor);color:#fff}
+  .next-mobile a:hover .nm-ar,.next-mobile a:active .nm-ar{color:#fff}
+  .nm-meta{display:flex;flex-direction:column;gap:6px;flex:1}
+  .nm-label{font-size:11px;letter-spacing:2px;color:var(--encre-soft);text-transform:uppercase}
+  .next-mobile a:hover .nm-label,.next-mobile a:active .nm-label{color:rgba(255,255,255,.7)}
+  .nm-num{font-family:'Playfair Display',serif;font-weight:900;font-size:14px;letter-spacing:.3px}
+  .nm-ttl{font-family:'Playfair Display',serif;font-weight:700;font-size:20px;line-height:1.3}
+  .nm-ar{font-size:24px;transition:color .18s}
+  @media(max-width:680px){
+    .art-head h1{font-size:32px;}
+    .litanie{font-style:italic;margin-bottom:10px}
+    .litanie-block{border-left:3px solid var(--s2);padding-left:20px;margin:24px 0 28px}
+    .prose{font-size:17px}
+    .punch{font-size:22px}
+    .dialogue{padding-left:32px;font-size:14px}
+    .navlinks{gap:16px;font-size:12px}
+    .brand{font-size:20px}
+    .next-mobile{display:block}
+    .wrap{padding:0 16px}
+    .art-meta{flex-wrap:wrap;gap:10px}
+    .nav-articles{flex-direction:column;gap:12px}
+    .nav-articles .next,.nav-articles .serie-next{width:100%;flex:none;margin-left:0 !important}
+    .burger{display:flex}
+    .navlinks{display:none;position:fixed;top:68px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--hair);flex-direction:column;padding:20px 24px;gap:20px;z-index:99;font-size:14px}
+    .navlinks.open{display:flex}
+    .nav-dt{display:none}
+    .nav-section{display:block}
+    .nav-flat{display:flex}
+  }
+
+  .nav-articles{max-width:760px;margin:54px auto 0;display:flex;align-items:stretch}
+  .nav-articles .next,.nav-articles .serie-next{width:260px;flex:0 0 auto;margin:0;max-width:none}
+  .nav-articles .next:not(.prev),.nav-articles .serie-next{margin-left:auto}
+  .prev{flex-direction:row-reverse;text-align:right}
+  .s1-prev .ar{color:#FF2D78!important}
+  .s1-prev:hover{border-color:#FF2D78}
+  .art-head h1 .hl{background:var(--s2);color:#fff;padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .art-head h1 .hl-y{background:var(--jaune);color:var(--encre);padding:0 6px 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+  .card-num{font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--s2);line-height:1.2;margin:2px 0 5px}
+  .s1-prev .card-num{color:#FF2D78}
+
+  .ctx-bar{position:fixed;top:0;left:0;right:0;z-index:210;background:var(--creme);border-bottom:1px solid var(--hair);transform:translateY(-100%);transition:transform .25s ease}
+  .ctx-bar.visible{transform:translateY(0)}
+  .ctx-inner{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;align-items:center;gap:16px;position:relative}
+  .ctx-brand{font-family:'Playfair Display',serif;font-weight:900;font-size:18px;letter-spacing:-.5px;display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--encre);flex-shrink:0}
+  .ctx-dot{width:9px;height:9px;border-radius:50%;background:var(--jaune);flex-shrink:0;display:inline-block}
+  .ctx-nav{display:flex;align-items:center;gap:4px;text-decoration:none;width:72px;padding:5px 0;justify-content:center;border:0.5px solid currentColor;border-radius:6px;flex-shrink:0;opacity:.75;transition:opacity .2s,box-shadow .15s}
+  .ctx-nav:hover{opacity:1;box-shadow:inset 0 0 0 999px currentColor}.ctx-nav:hover .ctx-arrow,.ctx-nav:hover .ctx-num{color:var(--creme)}
+  .ctx-spacer{width:74px;flex-shrink:0}
+  .ctx-arrow{font-size:12px}
+  .ctx-num{font-family:'Playfair Display',serif;font-weight:900;font-size:16px;line-height:1}
+  .ctx-center{position:absolute;left:50%;transform:translateX(-50%);max-width:45%;background:none;border:none;cursor:pointer;font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--encre);letter-spacing:.2px;text-align:center;padding:0 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;transition:opacity .2s}
+  .ctx-center:hover{opacity:.6}
+  .ctx-ep{color:var(--s2);margin-right:8px;font-size:19px;letter-spacing:.3px;font-weight:700}
+  .ctx-prog{position:absolute;bottom:0;left:0;height:2px;background:var(--s2);width:0%;transition:width .1s;pointer-events:none}
+  .fab{position:fixed;bottom:28px;right:max(32px,calc(50vw - 508px));width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--s2);cursor:pointer;color:var(--s2);display:flex;align-items:center;justify-content:center;opacity:0;transform:scale(.8);transition:opacity .2s,transform .2s;z-index:105}
+  .fab.visible{opacity:1;transform:scale(1)}
+  .fab:hover{transform:scale(1.1)!important}
+  .fab:hover{transform:scale(1.1)!important}
+  .litanie{font-size:17px;padding-left:20px;border-left:2px solid var(--hair);color:var(--encre-soft);margin-bottom:16px}
+  @media(max-width:640px){.fab{display:none}.ctx-burger{display:flex}.ctx-brand-txt{display:none}.ctx-dot{width:12px;height:12px}.ctx-inner>div:not([class]){display:none}.ctx-spacer{display:none}.ctx-inner{gap:6px;padding:25px 10px}.ctx-center{position:static;transform:none;left:auto;flex:1;display:flex;align-items:center;justify-content:center;font-size:17px;max-width:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 4px}.ctx-ep{font-size:17px;margin-right:3px}.ctx-num{font-size:13px}.ctx-arrow{font-size:10px}.ctx-nav{display:none}}
+</style>
+</head>
+<body>
+<div class="ctx-bar" id="ctx-bar">
+  <div class="ctx-inner">
+    <a href="../../" class="ctx-brand"><span class="ctx-dot"></span><span class="ctx-brand-txt">OMG<span style="color:var(--encre-soft);font-weight:900;">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:8px">AuDHD</span></span></a>
+    <div style="flex:1"></div>
+    <button class="ctx-center" onclick="window.scrollTo({top:0,behavior:'smooth'})"><span class="ctx-ep">S2·01</span>On m’évite ?</button>
+    <a href="../s1-05/" class="ctx-nav ctx-prev" style="color:#FF2D78"><span class="ctx-arrow">←</span><span class="ctx-num">05</span></a>
+    <a href="../s2-02/" class="ctx-nav ctx-next" style="color:var(--s2)"><span class="ctx-num">02</span><span class="ctx-arrow">→</span></a>
+    <button class="ctx-burger" id="ctx-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="ctx-prog" id="ctx-prog"></div>
+  </div>
+</div>
+<button class="fab" id="fab" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Haut de page"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1,10 7,4 13,10"/></svg></button>
+<div class="progress" id="progress"></div>
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href="../../"><span class="dot"></span>OMG<span style="color:var(--encre-soft);font-weight:900;margin-left:-8px">&hellip;</span><span style="font-style:italic;font-weight:500;margin-left:1px">AuDHD</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="navlinks" id="navlinks">
+      <a class="nav-dt" href="../../#series">Saisons</a>
+      <div class="nav-section" style="--sec:#FF2D78">
+        <button class="nav-section-btn" data-target="nav-s1">
+          <span class="nav-dot"></span>
+          <span>SAISON 01 · ME DÉCOUVRIR</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s1">
+          <a href="../../articles/s1-01/"><span class="ep-num">S1·01</span> — Connais toi toi-même… facile à dire !</a>
+          <a href="../../articles/s1-02/"><span class="ep-num">S1·02</span> — Héréditaire</a>
+          <a href="../../articles/s1-03/"><span class="ep-num">S1·03</span> — En fait, j'étais normale…</a>
+          <a href="../../articles/s1-04/"><span class="ep-num">S1·04</span> — Evidemment</a>
+          <a href="../../articles/s1-05/"><span class="ep-num">S1·05</span> — Explaining…</a>
+        </div>
+      </div>
+      <div class="nav-section" style="--sec:#38C9A3">
+        <button class="nav-section-btn" data-target="nav-s2">
+          <span class="nav-dot"></span>
+          <span>SAISON 02 · TROUVER UN CHEMIN</span>
+          <svg class="nav-chevron" width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,2 7,5 3,8"/></svg>
+        </button>
+        <div class="nav-section-items" id="nav-s2">
+          <a href="../../articles/s2-01/"><span class="ep-num">S2·01</span> — On m'évite ?</a>
+          <a href="../../articles/s2-02/"><span class="ep-num">S2·02</span> — Tuto de la collégienne normale… tu parles !</a>
+          <a href="../../articles/s2-03/"><span class="ep-num">S2·03</span> — Le lycée ? RAS… ou presque !</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+
+    <header class="art-head">
+      <a class="tag" href="../../series/s2/">SAISON 02 · TROUVER UN CHEMIN</a>
+      <h1>On m'évite ?</h1>
+      <div class="art-meta">
+        <span class="num">01</span>
+        <span>· 5 min de lecture</span>
+        <span>· #ENFANCE #REJET #MASKING</span>
+      </div>
+    </header>
+
+    
+    <div class="prose">
+      <p class="punch">« Si tu attrapes ma maladie, alors tes parents pourront appeler mes parents pour se plaindre. »</p>
+
+      <p>Ça c’est moi dans la cour de récré, je devais avoir 4 ou 5 ans et je m’en rappelle comme si c’était hier.</p>
+
+      <p>J’avais de l’eczéma sur les mains. Beaucoup. Franchement c’était difficile à vivre, et le pire, c’est que je ne pouvais pas le cacher. Mes petits camarades avaient peur de jouer avec moi, de faire la ronde avec moi. Je trouvais ça absolument absurde alors au début, je m’en fichais. Mon truc à moi c’étaient les histoires. Les écouter puis les lire. Les autres ne savaient pas encore lire. Néanmoins, j’étais perdue sur le pourquoi. Pourquoi on ne jouait pas avec moi ? Alors j’ai posé la question à Alice pour savoir comment intégrer leur jeu.</p>
+
+      <p>Elle m’a répondu : « ma mère m’a dit que ça s’attrape. »</p>
+
+      <p>WTF ?</p>
+
+      <p class="punch">Alors je lui ai attrapé le bras sans réfléchir,</p>
+
+      <p>c’était complètement impulsif. Elle était terrorisée, a ouvert ses yeux et sa bouche en grand. Je me rappelle la colère que j’ai ressentie à ce moment-là, j’avais chaud, j’entendais mon cœur battre dans mes tempes. Puis je l’ai laissée là, tremblante, sans doute en train de réfléchir à ce qu’elle allait pouvoir dire à sa mère. Moi ? J’étais terrifiée à l’idée qu’elle se fasse gronder, et que je me fasse gronder aussi.</p>
+
+      <p>Il n’en a rien été : Alice n’a rien dit à sa mère et est devenue ma meilleure copine de maternelle. Elle avait compris, et les autres avec elle, que j’étais inoffensive.</p>
+
+      <p>J’étais rejetée par les enfants à cause d’une maladie de peau qu’ils ne comprenaient pas et dont ils avaient peur. Enfin, dont leurs parents avaient peur. Par ignorance ? Sûrement. Par bêtise ? Sans doute. Par méchanceté ? Je ne crois pas.</p>
+
+      <p>Pendant l’année de CP, mes parents se sont séparés et j’ai déménagé. Souvent. Parfois en milieu d’année. A chaque fois, tout était à refaire. Une nouvelle routine, de nouveaux visages, de nouvelles questions sur mon eczéma : Ça s’attrape ?</p>
+
+      <p>Parfois je disais oui, juste pour avoir la paix.</p>
+
+      <p>Honnêtement, je ne peux pas dire que j’ai vraiment cherché à me faire des amis. Je ne sais même pas si c’était moi ou eux qui n’étaient pas intéressés. A force de déménager, je pense que je m’étais dit que ça n’en valait tout simplement pas la peine. Mais il y a une chose que je savais : faire le pitre, c’était un super moyen d’être appréciée. <span class="hl-y">Alors je suis devenue clown.</span> Comme mon doudou (<em>oui c’était un clown, évidemment</em>) ! J’ai tellement bien incarné mon personnage, que j’en ai reçu un autre de la part d’une de mes institutrices avant un énième déménagement. J’avais la cote avec les maitresses. Avec les adultes en général.</p>
+
+      <p>En même temps, j’étais bonne à l’école, sage à la maison, sérieuse.</p>
+
+      <p>Ça peut paraitre contradictoire mais je faisais vraiment coexister : clown et sérieux. Je faisais de l’esprit, j’avais de la répartie, de l’humour. Un humour de grand. Ça me permettait d’être appréciée par les adultes et de ne pas trop courir après les autres enfants… que je ne comprenais pas, et qui me le rendaient bien.</p>
+
+      <p>Pour moi ce n’était pas bizarre d’être avec des adultes tout le temps. J’avais l’impression d’appartenir à leur groupe. Aux adultes. Ce n’était pas le cas bien sûr. <span class="hl">Je n’étais qu’une enfant, qu’on pouvait renvoyer dans sa chambre</span>, juste après avoir débattu sur le sens de la vie pendant une demi-heure à l’apéro. Je me rappelle que c’était pour moi l’équivalent d’une grande gifle. D’aussi loin que je me souvienne, je rêvais d’être une adulte pour pouvoir enfin rester et être à ma place.</p>
+
+      <p class="punch">Heureusement qu’il y avait les bouquins, au moins je savais où j’étais et à quoi m’en tenir…</p>
+    </div>
+
+
+  <div class="next-mobile" style="--nm-color:var(--s2)">
+    <a href="../s2-02/">
+      <div class="nm-meta">
+        <span class="nm-label">Article suivant</span>
+        <span class="nm-num" style="color:var(--s2)">S2·02</span>
+        <span class="nm-ttl">Tuto de la collégienne normale… tu parles !</span>
+      </div>
+      <span class="nm-ar" style="color:var(--s2)">→</span>
+    </a>
+  </div>
+  </article>
+
+  <footer>
+    <div><span class="dot"></span>OMGAUDHD — Stéphanie</div>
+    <div>
+      <a href="https://instagram.com/ohmygaudhd" target="_blank" rel="noopener">@ohmygaudhd</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  const ctxBar = document.getElementById('ctx-bar');
+  const ctxProg = document.getElementById('ctx-prog');
+  const fab = document.getElementById('fab');
+  const progressEl = document.getElementById('progress');
+
+  new IntersectionObserver(
+    e => {
+      const hidden = !e[0].isIntersecting;
+      ctxBar.classList.toggle('visible', hidden);
+      fab.classList.toggle('visible', hidden);
+    },
+    { rootMargin: '-52px 0px 0px 0px' }
+  ).observe(document.querySelector('.art-head'));
+
+  const footer = document.querySelector('footer');
+
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const pct = doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100;
+    progressEl.style.width = pct + '%';
+    ctxProg.style.width = pct + '%';
+    const fTop = footer.getBoundingClientRect().top;
+    fab.style.bottom = fTop < window.innerHeight - 60
+      ? (window.innerHeight - fTop + 16) + 'px'
+      : '28px';
+  }, { passive: true });
+</script>
+<script>
+(function(){
+  var btn = document.getElementById('burger');
+  var ctxBtn = document.getElementById('ctx-burger');
+  var nav = document.getElementById('navlinks');
+  if(!nav) return;
+  function openMenu(open){
+    nav.classList.toggle('open',open);
+    if(btn) btn.classList.toggle('open',open);
+    if(ctxBtn) ctxBtn.classList.toggle('open',open);
+  }
+  function toggle(){ openMenu(!nav.classList.contains('open')); }
+  if(btn) btn.addEventListener('click',toggle);
+  if(ctxBtn) ctxBtn.addEventListener('click',toggle);
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){ openMenu(false); });
+  });
+  nav.querySelectorAll('.nav-section-btn').forEach(function(secBtn){
+    secBtn.addEventListener('click',function(){
+      var target=document.getElementById(this.dataset.target);
+      if(!target) return;
+      var isOpen=!target.classList.contains('open');
+      nav.querySelectorAll('.nav-section-items').forEach(function(el){el.classList.remove('open');});
+      nav.querySelectorAll('.nav-section-btn').forEach(function(el){el.classList.remove('open');});
+      if(isOpen){target.classList.add('open');secBtn.classList.add('open');}
+    });
+  });
+})();
+</script>
+</body>
+</html>
